@@ -4,3 +4,13 @@ document.getElementById("btn").addEventListener("click", e=>{
      document.getElementById("gif").src = videoUrl;
    })
 })
+
+function modoOscuro() {
+  let theme = document.getElementById("theme");
+
+  if (theme.getAttribute("href") == "syle.css") {
+    theme.href = "modo-noche.css";
+  } else {
+    theme.href = "style.css";
+  }
+}
