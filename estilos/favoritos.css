@@ -1,0 +1,155 @@
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 4px solid #6f00ff;
+  border-bottom: 4px solid #6f00ff;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+header #logo {
+  display: inline-block;
+  width: 50px;
+  margin: 0 100px;
+  cursor: pointer;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  height: 50px;
+  margin-left: 250px;
+}
+
+header ul img {
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+header li {
+  margin: 20px;
+  font-size: 13px;
+}
+
+header a {
+  text-decoration: none;
+  color: #6f00ff;
+}
+
+.galeria-fav {
+  max-width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.galeria-fav .titulo-fav {
+  margin-top: 30px;
+  color: #6f00ff;
+}
+
+.galeria-fav .titulo-fav h2 {
+  font-size: 30px;
+  margin-top: -5px;
+}
+
+.galeria-fav .contenido {
+  margin-top: 100px;
+}
+
+.galeria-fav h3 {
+  max-width: 550px;
+  font-size: 30px;
+  margin: auto;
+  color: cyan;
+}
+
+.galeria-fav .ver {
+  font-size: 10px;
+  color: #6f00ff;
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  border: 1px solid #6f00ff;
+  background: #fff;
+  cursor: pointer;
+  margin-top: 50px;
+  display: none;
+}
+
+article {
+  margin-top: 100px;
+  text-align: center;
+}
+
+article h2 {
+  color: #6f00ff;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 120px;
+  font-size: 12px;
+}
+
+footer .contactos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .contactos div {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+footer .contactos #twitter {
+  margin-top: 12px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon-twitter.svg) no-repeat;
+}
+
+footer .contactos #face {
+  margin-top: 10px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon_facebook.svg) no-repeat;
+}
+
+footer .contactos #inst {
+  margin-left: -4px;
+  margin-top: 10px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon_instagram.svg) no-repeat;
+}
+
+footer p {
+  margin-left: auto;
+}
+
+footer #twitter:hover {
+  background: url(../assets/icon-twitter-hover.svg) no-repeat;
+}
+
+footer #face:hover {
+  background: url(../assets/icon_facebook_hover.svg) no-repeat;
+}
+
+footer #inst:hover {
+  background: url(../assets/icon_instagram-hover.svg) no-repeat;
+}
+/*# sourceMappingURL=favoritos.css.map */
