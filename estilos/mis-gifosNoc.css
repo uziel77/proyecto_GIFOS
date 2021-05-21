@@ -1,12 +1,13 @@
 body {
+  background: #353638;
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-top: 4px solid #6f00ff;
-  border-bottom: 4px solid #6f00ff;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
 }
 
 header {
@@ -17,7 +18,7 @@ header {
 }
 
 header #logo {
-  background: url(../assets/logo-desktop.svg) no-repeat;
+  background: url(../assets/Logo-modo-noc.svg) no-repeat;
   display: inline-block;
   width: 80px;
   margin: 10px 90px;
@@ -36,12 +37,12 @@ header ul {
 }
 
 header ul #mod {
-  color: #6f00ff;
+  color: #fff;
   border: none;
-  background: #fff;
+  background: #353638;
   font-size: 12px;
-  margin-top: 6px;
   margin-right: 20px;
+  margin-top: 6px;
   cursor: pointer;
 }
 
@@ -50,7 +51,7 @@ header ul #cruz {
   margin-bottom: -10px;
   margin-left: 30px;
   cursor: pointer;
-  background: url(../assets/button-crear-gifo.svg) no-repeat;
+  background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -62,7 +63,7 @@ header li {
 
 header a {
   text-decoration: none;
-  color: #6f00ff;
+  color: #fff;
 }
 
 .galeria-fav {
@@ -73,7 +74,7 @@ header a {
 
 .galeria-fav .titulo-fav {
   margin-top: 30px;
-  color: #6f00ff;
+  color: #fff;
 }
 
 .galeria-fav .titulo-fav h2 {
@@ -108,10 +109,12 @@ header a {
 article {
   margin-top: 100px;
   text-align: center;
+  background: #202021;
+  color: #fff;
 }
 
 article h2 {
-  color: #6f00ff;
+  color: #fff;
 }
 
 footer {
@@ -120,6 +123,8 @@ footer {
   display: flex;
   padding: 10px 120px;
   font-size: 12px;
+  color: #fff;
+  background: #353638;
 }
 
 footer .contactos {
@@ -170,4 +175,4 @@ footer #face:hover {
 footer #inst:hover {
   background: url(../assets/icon_instagram-hover.svg) no-repeat;
 }
-/*# sourceMappingURL=mis-gifos.css.map */
+/*# sourceMappingURL=mis-gifosNoc.css.map */

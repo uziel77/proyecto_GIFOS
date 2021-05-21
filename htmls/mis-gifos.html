@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../estilos/mis-gifos.css">
+    <link rel="stylesheet" href="../estilos/mis-gifos.css" id="noc">
 </head>
 <body>
     <header>
-        <img src="../assets/logo-desktop.svg" alt="" id="logo">
+        <a href="../htmls/index.html" id="logo"> <img src="" alt=""></a>
         <nav>
           <ul>
-            <li><a href="#">MODO NOCTURNO</a></li>
+            <button onclick="modoOscuro()" id="mod">MODO OSCURO</button>
             <li><a href="../htmls/favoritos.html">FAVORITOS</a></li>
             <li><a href="../htmls/mis-gifos.html">MIS GIFOS</a></li>
-            <img src="../assets/button-crear-gifo.svg" alt="">
+            <a href="../htmls/crear-gifo.html" id="cruz"><img src="" alt=""></a> 
           </ul>
         </nav>
     </header>
@@ -43,5 +43,6 @@
         </div>
         <p>©GIFOS 2021 All Rights Reserved.</p>
     </footer>
+    <script src="../scripts/mis-gifos.js"></script>
 </body>
 </html>

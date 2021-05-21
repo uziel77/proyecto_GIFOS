@@ -1,17 +1,18 @@
 body{
+    background: #353638  ;
     width: 100%;
     height: 100%;    
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border-top: 4px solid rgb(111, 0, 255);
-    border-bottom: 4px solid rgb(111, 0, 255);
+    border-top: 4px solid black ;
+    border-bottom: 4px solid black;
     }
     header{
         display: flex;
         width: 100%;
-        #logo{
-        background: url(../assets/logo-desktop.svg) no-repeat;
+        #logo{    
+        background: url(../assets/Logo-modo-noc.svg) no-repeat;
         display: inline-block;
         width: 80px;
         margin: 10px 90px;
@@ -24,12 +25,12 @@ body{
         height: 50px;
         margin-left: 300px;
             #mod{
-            color: rgb(111, 0, 255);
+            color: #fff;
             border: none;
-            background: #fff;
+            background: #353638 ;
             font-size: 12px;
-            margin-top: 6px;
             margin-right: 20px;
+            margin-top: 6px;
             cursor: pointer;
             }
             #cruz{
@@ -37,17 +38,17 @@ body{
             margin-bottom: -10px;
             margin-left: 30px;
             cursor: pointer;
-            background: url(../assets/button-crear-gifo.svg) no-repeat;
+            background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
             object-fit: cover;
             }
-        }
+    }
         li{
         margin: 20px;
         font-size: 13px;
         }
         a{
         text-decoration: none;
-        color: rgb(111, 0, 255);
+        color: #fff;
         }
     }
     main{
@@ -99,7 +100,8 @@ body{
            
         }
         #titulo{
-            width: 300px;
+         color: #fff;
+         width: 300px;
          text-align: center;
          margin-top: 70px;
          margin-left: 20px;
@@ -110,47 +112,48 @@ body{
             
         }
     }
-
     footer{
         display: flex;
         padding: 10px 120px;
         font-size: 12px;
-        .contactos{
-        display: flex;
-            div{
-            margin-left: 5px;
-            cursor: pointer;
+        color: #fff;
+        background: #353638;
+            .contactos{
+            display: flex;
+                div{
+                margin-left: 5px;
+                cursor: pointer;
+                }
+                #twitter{
+                margin-top: 12px;
+                min-height: 20px;
+                min-width: 20px;
+                background: url(../assets/icon-twitter.svg) no-repeat;
+                }
+                #face{
+                margin-top: 10px;
+                min-height: 20px;
+                min-width: 20px;
+                background: url(../assets/icon_facebook.svg) no-repeat;
+                }
+                #inst{
+                margin-left: -4px;
+                margin-top: 10px;
+                min-height: 20px;
+                min-width: 20px;
+                background: url(../assets/icon_instagram.svg) no-repeat;
+                }
             }
-            #twitter{
-            margin-top: 12px;
-            min-height: 20px;
-            min-width: 20px;
-            background: url(../assets/icon-twitter.svg) no-repeat;
+            p{
+            margin-left: auto;
             }
-            #face{
-            margin-top: 10px;
-            min-height: 20px;
-            min-width: 20px;
-            background: url(../assets/icon_facebook.svg) no-repeat;
+            #twitter:hover{
+            background: url(../assets/icon-twitter-hover.svg) no-repeat;
             }
-            #inst{
-            margin-left: -4px;
-            margin-top: 10px;
-            min-height: 20px;
-            min-width: 20px;
-            background: url(../assets/icon_instagram.svg) no-repeat;
+            #face:hover{
+            background: url(../assets/icon_facebook_hover.svg) no-repeat;
+            }
+            #inst:hover{
+            background: url(../assets/icon_instagram-hover.svg) no-repeat;
             }
         }
-        p{
-        margin-left: auto;
-        }
-        #twitter:hover{
-        background: url(../assets/icon-twitter-hover.svg) no-repeat;
-        }
-        #face:hover{
-        background: url(../assets/icon_facebook_hover.svg) no-repeat;
-        }
-        #inst:hover{
-        background: url(../assets/icon_instagram-hover.svg) no-repeat;
-        }
-    }
