@@ -41,7 +41,7 @@ header ul #mod {
   border: none;
   background: #353638;
   font-size: 12px;
-  margin-right: 20px;
+  margin-right: 42px;
   margin-top: 6px;
   cursor: pointer;
 }
@@ -64,6 +64,10 @@ header li {
 header a {
   text-decoration: none;
   color: #fff;
+}
+
+#mod::before {
+  content: "MODO DIURNO";
 }
 
 main {

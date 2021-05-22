@@ -1,167 +1,169 @@
 body{
-    background: #353638  ;
-    width: 100%;
-    height: 100%;    
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    border-top: 4px solid black ;
-    border-bottom: 4px solid black;
+background: #353638  ;
+width: 100%;
+height: 100%;    
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+border-top: 4px solid black ;
+border-bottom: 4px solid black;
+}
+header{
+display: flex;
+width: 100%;
+    #logo{    
+    background: url(../assets/Logo-modo-noc.svg) no-repeat;
+    display: inline-block;
+    width: 80px;
+    margin: 10px 90px;
+    cursor: pointer;
+    object-fit: cover;
     }
-    header{
-        display: flex;
-        width: 100%;
-        #logo{    
-        background: url(../assets/Logo-modo-noc.svg) no-repeat;
-        display: inline-block;
-        width: 80px;
-        margin: 10px 90px;
-        cursor: pointer;
-        object-fit: cover;
-        }
-        ul{
-        display: flex;
-        list-style: none;
-        height: 50px;
-        margin-left: 300px;
-            #mod{
-            color: #fff;
-            border: none;
-            background: #353638 ;
-            font-size: 12px;
-            margin-right: 20px;
-            margin-top: 6px;
-            cursor: pointer;
-            }
-            #cruz{
-            width: 70px;
-            margin-bottom: -10px;
-            margin-left: 30px;
-            cursor: pointer;
-            background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
-            object-fit: cover;
-            }
-    }
-        li{
-        margin: 20px;
-        font-size: 13px;
-        }
-        a{
-        text-decoration: none;
-        color: #fff;
-        }
-    }
-    main{
-    max-width: 100%;
-    height: 100%;
-    text-align: center;
-    display: block;
-        h1{
-        margin: 50px auto;
-        width: 450px;
-        color: #fff;
-        }
-        span{
-        color: cyan;
-        }
-        img{
-        margin: 0  auto;
-        height: 160px;
-        }
-        .gifs{
-          height: 100%;
-        video{
-        width: 300px;
-        height: 200px;
-        object-fit: cover;
-        }
-        }
-        .busqueda{
-        display: flex;
-        align-items: center;
-        width: 450px;
-        margin: 0 auto;
-        margin-top: -4px;
-        border: 2px solid #fff;
-        border-radius: 30px;
-           #btn{
-           margin-right: 20px;
-           }
-           #search{
-           margin: auto;
-           width: 450px;
-           height: 40px;
-           border-radius: 30px;
-           border: none;
-           padding: 20px;
-           background: #353638 ;
-           color: #fff;
-           }
-           #search:focus{
-           outline: none;
-           }
-        }
-        h4{
-        margin-top: -100px;
-        color: #fff;
-        }
-        p{
-        color: #fff;
-        margin-top: -15px;
-        }
-    
-    }
-    article{
-    margin-top: 100px;
-    text-align: center;
-    background: #202021 ;
-    color: #fff;
-        h2{
-        color: #fff;
-        }
-    }
-    footer{
+    ul{
     display: flex;
-    padding: 10px 120px;
-    font-size: 12px;
+    list-style: none;
+    height: 50px;
+    margin-left: 300px;
+        #mod{
+        color: #fff;
+        border: none;
+        background: #353638 ;
+        font-size: 12px;
+        margin-right: 42px;
+        margin-top: 6px;
+        cursor: pointer;
+        }
+        #cruz{
+        width: 70px;
+        margin-bottom: -10px;
+        margin-left: 30px;
+        cursor: pointer;
+        background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
+        object-fit: cover;
+        }
+}
+    li{
+    margin: 20px;
+    font-size: 13px;
+    }
+    a{
+    text-decoration: none;
     color: #fff;
-    background: #353638;
-        .contactos{
-        display: flex;
-            div{
-            margin-left: 5px;
-            cursor: pointer;
-            }
-            #twitter{
-            margin-top: 12px;
-            min-height: 20px;
-            min-width: 20px;
-            background: url(../assets/icon-twitter.svg) no-repeat;
-            }
-            #face{
-            margin-top: 10px;
-            min-height: 20px;
-            min-width: 20px;
-            background: url(../assets/icon_facebook.svg) no-repeat;
-            }
-            #inst{
-            margin-left: -4px;
-            margin-top: 10px;
-            min-height: 20px;
-            min-width: 20px;
-            background: url(../assets/icon_instagram.svg) no-repeat;
-            }
+    }
+}
+#mod::before{
+    content: "MODO DIURNO";
+}
+main{
+max-width: 100%;
+height: 100%;
+text-align: center;
+display: block;
+    h1{
+    margin: 50px auto;
+    width: 450px;
+    color: #fff;
+    }
+    span{
+    color: cyan;
+    }
+    img{
+    margin: 0  auto;
+    height: 160px;
+    }
+    .gifs{
+    height: 100%;
+    video{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    }
+    }
+    .busqueda{
+    display: flex;
+    align-items: center;
+    width: 450px;
+    margin: 0 auto;
+    margin-top: -4px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+        #btn{
+        margin-right: 20px;
         }
-        p{
-        margin-left: auto;
+        #search{
+        margin: auto;
+        width: 450px;
+        height: 40px;
+        border-radius: 30px;
+        border: none;
+        padding: 20px;
+        background: #353638 ;
+        color: #fff;
         }
-        #twitter:hover{
-        background: url(../assets/icon-twitter-hover.svg) no-repeat;
-        }
-        #face:hover{
-        background: url(../assets/icon_facebook_hover.svg) no-repeat;
-        }
-        #inst:hover{
-        background: url(../assets/icon_instagram-hover.svg) no-repeat;
+        #search:focus{
+        outline: none;
         }
     }
+    h4{
+    margin-top: -100px;
+    color: #fff;
+    }
+    p{
+    color: #fff;
+    margin-top: -15px;
+    }
+}
+article{
+margin-top: 100px;
+text-align: center;
+background: #202021 ;
+color: #fff;
+    h2{
+    color: #fff;
+    }
+}
+footer{
+display: flex;
+padding: 10px 120px;
+font-size: 12px;
+color: #fff;
+background: #353638;
+    .contactos{
+    display: flex;
+        div{
+        margin-left: 5px;
+        cursor: pointer;
+        }
+        #twitter{
+        margin-top: 12px;
+        min-height: 20px;
+        min-width: 20px;
+        background: url(../assets/icon-twitter.svg) no-repeat;
+        }
+        #face{
+        margin-top: 10px;
+        min-height: 20px;
+        min-width: 20px;
+        background: url(../assets/icon_facebook.svg) no-repeat;
+        }
+        #inst{
+        margin-left: -4px;
+        margin-top: 10px;
+        min-height: 20px;
+        min-width: 20px;
+        background: url(../assets/icon_instagram.svg) no-repeat;
+        }
+    }
+    p{
+    margin-left: auto;
+    }
+    #twitter:hover{
+    background: url(../assets/icon-twitter-hover.svg) no-repeat;
+    }
+    #face:hover{
+    background: url(../assets/icon_facebook_hover.svg) no-repeat;
+    }
+    #inst:hover{
+    background: url(../assets/icon_instagram-hover.svg) no-repeat;
+    }
+}
