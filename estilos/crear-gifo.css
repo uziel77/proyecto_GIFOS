@@ -78,11 +78,36 @@ main {
   padding: 0 80px;
 }
 
+.camara-luz {
+  width: 250px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.camara-luz #camara {
+  background: url(../assets/camara.svg) no-repeat;
+  margin-top: 60px;
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.camara-luz #luz {
+  margin-left: -28px;
+  background: url(../assets/element-luz-camara.svg) no-repeat;
+  margin-top: 78px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .cuadrado {
-  width: 550px;
+  width: 700px;
   height: 300px;
   border: 1px solid black;
-  margin-right: auto;
+  margin-right: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,6 +156,52 @@ main {
 
 .cuadrado p {
   text-align: center;
+}
+
+.grabar {
+  width: 100%;
+  height: 170px;
+  display: inline-block;
+}
+
+.grabar .spn {
+  width: 90%;
+  text-align: center;
+  padding: 10px;
+  margin-left: 40px;
+}
+
+.grabar .spn #sp1, .grabar .spn #sp2, .grabar .spn #sp3 {
+  color: #6f00ff;
+  margin-left: 50px;
+  font-size: 20px;
+  border: 2px solid #6f00ff;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+  width: 30px;
+  line-height: 30px;
+}
+
+.grabar #barra {
+  width: 600px;
+  height: 5px;
+  background: #6f00ff;
+  margin-left: 240px;
+  margin-top: -20px;
+  border-radius: 5px;
+}
+
+.grabar #cinta {
+  display: block;
+  background: center url(../assets/pelicula.svg) no-repeat;
+  margin-left: 750px;
+  height: 100px;
+  margin-top: -80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 footer {
