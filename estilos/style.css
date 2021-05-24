@@ -208,4 +208,19 @@ footer #face:hover {
 footer #inst:hover {
   background: url(../assets/icon_instagram-hover.svg) no-repeat;
 }
+
+@media screen and (max-width: 600px) {
+  #logo {
+    width: 30px;
+    height: 60px;
+    position: relative;
+    left: -50px;
+  }
+  .menu1 {
+    display: none;
+  }
+  footer {
+    padding: 30px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
