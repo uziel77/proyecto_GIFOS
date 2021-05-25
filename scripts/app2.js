@@ -1,4 +1,4 @@
-document.getElementById("btn").addEventListener("click", e=>{
+document.getElementById("btn").addEventListener("click","touch", e=>{
    let keyword = document.getElementById("search").value;
    Giphy.getUrlAsync(keyword,function(videoUrl){
      document.getElementById("gif").src = videoUrl;
