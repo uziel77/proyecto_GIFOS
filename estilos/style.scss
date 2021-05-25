@@ -234,6 +234,9 @@ footer{
 }
 
 @media screen and (max-width:600px){
+  body{
+    width: 120%;
+  }
     #logo{
         width: 30px;
         height: 60px;
