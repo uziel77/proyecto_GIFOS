@@ -17,6 +17,7 @@ header{
     margin: 10px 90px;
     cursor: pointer;
     object-fit: cover;
+    outline: none;
     }
     ul{
     display: flex;
@@ -101,6 +102,7 @@ content: "MODO NOCTURNO";
         border-bottom: 1px solid white;
         width: 87%;
         height: 45px;
+        outline: none;
       }
       
     }
