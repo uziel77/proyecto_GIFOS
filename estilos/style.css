@@ -88,11 +88,12 @@ header a {
 }
 
 .cont-menu {
-  background-color: gray;
+  background-color: #6f00ff;
+  opacity: 0.9;
   -webkit-box-shadow: 2px 0px 5px 2px #424242;
           box-shadow: 2px 0px 5px 2px #424242;
-  width: 400px;
-  height: 100vh;
+  width: 450px;
+  height: 80vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -115,6 +116,16 @@ header a {
   padding: 100px 0px 20px 0px;
   list-style: none;
   text-align: center;
+  margin-top: -25px;
+}
+
+.cont-menu ul button {
+  border: none;
+  font-size: 25px;
+  background: #6f00ff;
+  color: white;
+  border-bottom: 1px solid white;
+  width: 85%;
 }
 
 .cont-menu ul li {
@@ -124,7 +135,13 @@ header a {
   text-decoration: none;
   padding: 10px 50px;
   cursor: pointer;
-  border: 1px blue solid;
+  border-bottom: 1px solid white;
+  margin: 30px;
+}
+
+.cont-menu ul li a {
+  color: white;
+  text-decoration: none;
 }
 
 .cont-menu ul li:hover {
