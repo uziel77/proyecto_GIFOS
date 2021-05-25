@@ -17,7 +17,7 @@ header{
     margin: 10px 90px;
     cursor: pointer;
     object-fit: cover;
-    outline: none;
+    user-select: none;
     }
     ul{
     display: flex;

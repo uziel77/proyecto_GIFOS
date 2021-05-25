@@ -24,7 +24,10 @@ header #logo {
   cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
-  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 header ul {
