@@ -93,7 +93,7 @@ header a {
   -webkit-box-shadow: 2px 0px 5px 2px #424242;
           box-shadow: 2px 0px 5px 2px #424242;
   width: 450px;
-  height: 80vh;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -125,7 +125,8 @@ header a {
   background: #6f00ff;
   color: white;
   border-bottom: 1px solid white;
-  width: 85%;
+  width: 87%;
+  height: 45px;
 }
 
 .cont-menu ul li {
