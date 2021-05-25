@@ -69,6 +69,87 @@ header a {
   content: "MODO NOCTURNO";
 }
 
+.menu-hamburguesa {
+  display: none;
+}
+
+.icono-menu {
+  margin: 20px 300px;
+  position: relative;
+  top: -70px;
+  left: 90px;
+  z-index: 10;
+}
+
+.icono-menu img {
+  vertical-align: top;
+  width: 30px;
+  cursor: pointer;
+}
+
+.cont-menu {
+  background-color: #6f00ff;
+  opacity: 0.9;
+  -webkit-box-shadow: 2px 0px 5px 2px #424242;
+          box-shadow: 2px 0px 5px 2px #424242;
+  width: 450px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  margin-top: 100px;
+}
+
+.active {
+  -webkit-transform: translate(-600px);
+          transform: translate(-600px);
+}
+
+.opacity {
+  -webkit-transition: all .0s ease;
+  transition: all .0s ease;
+}
+
+.cont-menu ul {
+  padding: 100px 0px 20px 0px;
+  list-style: none;
+  text-align: center;
+  margin-top: -25px;
+}
+
+.cont-menu ul button {
+  border: none;
+  font-size: 25px;
+  background: #6f00ff;
+  color: white;
+  border-bottom: 1px solid white;
+  width: 87%;
+  height: 45px;
+}
+
+.cont-menu ul li {
+  color: white;
+  display: block;
+  font-size: 25px;
+  text-decoration: none;
+  padding: 10px 50px;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+  margin: 30px;
+}
+
+.cont-menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.cont-menu ul li:hover {
+  background-color: #e4e4e4;
+  color: #2a2a2a;
+}
+
 .galeria-fav {
   max-width: 100%;
   height: 100%;
@@ -173,5 +254,26 @@ footer #face:hover {
 
 footer #inst:hover {
   background: url(../assets/icon_instagram-hover.svg) no-repeat;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    width: 125%;
+  }
+  #logo {
+    width: 30px;
+    height: 60px;
+    position: relative;
+    left: -50px;
+  }
+  .menu1 {
+    display: none;
+  }
+  .menu-hamburguesa {
+    display: block;
+  }
+  footer {
+    padding: 30px;
+  }
 }
 /*# sourceMappingURL=favoritos.css.map */
