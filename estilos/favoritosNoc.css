@@ -133,6 +133,7 @@ header a {
   border-bottom: 1px solid white;
   width: 87%;
   height: 45px;
+  outline: none;
 }
 
 .cont-menu ul li {
