@@ -220,6 +220,8 @@ background: #353638;
 @media screen and (max-width:600px){
     body{
      width: 125%; 
+     border-bottom: none;
+     border-top: none;
     }
     #logo{
         width: 30px;

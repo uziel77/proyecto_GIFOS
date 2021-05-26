@@ -98,7 +98,7 @@ header a {
   opacity: 0.9;
   -webkit-box-shadow: 2px 0px 5px 2px #424242;
           box-shadow: 2px 0px 5px 2px #424242;
-  width: 450px;
+  width: 100%;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -305,7 +305,9 @@ footer #inst:hover {
 
 @media screen and (max-width: 600px) {
   body {
-    width: 124%;
+    width: 100%;
+    border-bottom: none;
+    border-top: none;
   }
   #logo {
     width: 30px;
