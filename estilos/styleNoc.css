@@ -26,6 +26,7 @@ header #logo {
   -o-object-fit: cover;
      object-fit: cover;
   outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 header ul {

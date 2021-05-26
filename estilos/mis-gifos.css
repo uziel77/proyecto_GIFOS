@@ -24,6 +24,7 @@ header #logo {
   cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 header ul {
