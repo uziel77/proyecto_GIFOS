@@ -83,7 +83,7 @@ header a {
   margin: 20px 300px;
   position: relative;
   top: -70px;
-  left: 90px;
+  left: 130px;
   z-index: 10;
 }
 
@@ -98,7 +98,7 @@ header a {
   opacity: 0.9;
   -webkit-box-shadow: 2px 0px 5px 2px #424242;
           box-shadow: 2px 0px 5px 2px #424242;
-  width: 100%;
+  width: 500px;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -305,7 +305,7 @@ footer #inst:hover {
 
 @media screen and (max-width: 600px) {
   body {
-    width: 100%;
+    width: 124%;
     border-bottom: none;
     border-top: none;
   }

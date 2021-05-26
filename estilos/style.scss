@@ -61,7 +61,7 @@ content: "MODO NOCTURNO";
     margin: 20px 300px;
     position: relative;
     top: -70px;
-    left: 90px;
+    left: 130px;
     z-index: 10;
     }
     .icono-menu img{
@@ -73,7 +73,7 @@ content: "MODO NOCTURNO";
       background-color: rgb(111, 0, 255);
       opacity: 0.9;
       box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
-      width: 100%;
+      width: 500px;
       height: 100vh;
       position: absolute;
       top: 0;
@@ -237,7 +237,7 @@ footer{
 
 @media screen and (max-width:600px){
   body{
-    width: 100%;
+    width: 124%;
     border-bottom: none;
     border-top: none;
   }
