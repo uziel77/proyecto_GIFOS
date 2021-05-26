@@ -206,10 +206,11 @@ main .busqueda #btn {
 main .busqueda #search {
   margin: auto;
   width: 450px;
-  height: 40px;
+  height: 5px;
   border-radius: 30px;
   border: none;
   padding: 20px;
+  display: block;
 }
 
 main .busqueda #search:focus {
