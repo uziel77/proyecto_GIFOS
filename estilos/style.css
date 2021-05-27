@@ -1,26 +1,29 @@
 body {
   width: 100%;
-  height: 100%;
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-top: 4px solid #6f00ff;
   border-bottom: 4px solid #6f00ff;
+  overflow-x: hidden;
 }
 
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 70%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
 }
 
 header #logo {
   background: url(../assets/logo-desktop.svg) no-repeat;
-  display: inline-block;
-  width: 80px;
-  margin: 10px 90px;
+  margin: 20px 0 0 0;
+  width: 100%;
   cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
@@ -28,12 +31,16 @@ header #logo {
 }
 
 header ul {
+  margin-left: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  width: 100%;
   height: 50px;
-  margin-left: 300px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header ul #mod {
@@ -41,9 +48,11 @@ header ul #mod {
   border: none;
   background: #fff;
   font-size: 12px;
-  margin-top: 6px;
-  margin-right: 20px;
+  margin-top: 13px;
+  margin-right: 0px;
   cursor: pointer;
+  height: 30px;
+  width: 200px;
 }
 
 header ul #cruz {
@@ -59,6 +68,8 @@ header ul #cruz {
 header li {
   margin: 20px;
   font-size: 13px;
+  width: 70px;
+  height: 20px;
 }
 
 header a {
@@ -157,6 +168,9 @@ main {
   height: 100%;
   text-align: center;
   display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main h1 {
@@ -176,13 +190,7 @@ main img {
 
 main .gifs {
   height: 100%;
-}
-
-main .gifs video {
-  width: 300px;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
 }
 
 main .busqueda {
@@ -192,7 +200,7 @@ main .busqueda {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 450px;
+  width: 400px;
   margin: 0 auto;
   margin-top: -4px;
   border: 1px solid blue;
@@ -201,6 +209,7 @@ main .busqueda {
 
 main .busqueda #btn {
   margin-right: 20px;
+  cursor: pointer;
 }
 
 main .busqueda #search {
@@ -217,8 +226,34 @@ main .busqueda #search:focus {
   outline: none;
 }
 
+main #gifs {
+  width: 90%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+main .gifos {
+  width: 200px;
+  margin: 20px;
+  border: 1px solid black;
+}
+
+main .gifos img {
+  width: 200px;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 main h4 {
-  margin-top: -100px;
+  margin-top: 100px;
   color: #6f00ff;
 }
 
@@ -242,9 +277,12 @@ footer {
   display: flex;
   padding: 10px 120px;
   font-size: 12px;
+  width: 80%;
+  margin: auto;
 }
 
 footer .contactos {
+  margin-left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,7 +341,7 @@ footer #inst:hover {
     width: 30px;
     height: 60px;
     position: relative;
-    left: -50px;
+    left: -30px;
   }
   .menu1 {
     display: none;

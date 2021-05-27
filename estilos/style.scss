@@ -1,37 +1,42 @@
 body{
-width: 100%;
-height: 100%;    
+width: 100%;  
 padding: 0;
 margin: 0;
 box-sizing: border-box;
 border-top: 4px solid rgb(111, 0, 255);
 border-bottom: 4px solid rgb(111, 0, 255);
+overflow-x: hidden;
 }
 header{
     display: flex;
-    width: 100%;
+    width: 70%;
+    justify-content: space-between;
+    margin: auto;
     #logo{
     background: url(../assets/logo-desktop.svg) no-repeat;
-    display: inline-block;
-    width: 80px;
-    margin: 10px 90px;
+    margin: 20px 0 0 0;
+    width: 100%;
     cursor: pointer;
     object-fit: cover;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
     ul{
+      margin-left: 10%;
     display: flex;
     list-style: none;
+    width: 100%;
     height: 50px;
-    margin-left: 300px;
+    justify-content: space-between;
         #mod{
         color: rgb(111, 0, 255);
         border: none;
         background: #fff;
         font-size: 12px;
-        margin-top: 6px;
-        margin-right: 20px;
+        margin-top: 13px;
+        margin-right: 0px;
         cursor: pointer;
+        height: 30px;
+        width: 200px;
         }
         #cruz{
         width: 70px;
@@ -45,11 +50,13 @@ header{
     li{
     margin: 20px;
     font-size: 13px;
+    width: 70px;
+    height: 20px;
     }
     a{
     text-decoration: none;
     color: rgb(111, 0, 255);
-    }
+  }
 }
 #mod::after{
 content: "MODO NOCTURNO";
@@ -131,6 +138,7 @@ max-width: 100%;
 height: 100%;
 text-align: center;
 display: block;
+align-items: center;
     h1{
     margin: 50px auto;
     width: 450px;
@@ -145,22 +153,19 @@ display: block;
     }
     .gifs{
       height: 100%;
-    video{
-        width: 300px;
-        height: 200px;
-        object-fit: cover;
-    }
+      width: 100%;
     }
     .busqueda{
     display: flex;
     align-items: center;
-    width: 450px;
+    width: 400px;
     margin: 0 auto;
     margin-top: -4px;
     border: 1px solid blue;
     border-radius: 30px;
        #btn{
        margin-right: 20px;
+       cursor: pointer;
        }
        #search{
        margin: auto;
@@ -176,8 +181,27 @@ display: block;
        
        }
     }
+    #gifs{
+     width: 90%;
+     flex-wrap: wrap;
+     display: flex;
+     justify-content: center;
+    margin: auto;
+    }
+    .gifos{
+      width: 200px;
+      margin: 20px;
+      border: 1px solid black;
+      
+      
+      img{
+        width: 200px;
+        height: 160px;
+        object-fit: cover;
+      }
+    }
     h4{
-    margin-top: -100px;
+    margin-top: 100px;
     color: rgb(111, 0, 255);
     }
     p{
@@ -197,7 +221,10 @@ footer{
     display: flex;
     padding: 10px 120px;
     font-size: 12px;
+    width: 80%;
+   margin: auto;
     .contactos{
+   margin-left: 5%;
     display: flex;
         div{
         margin-left: 5px;
@@ -247,7 +274,7 @@ footer{
         width: 30px;
         height: 60px;
         position: relative;
-        left: -50px;
+        left: -30px;
     }
   .menu1{
       display: none;
