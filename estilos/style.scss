@@ -151,7 +151,7 @@ align-items: center;
   width: 400px;
   margin: 0 auto;
   margin-top: -4px;
-  border: 1px solid blue;
+  border: 1px solid rgb(111, 0, 255);
   border-radius: 30px;
     #btn{
     width: 20px;
@@ -179,17 +179,18 @@ align-items: center;
   margin: auto;
   }
   .gifos{
-  width: 200px;
+  width: 250px;
+  height: 170px;
   margin: 20px;
   border: 1px solid black;
-    img{
-    width: 200px;
-    height: 160px;
-    object-fit: cover;
-    }
+  img{
+  width: 250px;
+  height: 170px;
+  object-fit: cover;
+  }
   }
   h4{
-  margin-top: 100px;
+  margin-top: 10px;
   color: rgb(111, 0, 255);
   }
   p{
@@ -203,20 +204,52 @@ text-align: center;
   h2{
   color: rgb(111, 0, 255);
   }
+  .container-box{
+    display: flex;
+    #trending-container{
+    display: flex;
+    width: 75%;
+    height: 200px;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    }
+    .trending{
+    align-items: center;
+    padding: 10px;
+      img{
+      width: 230px;
+      height: 180px;
+      object-fit: cover;
+      margin-left: 20px;
+      
+      }  
+    }
+   figure{
+     position: relative;
+     top: 60px;
+     #right-arrow , #left-arrow{
+       height: 50px;
+     }
+   }
+   figure:hover{
+     background: rgb(111, 0, 255);
+     height: 50px;
+     opacity: 0.7;
+   }
+
+}
 }
 footer{
   display: flex;
   padding: 10px 120px;
   font-size: 12px;
   width: 80%;
-  margin: auto;
+  justify-content: space-between;
   .contactos{
-  margin-left: 5%;
   display: flex;
-    div{
-    margin-left: 5px;
-    cursor: pointer;
-    }
+  cursor: pointer;
+  margin-left: -3%;
     #twitter{
     margin-top: 12px;
     min-height: 20px;
@@ -237,9 +270,7 @@ footer{
     background: url(../assets/icon_instagram.svg) no-repeat;
     }
   }
-  p{
-  margin-left: auto;
-  }
+ 
   #twitter:hover{
   background: url(../assets/icon-twitter-hover.svg) no-repeat;
   }
@@ -270,8 +301,11 @@ footer{
   .menu-hamburguesa{
   display: block;
   }
+  figure{
+    display: none;
+  }
   footer{
-  width: 80%;
-  padding: 30px;
+  display: block;
+  align-items: center
   }
 }

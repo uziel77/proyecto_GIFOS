@@ -3,6 +3,10 @@ document.getElementById("btn").addEventListener("click", e=>{
   llamadaGif(keyword);
 })
 
+window.onload = function() {
+  llamadaTrending();
+}
+
 function modoOscuro() {
   let theme = document.getElementById("theme");
   if (theme.getAttribute("href") == "./estilos/style.css") {
@@ -24,3 +28,15 @@ const iconoMenu = document.querySelector(".icono-menu"),
   e.target.setAttribute("src","./assets/burger.svg");
   }
 })
+
+const leftArrow = document.getElementById("left-arrow");
+const righttArrow = document.getElementById("right-arrow");
+const content = document.getElementById("trending-container");
+
+righttArrow.addEventListener("click", e => {
+    content.scrollLeft += 100;
+})
+
+leftArrow.addEventListener("click", e => {
+    content.scrollLeft -= 100;
+});

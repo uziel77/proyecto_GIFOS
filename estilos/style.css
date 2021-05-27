@@ -197,7 +197,7 @@ main .busqueda {
   width: 400px;
   margin: 0 auto;
   margin-top: -4px;
-  border: 1px solid blue;
+  border: 1px solid #6f00ff;
   border-radius: 30px;
 }
 
@@ -235,20 +235,21 @@ main #gifs {
 }
 
 main .gifos {
-  width: 200px;
+  width: 250px;
+  height: 170px;
   margin: 20px;
   border: 1px solid black;
 }
 
 main .gifos img {
-  width: 200px;
-  height: 160px;
+  width: 250px;
+  height: 170px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 main h4 {
-  margin-top: 100px;
+  margin-top: 10px;
   color: #6f00ff;
 }
 
@@ -266,6 +267,53 @@ article h2 {
   color: #6f00ff;
 }
 
+article .container-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article .container-box #trending-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  height: 200px;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+article .container-box .trending {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+article .container-box .trending img {
+  width: 230px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 20px;
+}
+
+article .container-box figure {
+  position: relative;
+  top: 60px;
+}
+
+article .container-box figure #right-arrow, article .container-box figure #left-arrow {
+  height: 50px;
+}
+
+article .container-box figure:hover {
+  background: #6f00ff;
+  height: 50px;
+  opacity: 0.7;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,19 +321,17 @@ footer {
   padding: 10px 120px;
   font-size: 12px;
   width: 80%;
-  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer .contactos {
-  margin-left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-footer .contactos div {
-  margin-left: 5px;
   cursor: pointer;
+  margin-left: -3%;
 }
 
 footer .contactos #twitter {
@@ -308,10 +354,6 @@ footer .contactos #inst {
   min-height: 20px;
   min-width: 20px;
   background: url(../assets/icon_instagram.svg) no-repeat;
-}
-
-footer p {
-  margin-left: auto;
 }
 
 footer #twitter:hover {
@@ -346,9 +388,14 @@ footer #inst:hover {
   .menu-hamburguesa {
     display: block;
   }
+  figure {
+    display: none;
+  }
   footer {
-    width: 80%;
-    padding: 30px;
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -166,14 +166,48 @@ text-align: center;
   }
 }
 article{
-margin-top: 100px;
-text-align: center;
-background: #202021 ;
-color: #fff;
-  h2{
+  margin-top: 100px;
+  text-align: center;
+  background: #202021 ;
   color: #fff;
+    h2{
+    color: #fff;
+    }
+    .container-box{
+      display: flex;
+      #trending-container{
+      display: flex;
+      width: 75%;
+      height: 200px;
+      margin: auto;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      }
+      .trending{
+      align-items: center;
+      padding: 10px;
+        img{
+        width: 230px;
+        height: 180px;
+        object-fit: cover;
+        margin-left: 20px;
+        
+        }  
+      }
+     figure{
+       position: relative;
+       top: 60px;
+       #right-arrow , #left-arrow{
+         height: 50px;
+       }
+     }
+     figure:hover{
+       background: rgb(111, 0, 255);
+       height: 50px;
+       opacity: 0.7;
+     }
+    }
   }
-}
 footer{
 display: flex;
 padding: 10px 120px;
