@@ -86,10 +86,9 @@ header a {
 }
 
 .icono-menu {
-  margin: 20px 300px;
-  position: relative;
-  top: -70px;
-  left: 130px;
+  position: absolute;
+  left: 90%;
+  top: 40px;
   z-index: 10;
 }
 
@@ -164,7 +163,7 @@ header a {
 }
 
 main {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   text-align: center;
   display: block;
@@ -175,7 +174,7 @@ main {
 
 main h1 {
   margin: 50px auto;
-  width: 450px;
+  width: 400px;
   color: #6f00ff;
 }
 
@@ -208,13 +207,14 @@ main .busqueda {
 }
 
 main .busqueda #btn {
+  width: 20px;
   margin-right: 20px;
   cursor: pointer;
 }
 
 main .busqueda #search {
   margin: auto;
-  width: 450px;
+  width: 70%;
   height: 5px;
   border-radius: 30px;
   border: none;
@@ -333,12 +333,15 @@ footer #inst:hover {
 
 @media screen and (max-width: 600px) {
   body {
-    width: 124%;
+    width: 110%;
     border-bottom: none;
     border-top: none;
+    overflow-x: hidden;
+  }
+  header {
+    max-width: 70%;
   }
   #logo {
-    width: 30px;
     height: 60px;
     position: relative;
     left: -30px;
@@ -350,6 +353,7 @@ footer #inst:hover {
     display: block;
   }
   footer {
+    width: 80%;
     padding: 30px;
   }
 }
