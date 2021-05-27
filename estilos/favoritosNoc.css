@@ -14,14 +14,17 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 70%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
 }
 
 header #logo {
   background: url(../assets/Logo-modo-noc.svg) no-repeat;
-  display: inline-block;
-  width: 80px;
-  margin: 10px 90px;
+  margin: 20px 0 0 0;
+  width: 100%;
   cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
@@ -29,12 +32,16 @@ header #logo {
 }
 
 header ul {
+  margin-left: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  width: 100%;
   height: 50px;
-  margin-left: 300px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header ul #mod {
@@ -42,9 +49,11 @@ header ul #mod {
   border: none;
   background: #353638;
   font-size: 12px;
-  margin-right: 42px;
-  margin-top: 6px;
+  margin-top: 13px;
+  margin-right: 0px;
   cursor: pointer;
+  height: 30px;
+  width: 200px;
 }
 
 header ul #cruz {
@@ -60,6 +69,8 @@ header ul #cruz {
 header li {
   margin: 20px;
   font-size: 13px;
+  width: 70px;
+  height: 20px;
 }
 
 header a {
@@ -80,10 +91,9 @@ header a {
 }
 
 .icono-menu {
-  margin: 20px 300px;
-  position: relative;
-  top: -70px;
-  left: 90px;
+  position: absolute;
+  left: 90%;
+  top: 40px;
   z-index: 10;
 }
 
@@ -98,7 +108,7 @@ header a {
   opacity: 0.9;
   -webkit-box-shadow: 2px 0px 5px 2px #424242;
           box-shadow: 2px 0px 5px 2px #424242;
-  width: 450px;
+  width: 100%;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -216,12 +226,15 @@ footer {
   font-size: 12px;
   color: #fff;
   background: #353638;
+  width: 80%;
+  margin: auto;
 }
 
 footer .contactos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 5%;
 }
 
 footer .contactos div {
@@ -269,15 +282,17 @@ footer #inst:hover {
 
 @media screen and (max-width: 600px) {
   body {
-    width: 125%;
+    width: 110%;
     border-bottom: none;
     border-top: none;
   }
+  header {
+    max-width: 70%;
+  }
   #logo {
-    width: 30px;
     height: 60px;
     position: relative;
-    left: -50px;
+    left: -30px;
   }
   .menu1 {
     display: none;
@@ -286,6 +301,7 @@ footer #inst:hover {
     display: block;
   }
   footer {
+    width: 80%;
     padding: 30px;
   }
 }

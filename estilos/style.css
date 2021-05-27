@@ -187,11 +187,6 @@ main img {
   height: 160px;
 }
 
-main .gifs {
-  height: 100%;
-  width: 100%;
-}
-
 main .busqueda {
   display: -webkit-box;
   display: -ms-flexbox;

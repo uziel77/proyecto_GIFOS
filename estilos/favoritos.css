@@ -13,14 +13,17 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 70%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
 }
 
 header #logo {
   background: url(../assets/logo-desktop.svg) no-repeat;
-  display: inline-block;
-  width: 80px;
-  margin: 10px 90px;
+  margin: 20px 0 0 0;
+  width: 100%;
   cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
@@ -28,12 +31,16 @@ header #logo {
 }
 
 header ul {
+  margin-left: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  width: 100%;
   height: 50px;
-  margin-left: 300px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header ul #mod {
@@ -41,9 +48,11 @@ header ul #mod {
   border: none;
   background: #fff;
   font-size: 12px;
-  margin-top: 6px;
-  margin-right: 20px;
+  margin-top: 13px;
+  margin-right: 0px;
   cursor: pointer;
+  height: 30px;
+  width: 200px;
 }
 
 header ul #cruz {
@@ -59,6 +68,8 @@ header ul #cruz {
 header li {
   margin: 20px;
   font-size: 13px;
+  width: 70px;
+  height: 20px;
 }
 
 header a {
@@ -75,10 +86,9 @@ header a {
 }
 
 .icono-menu {
-  margin: 20px 300px;
-  position: relative;
-  top: -70px;
-  left: 90px;
+  position: absolute;
+  left: 90%;
+  top: 40px;
   z-index: 10;
 }
 
@@ -93,7 +103,7 @@ header a {
   opacity: 0.9;
   -webkit-box-shadow: 2px 0px 5px 2px #424242;
           box-shadow: 2px 0px 5px 2px #424242;
-  width: 450px;
+  width: 100%;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -258,17 +268,79 @@ footer #inst:hover {
   background: url(../assets/icon_instagram-hover.svg) no-repeat;
 }
 
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 120px;
+  font-size: 12px;
+  width: 80%;
+  margin: auto;
+}
+
+footer .contactos {
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .contactos div {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+footer .contactos #twitter {
+  margin-top: 12px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon-twitter.svg) no-repeat;
+}
+
+footer .contactos #face {
+  margin-top: 10px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon_facebook.svg) no-repeat;
+}
+
+footer .contactos #inst {
+  margin-left: -4px;
+  margin-top: 10px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon_instagram.svg) no-repeat;
+}
+
+footer p {
+  margin-left: auto;
+}
+
+footer #twitter:hover {
+  background: url(../assets/icon-twitter-hover.svg) no-repeat;
+}
+
+footer #face:hover {
+  background: url(../assets/icon_facebook_hover.svg) no-repeat;
+}
+
+footer #inst:hover {
+  background: url(../assets/icon_instagram-hover.svg) no-repeat;
+}
+
 @media screen and (max-width: 600px) {
   body {
-    width: 125%;
-    border-top: none;
+    width: 110%;
     border-bottom: none;
+    border-top: none;
+  }
+  header {
+    max-width: 70%;
   }
   #logo {
-    width: 30px;
     height: 60px;
     position: relative;
-    left: -50px;
+    left: -30px;
   }
   .menu1 {
     display: none;
@@ -277,6 +349,7 @@ footer #inst:hover {
     display: block;
   }
   footer {
+    width: 80%;
     padding: 30px;
   }
 }

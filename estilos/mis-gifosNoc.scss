@@ -9,168 +9,170 @@ border-top: 4px solid black ;
 border-bottom: 4px solid black;
 }
 header{
-    display: flex;
-    width: 100%;
-        #logo{    
-        background: url(../assets/Logo-modo-noc.svg) no-repeat;
-        display: inline-block;
-        width: 80px;
-        margin: 10px 90px;
-        cursor: pointer;
-        object-fit: cover;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-        }
-        ul{
-        display: flex;
-        list-style: none;
-        height: 50px;
-        margin-left: 300px;
-            #mod{
-            color: #fff;
-            border: none;
-            background: #353638 ;
-            font-size: 12px;
-            margin-right: 42px;
-            margin-top: 6px;
-            cursor: pointer;
-            }
-            #cruz{
-            width: 70px;
-            margin-bottom: -10px;
-            margin-left: 30px;
-            cursor: pointer;
-            background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
-            object-fit: cover;
-            }
-    }
-        li{
-        margin: 20px;
-        font-size: 13px;
-        }
-        a{
-        text-decoration: none;
-        color: #fff;
-        }
-    }
-    #mod::before{
-        content: "MODO DIURNO";
-    }
-    .menu-hamburguesa{
-        display: none;
-    }
-    .menu-hamburguesa{
-      display: none;
-    }
-    .icono-menu{
-      margin: 20px 300px;
-      position: relative;
-      top: -70px;
-      left: 90px;
-      z-index: 10;
-      }
-      .icono-menu img{
-        vertical-align: top;
-        width: 30px;
-        cursor: pointer;
-      }
-      .cont-menu{
-        background-color: black;
-        opacity: 0.9;
-        box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
-        width: 450px;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: all .5s ease;
-        margin-top: 100px;
-      
-      }
-      
-      .active{
-        transform: translate(-600px);
-      }
-      .opacity{
-        transition: all .0s ease;
-      }
-      .cont-menu ul{
-        padding: 100px 0px 20px 0px;
-        list-style: none;
-        text-align: center;
-        margin-top: -25px;
-        button{
-          border: none;
-          font-size: 25px;
-          background: black;
-          color: white;
-          border-bottom: 1px solid white;
-          width: 87%;
-          height: 45px;
-          outline: none;
-        }
-        
-      }
-      .cont-menu ul li{
-        color: white;
-        display: block;
-        font-size: 25px;
-        text-decoration: none;
-        padding: 10px 50px;
-        cursor: pointer;
-        border-bottom: 1px solid white;
-        margin: 30px;
-        a{
-          color: white;
-          text-decoration: none;
-      
-        }
-      }
-      .cont-menu ul li:hover{
-        background-color: rgb(228, 228, 228);
-        color: rgb(42, 42, 42);
-      }
-    .galeria-fav{
-    max-width: 100%;
-    height: 100%;
-    text-align: center;
-        .titulo-fav{
-        margin-top: 30px;
-        color: #fff;
-            h2{
-            font-size: 30px;
-            margin-top: -5px;
-            }
-        }
-        .contenido{
-        margin-top: 100px;
-        }
-        h3{
-        max-width: 550px;
-        font-size: 30px;
-        margin: auto;
-        color: cyan;
-        }
-        .ver{
-        font-size: 10px;
-        color: rgb(111, 0, 255);
-        width: 100px;
-        height: 40px;
-        border-radius: 30px;
-        border: 1px solid rgb(111, 0, 255);
-        background: #fff;
-        cursor: pointer;
-        margin-top: 50px;
-        display: none;
-        }
-    }
-    article{
-    margin-top: 100px;
-    text-align: center;
-    background: #202021 ;
+display: flex;
+width: 70%;
+justify-content: space-between;
+margin: auto;
+  #logo{    
+  background: url(../assets/Logo-modo-noc.svg) no-repeat;
+  margin: 20px 0 0 0;
+  width: 100%;
+  cursor: pointer;
+  object-fit: cover;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  ul{
+  margin-left: 10%;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+    #mod{
     color: #fff;
-        h2{
-        color: #fff;
-        }
+    border: none;
+    background: #353638 ;
+    font-size: 12px;
+    margin-top: 13px;
+    margin-right: 0px;
+    cursor: pointer;
+    height: 30px;
+    width: 200px;
+    }
+    #cruz{
+    width: 70px;
+    margin-bottom: -10px;
+    margin-left: 30px;
+    cursor: pointer;
+    background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
+    object-fit: cover;
+    }
+  }
+  li{
+  margin: 20px;
+  font-size: 13px;
+  width: 70px;
+  height: 20px;
+  }
+  a{
+  text-decoration: none;
+  color: #fff;
+  }
+}
+#mod::before{
+content: "MODO DIURNO";
+}
+.menu-hamburguesa{
+display: none;
+}
+.menu-hamburguesa{
+display: none;
+}
+.icono-menu{
+position: absolute;
+left: 90%;
+top: 40px;
+z-index: 10;
+}
+.icono-menu img{
+vertical-align: top;
+width: 30px;
+cursor: pointer;
+}
+.cont-menu{
+background-color: black;
+opacity: 0.9;
+box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
+width: 100%;
+height: 100vh;
+position: absolute;
+top: 0;
+left: 0;
+transition: all .5s ease;
+margin-top: 100px;
+}
+.active{
+transform: translate(-600px);
+}
+.opacity{
+transition: all .0s ease;
+}
+.cont-menu ul{
+padding: 100px 0px 20px 0px;
+list-style: none;
+text-align: center;
+margin-top: -25px;
+button{
+border: none;
+font-size: 25px;
+background: black;
+color: white;
+border-bottom: 1px solid white;
+width: 87%;
+height: 45px;
+outline: none;
+}
+}
+.cont-menu ul li{
+color: white;
+display: block;
+font-size: 25px;
+text-decoration: none;
+padding: 10px 50px;
+cursor: pointer;
+border-bottom: 1px solid white;
+margin: 30px;
+a{
+color: white;
+text-decoration: none;
+}
+}
+.cont-menu ul li:hover{
+background-color: rgb(228, 228, 228);
+color: rgb(42, 42, 42);
+}
+.galeria-fav{
+max-width: 100%;
+height: 100%;
+text-align: center;
+  .titulo-fav{
+  margin-top: 30px;
+  color: #fff;
+    h2{
+    font-size: 30px;
+    margin-top: -5px;
+    }
+  }
+  .contenido{
+  margin-top: 100px;
+  }
+  h3{
+  max-width: 550px;
+  font-size: 30px;
+  margin: auto;
+  color: cyan;
+  }
+  .ver{
+  font-size: 10px;
+  color: rgb(111, 0, 255);
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  border: 1px solid rgb(111, 0, 255);
+  background: #fff;
+  cursor: pointer;
+  margin-top: 50px;
+  display: none;
+  }
+}
+article{
+margin-top: 100px;
+text-align: center;
+background: #202021 ;
+color: #fff;
+  h2{
+  color: #fff;
+  }
 }
 footer{
 display: flex;
@@ -178,64 +180,70 @@ padding: 10px 120px;
 font-size: 12px;
 color: #fff;
 background: #353638;
-    .contactos{
-    display: flex;
-        div{
-        margin-left: 5px;
-        cursor: pointer;
-        }
-        #twitter{
-        margin-top: 12px;
-        min-height: 20px;
-        min-width: 20px;
-        background: url(../assets/icon-twitter.svg) no-repeat;
-        }
-        #face{
-        margin-top: 10px;
-        min-height: 20px;
-        min-width: 20px;
-        background: url(../assets/icon_facebook.svg) no-repeat;
-        }
-        #inst{
-        margin-left: -4px;
-        margin-top: 10px;
-        min-height: 20px;
-        min-width: 20px;
-        background: url(../assets/icon_instagram.svg) no-repeat;
-        }
-    }
-    p{
-    margin-left: auto;
-    }
-    #twitter:hover{
-    background: url(../assets/icon-twitter-hover.svg) no-repeat;
-    }
-    #face:hover{
-    background: url(../assets/icon_facebook_hover.svg) no-repeat;
-    }
-    #inst:hover{
-    background: url(../assets/icon_instagram-hover.svg) no-repeat;
-    }
+width: 80%;
+margin: auto;
+  .contactos{
+  display: flex;
+  margin-left: 5%;
+  div{
+  margin-left: 5px;
+  cursor: pointer;
+  }
+  #twitter{
+  margin-top: 12px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon-twitter.svg) no-repeat;
+  }
+  #face{
+  margin-top: 10px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon_facebook.svg) no-repeat;
+  }
+  #inst{
+  margin-left: -4px;
+  margin-top: 10px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon_instagram.svg) no-repeat;
+  }
+}
+p{
+margin-left: auto;
+}
+#twitter:hover{
+background: url(../assets/icon-twitter-hover.svg) no-repeat;
+}
+#face:hover{
+background: url(../assets/icon_facebook_hover.svg) no-repeat;
+}
+#inst:hover{
+background: url(../assets/icon_instagram-hover.svg) no-repeat;
+}
 }
 @media screen and (max-width:600px){
-    body{
-     width: 125%; 
-     border-bottom: none;
-     border-top: none;
-    }
-    #logo{
-        width: 30px;
-        height: 60px;
-        position: relative;
-        left: -50px;
-    }
+  body{
+  width: 110%;
+  border-bottom: none;
+  border-top: none;
+  }
+  header{
+  max-width: 70%;
+  }
+  #logo{
+  height: 60px;
+  position: relative;
+  left: -30px;
+  }
   .menu1{
-      display: none;
+  display: none;
   }
   .menu-hamburguesa{
-      display: block;
+  display: block;
   }
   footer{
-      padding: 30px;
+  width: 80%;
+  padding: 30px;
   }
-  }
+}

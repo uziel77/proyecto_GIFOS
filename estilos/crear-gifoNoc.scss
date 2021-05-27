@@ -9,298 +9,306 @@ border-top: 4px solid black ;
 border-bottom: 4px solid black;
 }
 header{
-    display: flex;
-    width: 100%;
-        #logo{    
-        background: url(../assets/Logo-modo-noc.svg) no-repeat;
-        display: inline-block;
-        width: 80px;
-        margin: 10px 90px;
-        cursor: pointer;
-        object-fit: cover;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-        }
-        ul{
-        display: flex;
-        list-style: none;
-        height: 50px;
-        margin-left: 300px;
-            #mod{
-            color: #fff;
-            border: none;
-            background: #353638 ;
-            font-size: 12px;
-            margin-right: 42px;
-            margin-top: 6px;
-            cursor: pointer;
-            }
-            #cruz{
-            width: 70px;
-            margin-bottom: -10px;
-            margin-left: 30px;
-            cursor: pointer;
-            background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
-            object-fit: cover;
-            }
+display: flex;
+width: 70%;
+justify-content: space-between;
+margin: auto;
+  #logo{    
+  background: url(../assets/Logo-modo-noc.svg) no-repeat;
+  margin: 20px 0 0 0;
+  width: 100%;
+  cursor: pointer;
+  object-fit: cover;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  ul{
+  margin-left: 10%;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+    #mod{
+    color: #fff;
+    border: none;
+    background: #353638 ;
+    font-size: 12px;
+    margin-top: 13px;
+    margin-right: 0px;
+    cursor: pointer;
+    height: 30px;
+    width: 200px;
     }
-        li{
-        margin: 20px;
-        font-size: 13px;
-        }
-        a{
-        text-decoration: none;
-        color: #fff;
-        }
+    #cruz{
+    width: 70px;
+    margin-bottom: -10px;
+    margin-left: 30px;
+    cursor: pointer;
+    background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
+    object-fit: cover;
     }
-    #mod::before{
-        content: "MODO DIURNO";
-    }
-    .menu-hamburguesa{
-        display: none;
-    }
-    .menu-hamburguesa{
-      display: none;
-    }
-    .icono-menu{
-      margin: 20px 300px;
-      position: relative;
-      top: -70px;
-      left: 90px;
-      z-index: 10;
-      }
-      .icono-menu img{
-        vertical-align: top;
-        width: 30px;
-        cursor: pointer;
-      }
-      .cont-menu{
-        background-color: black;
-        opacity: 0.9;
-        box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
-        width: 450px;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: all .5s ease;
-        margin-top: 100px;
-      
-      }
-      
-      .active{
-        transform: translate(-600px);
-      }
-      .opacity{
-        transition: all .0s ease;
-      }
-      .cont-menu ul{
-        padding: 100px 0px 20px 0px;
-        list-style: none;
-        text-align: center;
-        margin-top: -25px;
-        button{
-          border: none;
-          font-size: 25px;
-          background: black;
-          color: white;
-          border-bottom: 1px solid white;
-          width: 87%;
-          height: 45px;
-          outline: none;
-        }
-        
-      }
-      .cont-menu ul li{
-        color: white;
-        display: block;
-        font-size: 25px;
-        text-decoration: none;
-        padding: 10px 50px;
-        cursor: pointer;
-        border-bottom: 1px solid white;
-        margin: 30px;
-        a{
-          color: white;
-          text-decoration: none;
-      
-        }
-      }
-      .cont-menu ul li:hover{
-        background-color: rgb(228, 228, 228);
-        color: rgb(42, 42, 42);
-      }
+  } 
+  li{
+  margin: 20px;
+  font-size: 13px;
+  width: 70px;
+  height: 20px;
+  }
+  a{
+  text-decoration: none;
+  color: #fff;
+  }
+}
+#mod::before{
+  content: "MODO DIURNO";
+}
+.menu-hamburguesa{
+display: none;
+}
+.menu-hamburguesa{
+display: none;
+}
+.icono-menu{
+position: absolute;
+left: 90%;
+top: 40px;
+z-index: 10;
+}
+.icono-menu img{
+vertical-align: top;
+width: 30px;
+cursor: pointer;
+}
+.cont-menu{
+background-color: black;
+opacity: 0.9;
+box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
+width: 100%;
+height: 100vh;
+position: absolute;
+top: 0;
+left: 0;
+transition: all .5s ease;
+margin-top: 100px;
+}
+.active{
+transform: translate(-600px);
+}
+.opacity{
+transition: all .0s ease;
+}
+.cont-menu ul{
+padding: 100px 0px 20px 0px;
+list-style: none;
+text-align: center;
+margin-top: -25px;
+button{
+border: none;
+font-size: 25px;
+background: black;
+color: white;
+border-bottom: 1px solid white;
+width: 87%;
+height: 45px;
+outline: none;
+}
+}
+.cont-menu ul li{
+color: white;
+display: block;
+font-size: 25px;
+text-decoration: none;
+padding: 10px 50px;
+cursor: pointer;
+border-bottom: 1px solid white;
+margin: 30px;
+  a{
+  color: white;
+  text-decoration: none;
+  }
+}
+.cont-menu ul li:hover{
+background-color: rgb(228, 228, 228);
+color: rgb(42, 42, 42);
+}
 main{
 max-width: 100%;
 height: 100%;
 display: flex;
 padding: 0 80px;
-    }
+}
 .camara-luz{
 width: 250px;
 height: 300px;
 display: flex;
-    #camara{
-    background: url(../assets/camara-modo-noc.svg) no-repeat;
-    margin-top: 60px;
-    width: 150px;
-    object-fit: cover;
-    }
-    #luz{
-    margin-left: -28px;
-    background: url(../assets/element-luz-camara.svg) no-repeat;
-    margin-top: 78px;
-    width: 50px;
-    object-fit: cover;
-    }
+  #camara{
+  background: url(../assets/camara-modo-noc.svg) no-repeat;
+  margin-top: 60px;
+  width: 150px;
+  object-fit: cover;
+  }
+  #luz{
+  margin-left: -28px;
+  background: url(../assets/element-luz-camara.svg) no-repeat;
+  margin-top: 78px;
+  width: 50px;
+  object-fit: cover;
+  }
 }
 .cuadrado{
-    width: 700px;
-    height: 300px;
-    border: 1px solid black;
-    margin-right: 200px;
-    display: flex;
-        .cuadrado1{
-        margin: auto;
-        }
-        #cuadrado1{
-        width: 20px;
-        height: 20px;
-        border: 2px solid cyan;
-        }
-        #cuadrado2{
-        width: 20px;
-        height: 20px;
-        border: 2px solid cyan;
-        margin-top: 220px;
-        }
-        .cuadrado2{
-        margin: auto;
-        }
-        #cuadrado3{
-        width: 20px;
-        height: 20px;
-        border: 2px solid cyan;
-        }
-        #cuadrado4{
-        width: 20px;
-        height: 20px;
-        border: 2px solid cyan;
-        margin-top: 220px;
-        }
-        #titulo{
-        width: 300px;
-        text-align: center;
-        margin-top: 70px;
-        margin-left: 20px;
-        }
-        p{
-        text-align: center;
-        }
+  width: 700px;
+  height: 300px;
+  border: 1px solid black;
+  margin-right: 200px;
+  display: flex;
+  .cuadrado1{
+  margin: auto;
+  }
+  #cuadrado1{
+  width: 20px;
+  height: 20px;
+  border: 2px solid cyan;
+  }
+  #cuadrado2{
+  width: 20px;
+  height: 20px;
+  border: 2px solid cyan;
+  margin-top: 220px;
+  }
+  .cuadrado2{
+  margin: auto;
+  }
+  #cuadrado3{
+  width: 20px;
+  height: 20px;
+  border: 2px solid cyan;
+  }
+  #cuadrado4{
+  width: 20px;
+  height: 20px;
+  border: 2px solid cyan;
+  margin-top: 220px;
+  }
+  #titulo{
+  width: 300px;
+  text-align: center;
+  margin-top: 70px;
+  margin-left: 20px;
+  }
+  p{
+  text-align: center;
+  }
+}
+.grabar{
+width: 100%;
+height: 170px;
+display: inline-block;
+  .spn{
+  width: 90%;
+  text-align: center;
+  padding: 10px;
+  margin-left: 40px;
+    #sp1 , #sp2 , #sp3{
+    color: rgb(111, 0, 255);
+    background: #fff;
+    margin-left: 50px;
+    font-size: 20px;
+    border: 1px solid rgb(111, 0, 255);
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
     }
-    .grabar{
-        width: 100%;
-        height: 170px;
-        display: inline-block;
-        .spn{
-            width: 90%;
-            text-align: center;
-            padding: 10px;
-            margin-left: 40px;
-            #sp1 , #sp2 , #sp3{
-                color: rgb(111, 0, 255);
-                background: #fff;
-                margin-left: 50px;
-                font-size: 20px;
-                border: 1px solid rgb(111, 0, 255);
-                border-radius: 30px;
-                font-weight: bold;
-                display: inline-block;
-                width: 30px;
-                line-height: 30px;
-            }
-        }
-        #barra{
-        width: 600px;
-        height: 5px;
-        background: rgb(111, 0, 255);
-        margin-left: 240px;
-        margin-top: -20px;
-        border-radius: 5px;
-        }
-        #cinta{
-            display: block;
-            background:center url(../assets/pelicula-modo-noc.svg) no-repeat ;
-            margin-left: 750px;
-            height: 100px;
-            margin-top: -80px;
-            object-fit: cover;
-            box-sizing: border-box;
-            }
-    }
+  }
+  #barra{
+  width: 600px;
+  height: 5px;
+  background: rgb(111, 0, 255);
+  margin-left: 240px;
+  margin-top: -20px;
+  border-radius: 5px;
+  }
+  #cinta{
+  display: block;
+  background:center url(../assets/pelicula-modo-noc.svg) no-repeat ;
+  margin-left: 750px;
+  height: 100px;
+  margin-top: -80px;
+  object-fit: cover;
+  box-sizing: border-box;
+  }
+}
 footer{
 display: flex;
 padding: 10px 120px;
 font-size: 12px;
 color: #fff;
 background: #353638;
-    .contactos{
-    display: flex;
-        div{
-        margin-left: 5px;
-        cursor: pointer;
-        }
-        #twitter{
-        margin-top: 12px;
-        min-height: 20px;
-        min-width: 20px;
-        background: url(../assets/icon-twitter.svg) no-repeat;
-        }
-        #face{
-        margin-top: 10px;
-        min-height: 20px;
-        min-width: 20px;
-        background: url(../assets/icon_facebook.svg) no-repeat;
-        }
-        #inst{
-        margin-left: -4px;
-        margin-top: 10px;
-        min-height: 20px;
-        min-width: 20px;
-        background: url(../assets/icon_instagram.svg) no-repeat;
-        }
+width: 80%;
+margin: auto;
+  .contactos{
+  display: flex;
+  margin-left: 5%;
+    div{
+    margin-left: 5px;
+    cursor: pointer;
     }
-    p{
-    margin-left: auto;
+    #twitter{
+    margin-top: 12px;
+    min-height: 20px;
+    min-width: 20px;
+    background: url(../assets/icon-twitter.svg) no-repeat;
     }
-    #twitter:hover{
-    background: url(../assets/icon-twitter-hover.svg) no-repeat;
+    #face{
+    margin-top: 10px;
+    min-height: 20px;
+    min-width: 20px;
+    background: url(../assets/icon_facebook.svg) no-repeat;
     }
-    #face:hover{
-    background: url(../assets/icon_facebook_hover.svg) no-repeat;
+    #inst{
+    margin-left: -4px;
+    margin-top: 10px;
+    min-height: 20px;
+    min-width: 20px;
+    background: url(../assets/icon_instagram.svg) no-repeat;
     }
-    #inst:hover{
-    background: url(../assets/icon_instagram-hover.svg) no-repeat;
-    }
+  }
+  p{
+  margin-left: auto;
+  }
+  #twitter:hover{
+  background: url(../assets/icon-twitter-hover.svg) no-repeat;
+  }
+  #face:hover{
+  background: url(../assets/icon_facebook_hover.svg) no-repeat;
+  }
+  #inst:hover{
+  background: url(../assets/icon_instagram-hover.svg) no-repeat;
+  }
 }
 @media screen and (max-width:600px){
-    body{
-     max-width: 125%; 
-     border-bottom: none;
-     border-top: none;
-    }
-    #logo{
-        width: 30px;
-        height: 60px;
-        position: relative;
-        left: -50px;
-    }
+  body{
+  width: 110%;
+  border-bottom: none;
+  border-top: none;
+  }
+  header{
+  max-width: 70%;
+  }
+  #logo{
+  height: 60px;
+  position: relative;
+  left: -30px;
+  }
   .menu1{
-      display: none;
+  display: none;
   }
   .menu-hamburguesa{
-      display: block;
+  display: block;
   }
   footer{
-      padding: 30px;
+  width: 80%;
+  padding: 30px;
   }
-  }
+}
