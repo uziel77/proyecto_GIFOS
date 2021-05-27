@@ -336,7 +336,6 @@ footer #inst:hover {
     width: 110%;
     border-bottom: none;
     border-top: none;
-    overflow-x: hidden;
   }
   header {
     max-width: 70%;
