@@ -321,9 +321,9 @@ footer {
   padding: 10px 120px;
   font-size: 12px;
   width: 80%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 footer .contactos {
@@ -331,7 +331,7 @@ footer .contactos {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
-  margin-left: -3%;
+  margin-right: 30%;
 }
 
 footer .contactos #twitter {
@@ -392,10 +392,8 @@ footer #inst:hover {
     display: none;
   }
   footer {
-    display: block;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    width: 80%;
+    padding: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

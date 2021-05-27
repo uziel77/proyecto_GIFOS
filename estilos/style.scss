@@ -245,11 +245,11 @@ footer{
   padding: 10px 120px;
   font-size: 12px;
   width: 80%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   .contactos{
   display: flex;
   cursor: pointer;
-  margin-left: -3%;
+  margin-right: 30%;
     #twitter{
     margin-top: 12px;
     min-height: 20px;
@@ -305,7 +305,7 @@ footer{
     display: none;
   }
   footer{
-  display: block;
-  align-items: center
-  }
+    width: 80%;
+    padding: 30px;
+    }
 }
