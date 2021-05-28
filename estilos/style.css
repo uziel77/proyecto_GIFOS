@@ -280,7 +280,7 @@ article .container-box #trending-container {
   width: 75%;
   height: 200px;
   margin: auto;
-  overflow-x: hidden;
+  overflow-x: scroll hidden;
   overflow-y: hidden;
 }
 
@@ -389,6 +389,7 @@ footer #inst:hover {
     display: block;
   }
   #trending-container {
+    display: block;
     overflow-x: hidden;
   }
   figure {

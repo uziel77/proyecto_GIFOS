@@ -206,17 +206,19 @@ text-align: center;
   }
   .container-box{
     display: flex;
+    
     #trending-container{
     display: flex;
     width: 75%;
     height: 200px;
     margin: auto;
-    overflow-x: hidden;
+    overflow-x: scroll hidden;
     overflow-y: hidden;
     }
     .trending{
     align-items: center;
     padding: 10px;
+   
       img{
       width: 230px;
       height: 180px;
@@ -302,13 +304,15 @@ footer{
   display: block;
   }
   #trending-container{
-    overflow-x: hidden;
+    display: block;
+    overflow-x:hidden;
   }
   figure{
     display: none;
+  
   }
   footer{
     width: 80%;
     padding: 30px;
-    }
+  }
 }
