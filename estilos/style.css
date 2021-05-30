@@ -314,6 +314,19 @@ article .container-box figure:hover {
   opacity: 0.7;
 }
 
+article #card {
+  display: none;
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  margin: 30px;
+}
+
+article #card img {
+  cursor: pointer;
+  float: right;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;

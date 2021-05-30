@@ -241,6 +241,19 @@ text-align: center;
    }
 
 }
+#card{
+  display: none;
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  margin: 30px;
+  img{
+    cursor: pointer; 
+     float: right;
+     
+   }
+}
+
 }
 footer{
   display: flex;

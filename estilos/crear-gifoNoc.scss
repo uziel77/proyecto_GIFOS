@@ -132,161 +132,131 @@ background-color: rgb(228, 228, 228);
 color: rgb(42, 42, 42);
 }
 main{
-max-width: 100%;
-height: 100%;
-display: flex;
-padding: 0 80px;
-}
-.camara-luz{
-width: 250px;
-height: 300px;
-display: flex;
-  #camara{
-  background: url(../assets/camara-modo-noc.svg) no-repeat;
-  margin-top: 60px;
-  width: 150px;
-  object-fit: cover;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  padding: 0 80px;
+  margin-top: 30px;
+  justify-content: center;
+  }
+  .camara-luz{
+    width: 250px;
+    height: 300px;
+    display: flex;
+    #camara{
+    background: url(../assets/camara-modo-noc.svg) no-repeat;
+    margin-top: 60px;
+    width: 150px;
+    object-fit: cover;
   }
   #luz{
-  margin-left: -28px;
-  background: url(../assets/element-luz-camara.svg) no-repeat;
-  margin-top: 78px;
-  width: 50px;
-  object-fit: cover;
+    margin-left: -28px;
+    background: url(../assets/element-luz-camara.svg) no-repeat;
+    margin-top: 78px;
+    width: 50px;
+    object-fit: cover;
   }
-}
+  }
 .cuadrado{
   width: 700px;
   height: 300px;
   border: 1px solid black;
-  margin-right: 200px;
   display: flex;
-  .cuadrado1{
-  margin: auto;
-  }
-  #cuadrado1{
-  width: 20px;
-  height: 20px;
-  border: 2px solid cyan;
-  }
-  #cuadrado2{
-  width: 20px;
-  height: 20px;
-  border: 2px solid cyan;
-  margin-top: 220px;
-  }
-  .cuadrado2{
-  margin: auto;
-  }
-  #cuadrado3{
-  width: 20px;
-  height: 20px;
-  border: 2px solid cyan;
-  }
-  #cuadrado4{
-  width: 20px;
-  height: 20px;
-  border: 2px solid cyan;
-  margin-top: 220px;
-  }
-  #titulo{
-  width: 300px;
-  text-align: center;
-  margin-top: 70px;
-  margin-left: 20px;
-  }
-  p{
-  text-align: center;
-  }
-}
-.grabar{
-width: 100%;
-height: 170px;
-display: inline-block;
-  .spn{
-  width: 90%;
-  text-align: center;
-  padding: 10px;
-  margin-left: 40px;
-    #sp1 , #sp2 , #sp3{
-    color: rgb(111, 0, 255);
-    background: #fff;
-    margin-left: 50px;
-    font-size: 20px;
-    border: 1px solid rgb(111, 0, 255);
-    border-radius: 30px;
-    font-weight: bold;
-    display: inline-block;
-    width: 30px;
-    line-height: 30px;
+    #titulo{
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    h2{
+      color: white;
     }
   }
-  #barra{
-  width: 600px;
-  height: 5px;
-  background: rgb(111, 0, 255);
-  margin-left: 240px;
-  margin-top: -20px;
-  border-radius: 5px;
   }
-  #cinta{
-  display: block;
-  background:center url(../assets/pelicula-modo-noc.svg) no-repeat ;
-  margin-left: 750px;
+  .grabar{
+  width: 70%;
   height: 100px;
-  margin-top: -80px;
-  object-fit: cover;
-  box-sizing: border-box;
-  }
-}
-footer{
-display: flex;
-padding: 10px 120px;
-font-size: 12px;
-color: #fff;
-background: #353638;
-width: 80%;
-margin: auto;
-  .contactos{
   display: flex;
-  margin-left: 5%;
-    div{
-    margin-left: 5px;
-    cursor: pointer;
+  justify-content: center;
+  
+  
+    .spn{
+   text-align: center;
+   display: flex;
+   margin-top: 50px;
+   margin-left: 500px;
+      #sp1 , #sp2 , #sp3{
+      color: white;
+      margin-left: 50px;
+      font-size: 20px;
+      border: 2px solid white;
+      border-radius: 30px;
+      display: inline-block;
+      text-align: center;
+      width: 30px;
+      line-height: 30px;
+      height: 30px;
+      }
     }
-    #twitter{
-    margin-top: 12px;
-    min-height: 20px;
-    min-width: 20px;
-    background: url(../assets/icon-twitter.svg) no-repeat;
+   
+  
+  }
+  
+  
+  #barra{
+    width: 500px;
+    height: 15px;
+    background: white;
+    margin-left: 35%;
+    border-radius: 10px;
+    
     }
-    #face{
-    margin-top: 10px;
-    min-height: 20px;
-    min-width: 20px;
-    background: url(../assets/icon_facebook.svg) no-repeat;
+  footer{
+  display: flex;
+  padding: 10px 120px;
+  font-size: 12px;
+    .contactos{
+    display: flex;
+      div{
+      margin-left: 5px;
+      cursor: pointer;
+      }
+      #twitter{
+      margin-top: 12px;
+      min-height: 20px;
+      min-width: 20px;
+      background: url(../assets/icon-twitter.svg) no-repeat;
+      }
+      #face{
+      margin-top: 10px;
+      min-height: 20px;
+      min-width: 20px;
+      background: url(../assets/icon_facebook.svg) no-repeat;
+      }
+      #inst{
+      margin-left: -4px;
+      margin-top: 10px;
+      min-height: 20px;
+      min-width: 20px;
+      background: url(../assets/icon_instagram.svg) no-repeat;
+      }
     }
-    #inst{
-    margin-left: -4px;
-    margin-top: 10px;
-    min-height: 20px;
-    min-width: 20px;
-    background: url(../assets/icon_instagram.svg) no-repeat;
+    p{
+    margin-left: auto;
+    }
+    #twitter:hover{
+    background: url(../assets/icon-twitter-hover.svg) no-repeat;
+    }
+    #face:hover{
+    background: url(../assets/icon_facebook_hover.svg) no-repeat;
+    }
+    #inst:hover{
+    background: url(../assets/icon_instagram-hover.svg) no-repeat;
     }
   }
-  p{
-  margin-left: auto;
+  @media screen and (max-width:1000px){
+    article .spn{
+      margin-right: 150px;
+    }
   }
-  #twitter:hover{
-  background: url(../assets/icon-twitter-hover.svg) no-repeat;
-  }
-  #face:hover{
-  background: url(../assets/icon_facebook_hover.svg) no-repeat;
-  }
-  #inst:hover{
-  background: url(../assets/icon_instagram-hover.svg) no-repeat;
-  }
-}
 @media screen and (max-width:600px){
   body{
   width: 110%;

@@ -168,12 +168,16 @@ header a {
 }
 
 main {
-  max-width: 100%;
+  width: 80%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0 80px;
+  margin-top: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .camara-luz {
@@ -205,102 +209,60 @@ main {
   width: 700px;
   height: 300px;
   border: 1px solid black;
-  margin-right: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cuadrado .cuadrado1 {
-  margin: auto;
-}
-
-.cuadrado #cuadrado1 {
-  width: 20px;
-  height: 20px;
-  border: 2px solid cyan;
-}
-
-.cuadrado #cuadrado2 {
-  width: 20px;
-  height: 20px;
-  border: 2px solid cyan;
-  margin-top: 220px;
-}
-
-.cuadrado .cuadrado2 {
-  margin: auto;
-}
-
-.cuadrado #cuadrado3 {
-  width: 20px;
-  height: 20px;
-  border: 2px solid cyan;
-}
-
-.cuadrado #cuadrado4 {
-  width: 20px;
-  height: 20px;
-  border: 2px solid cyan;
-  margin-top: 220px;
-}
-
 .cuadrado #titulo {
   width: 300px;
+  margin: auto;
   text-align: center;
-  margin-top: 70px;
-  margin-left: 20px;
 }
 
-.cuadrado p {
-  text-align: center;
+.cuadrado #titulo h2 {
+  color: white;
 }
 
 .grabar {
-  width: 100%;
-  height: 170px;
-  display: inline-block;
+  width: 70%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .grabar .spn {
-  width: 90%;
   text-align: center;
-  padding: 10px;
-  margin-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  margin-left: 500px;
 }
 
 .grabar .spn #sp1, .grabar .spn #sp2, .grabar .spn #sp3 {
-  color: #6f00ff;
-  background: #fff;
+  color: white;
   margin-left: 50px;
   font-size: 20px;
-  border: 1px solid #6f00ff;
+  border: 2px solid white;
   border-radius: 30px;
-  font-weight: bold;
   display: inline-block;
+  text-align: center;
   width: 30px;
   line-height: 30px;
+  height: 30px;
 }
 
-.grabar #barra {
-  width: 600px;
-  height: 5px;
-  background: #6f00ff;
-  margin-left: 240px;
-  margin-top: -20px;
-  border-radius: 5px;
-}
-
-.grabar #cinta {
-  display: block;
-  background: center url(../assets/pelicula-modo-noc.svg) no-repeat;
-  margin-left: 750px;
-  height: 100px;
-  margin-top: -80px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+#barra {
+  width: 500px;
+  height: 15px;
+  background: white;
+  margin-left: 35%;
+  border-radius: 10px;
 }
 
 footer {
@@ -309,17 +271,12 @@ footer {
   display: flex;
   padding: 10px 120px;
   font-size: 12px;
-  color: #fff;
-  background: #353638;
-  width: 80%;
-  margin: auto;
 }
 
 footer .contactos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 5%;
 }
 
 footer .contactos div {
@@ -363,6 +320,12 @@ footer #face:hover {
 
 footer #inst:hover {
   background: url(../assets/icon_instagram-hover.svg) no-repeat;
+}
+
+@media screen and (max-width: 1000px) {
+  article .spn {
+    margin-right: 150px;
+  }
 }
 
 @media screen and (max-width: 600px) {

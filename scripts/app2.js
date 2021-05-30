@@ -18,7 +18,8 @@ function modoOscuro() {
 
 const iconoMenu = document.querySelector(".icono-menu"),
   menu = document.querySelector("#menu");
-  iconoMenu.addEventListener("click", (e)=>{
+
+  iconoMenu.addEventListener("click", e =>{
   menu.classList.toggle("active");
   document.body.classList.toggle("opacity");
   const rutaActual = e.target.getAttribute("src");
@@ -40,3 +41,12 @@ righttArrow.addEventListener("click", e => {
 leftArrow.addEventListener("click", e => {
     content.scrollLeft -= 100;
 });
+
+const max = document.getElementById("max");
+const guar_fav = document.getElementById("guar-fav");
+const download = document.getElementById("download");
+const card = document.getElementById("card");
+
+card.addEventListener("click", e=>{
+  
+})
