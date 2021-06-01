@@ -237,7 +237,6 @@ main #gifs {
 main .gifos {
   width: 250px;
   height: 170px;
-  margin: 20px;
   border: 1px solid black;
 }
 
@@ -256,6 +255,43 @@ main h4 {
 main p {
   color: #6f00ff;
   margin-top: -15px;
+}
+
+#card1 {
+  display: block;
+  width: 250px;
+  height: 170px;
+  position: absolute;
+  z-index: 100;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#card1 #img-max {
+  cursor: pointer;
+  margin-left: 90px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -170px;
+}
+
+#card1 #img-fav {
+  cursor: pointer;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -170px;
+}
+
+#card1 #img-dow {
+  cursor: pointer;
+  margin-left: 50px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -170px;
 }
 
 article {
@@ -278,8 +314,7 @@ article .container-box #trending-container {
   display: -ms-flexbox;
   display: flex;
   width: 75%;
-  height: 200px;
-  margin: auto;
+  height: 250px;
   overflow-x: scroll hidden;
   overflow-y: hidden;
 }
@@ -288,15 +323,14 @@ article .container-box .trending {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
+  height: 300px;
 }
 
 article .container-box .trending img {
-  width: 230px;
-  height: 180px;
+  width: 320px;
+  height: 170px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-left: 20px;
 }
 
 article .container-box figure {
@@ -314,17 +348,39 @@ article .container-box figure:hover {
   opacity: 0.7;
 }
 
-article #card {
-  display: none;
-  width: 300px;
-  height: 300px;
+#card2 {
+  display: block;
   border: 2px solid black;
   margin: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-article #card img {
+#card2 #img-max-tren {
   cursor: pointer;
-  float: right;
+  margin-left: 90px;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  z-index: 10;
+}
+
+#card2 #img-fav-tren {
+  cursor: pointer;
+  margin-left: 10px;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  z-index: 10;
+}
+
+#card2 #img-dow-tren {
+  cursor: pointer;
+  margin-left: 50px;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  z-index: 10;
 }
 
 footer {

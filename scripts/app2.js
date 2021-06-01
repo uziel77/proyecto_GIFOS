@@ -11,8 +11,18 @@ function modoOscuro() {
   let theme = document.getElementById("theme");
   if (theme.getAttribute("href") == "./estilos/style.css") {
   theme.href = "./estilos/styleNoc.css";
+  localStorage.setItem("fondo","./estilos/styleNoc.css")
   } else {
   theme.href = "./estilos/style.css";
+  localStorage.setItem("fondo","./estilos/style.css")
+  }
+}
+function localColor(){
+  const color = localStorage.getItem("fondo");
+  if( color === null){
+    theme.id = "theme";
+  }else{
+    theme.classList = color;
   }
 }
 
@@ -42,11 +52,5 @@ leftArrow.addEventListener("click", e => {
     content.scrollLeft -= 100;
 });
 
-const max = document.getElementById("max");
-const guar_fav = document.getElementById("guar-fav");
-const download = document.getElementById("download");
-const card = document.getElementById("card");
 
-card.addEventListener("click", e=>{
-  
-})
+

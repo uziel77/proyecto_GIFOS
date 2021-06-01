@@ -19,8 +19,24 @@ async function llamadaGif(keyword) {
    let div = document.createElement('div');
    div.className = 'gifos';
    div.appendChild(imagen);
+   let divCard = document.createElement('div');
+   divCard.id = "card1"
+   let imagenFav = new Image();
+   let imagenDow = new Image();
+   let imagenMax = new Image();
+   imagenFav.id = "img-fav"
+   imagenDow.id = "img-dow"
+   imagenMax.id = "img-max"
+   imagenFav.src ="../assets/icon-fav.svg"
+   imagenDow.src = "../assets/icon-download.svg"
+   imagenMax.src = "../assets/icon-max-normal.svg"
+   divCard.appendChild(imagenFav)
+   divCard.appendChild(imagenDow)
+   divCard.appendChild(imagenMax)
+   div.appendChild(divCard);
    let divImg = document.getElementById("gifs");
    divImg.appendChild(div);
+   
 }
 
 
@@ -45,9 +61,29 @@ async function llamadaTrending(tren) {
    let div = document.createElement('div');
    div.className = 'trending';
    div.appendChild(imagen);
+   let divCard = document.createElement('div');
+   divCard.id = "card2"
+   let imagenFav = new Image();
+   let imagenDow = new Image();
+   let imagenMax = new Image();
+   imagenFav.id = "img-fav-tren"
+   imagenDow.id = "img-dow-tren"
+   imagenMax.id = "img-max-tren"
+   imagenFav.src ="../assets/icon-fav.svg"
+   imagenDow.src = "../assets/icon-download.svg"
+   imagenMax.src = "../assets/icon-max-normal.svg"
+   divCard.appendChild(imagenFav)
+   divCard.appendChild(imagenDow)
+   divCard.appendChild(imagenMax)
+   div.appendChild(divCard);
    let divImg = document.getElementById("trending-container");
    divImg.appendChild(div);
 }
 
 
-
+card.addEventListener("click", e =>{
+  let card1 = document.getElementById("card1")
+  card1.style.display.getAttribute("block")
+     
+  
+ })

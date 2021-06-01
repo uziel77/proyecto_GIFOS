@@ -243,26 +243,90 @@ main #gifs {
 }
 
 main .gifos {
-  width: 200px;
-  margin: 20px;
+  width: 250px;
+  height: 170px;
   border: 1px solid white;
 }
 
 main .gifos img {
-  width: 200px;
-  height: 160px;
+  width: 250px;
+  height: 170px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 main h4 {
-  margin-top: 100px;
+  margin-top: 10px;
   color: #fff;
 }
 
 main p {
   color: #fff;
   margin-top: -15px;
+}
+
+#card1 {
+  display: block;
+  border: 2px solid white;
+  margin: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#card1 #img-max {
+  cursor: pointer;
+  margin-left: 90px;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+}
+
+#card1 #img-fav {
+  cursor: pointer;
+  margin-left: 10px;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+}
+
+#card1 #img-dow {
+  cursor: pointer;
+  margin-left: 50px;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+}
+
+#card2 {
+  display: block;
+  border: 2px solid white;
+  margin: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#card2 #img-max {
+  cursor: pointer;
+  margin-left: 90px;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+}
+
+#card2 #img-fav {
+  cursor: pointer;
+  margin-left: 10px;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+}
+
+#card2 #img-dow {
+  cursor: pointer;
+  margin-left: 50px;
+  width: 30px;
+  height: 40px;
+  position: absolute;
 }
 
 article {

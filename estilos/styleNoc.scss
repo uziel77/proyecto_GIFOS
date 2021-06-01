@@ -187,17 +187,18 @@ align-items: center;
   
   }
   .gifos{
-  width: 200px;
-  margin: 20px;
-  border: 1px solid white;
+    width: 250px;
+    height: 170px;
+    
+    border: 1px solid white;
     img{
-    width: 200px;
-    height: 160px;
+    width: 250px;
+    height: 170px;
     object-fit: cover;
     }
   }
   h4{
-  margin-top: 100px;
+  margin-top: 10px;
   color: #fff;
   }
   p{
@@ -205,6 +206,62 @@ align-items: center;
   margin-top: -15px;
   }
 }
+#card1{
+  display: block;
+  
+  border: 2px solid white;
+  margin: 30px;
+  object-fit: cover;
+  #img-max{
+    cursor: pointer; 
+     margin-left: 90px;
+     width: 30px;
+     height: 40px;
+     position: absolute;
+   }
+   #img-fav{
+    cursor: pointer; 
+    margin-left: 10px;
+    width: 30px;
+    height: 40px;
+    position: absolute;
+   }
+   #img-dow{
+    cursor: pointer; 
+    margin-left: 50px;
+    width: 30px;
+    height: 40px;
+    position: absolute;
+   }
+  }
+#card2{
+  display: block;
+  
+  border: 2px solid white;
+  margin: 30px;
+  object-fit: cover;
+  #img-max{
+    cursor: pointer; 
+     margin-left: 90px;
+     width: 30px;
+     height: 40px;
+     position: absolute;
+   }
+   #img-fav{
+    cursor: pointer; 
+    margin-left: 10px;
+    width: 30px;
+    height: 40px;
+    position: absolute;
+   }
+   #img-dow{
+    cursor: pointer; 
+    margin-left: 50px;
+    width: 30px;
+    height: 40px;
+    position: absolute;
+   }
+  }
 article{
 margin-top: 100px;
 text-align: center;
