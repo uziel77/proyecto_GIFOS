@@ -69,9 +69,9 @@ async function llamadaTrending(tren) {
    imagenFav.id = "img-fav-tren"
    imagenDow.id = "img-dow-tren"
    imagenMax.id = "img-max-tren"
-   imagenFav.src ="../assets/icon-fav.svg"
-   imagenDow.src = "../assets/icon-download.svg"
-   imagenMax.src = "../assets/icon-max-normal.svg"
+   imagenFav.src ="./assets/icon-fav.svg"
+   imagenDow.src = "./assets/icon-download.svg"
+   imagenMax.src = "./assets/icon-max-normal.svg"
    divCard.appendChild(imagenFav)
    divCard.appendChild(imagenDow)
    divCard.appendChild(imagenMax)
