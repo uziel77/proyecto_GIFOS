@@ -27,9 +27,9 @@ async function llamadaGif(keyword) {
    imagenFav.id = "img-fav"
    imagenDow.id = "img-dow"
    imagenMax.id = "img-max"
-   imagenFav.src ="../assets/icon-fav.svg"
-   imagenDow.src = "../assets/icon-download.svg"
-   imagenMax.src = "../assets/icon-max-normal.svg"
+   imagenFav.src ="./assets/icon-fav.svg"
+   imagenDow.src = "./assets/icon-download.svg"
+   imagenMax.src = "./assets/icon-max-normal.svg"
    divCard.appendChild(imagenFav)
    divCard.appendChild(imagenDow)
    divCard.appendChild(imagenMax)
