@@ -184,13 +184,11 @@ align-items: center;
   display: flex;
   justify-content: center;
   margin: auto;
-  
   }
   .gifos{
-    width: 250px;
-    height: 170px;
-    
-    border: 1px solid white;
+  width: 250px;
+  height: 170px;
+  border: 1px solid white;
     img{
     width: 250px;
     height: 170px;
@@ -208,101 +206,102 @@ align-items: center;
 }
 #card1{
   display: block;
-  
-  border: 2px solid white;
-  margin: 30px;
+  width: 250px;
+  height: 170px;
+  position: absolute;
   object-fit: cover;
   #img-max{
-    cursor: pointer; 
-     margin-left: 90px;
-     width: 30px;
-     height: 40px;
-     position: absolute;
-   }
-   #img-fav{
-    cursor: pointer; 
-    margin-left: 10px;
-    width: 30px;
-    height: 40px;
-    position: absolute;
-   }
-   #img-dow{
-    cursor: pointer; 
-    margin-left: 50px;
-    width: 30px;
-    height: 40px;
-    position: absolute;
-   }
+  cursor: pointer; 
+  margin-left: 90px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -170px;
   }
+  #img-fav{
+  cursor: pointer; 
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -170px;
+  }
+  #img-dow{
+  cursor: pointer; 
+  margin-left: 50px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -170px;
+  }
+}
+  article{
+    margin-top: 100px;
+    text-align: center;
+    background: #202021;
+    color: white;
+      h2{
+      color: #fff;
+      }
+      .container-box{
+      display: flex;
+        #trending-container{
+        display: flex;
+        width: 75%;
+        height: 200px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        }
+        .trending{
+        align-items: center;
+        height: 200px;
+        position: relative;
+        object-fit: cover;
+          img{
+          width: 320px;
+          height: 180px;
+          margin: 10px;
+        }  
+      }
+      figure{
+      position: relative;
+      top: 60px;
+      background-color: white;
+      height: 35px;
+        #right-arrow , #left-arrow{
+        height: 35px;
+        }
+      }
+      figure:hover{
+      background: cyan;
+      height: 35px;
+      opacity: 0.7;
+      }
+    }
+    }
 #card2{
-  display: block;
-  
-  border: 2px solid white;
-  margin: 30px;
-  object-fit: cover;
-  #img-max{
-    cursor: pointer; 
-     margin-left: 90px;
-     width: 30px;
-     height: 40px;
-     position: absolute;
-   }
-   #img-fav{
-    cursor: pointer; 
-    margin-left: 10px;
-    width: 30px;
-    height: 40px;
-    position: absolute;
-   }
-   #img-dow{
-    cursor: pointer; 
-    margin-left: 50px;
-    width: 30px;
-    height: 40px;
-    position: absolute;
-   }
+display: block;
+margin: 30px;
+object-fit: cover;
+position: absolute;
+top: -20px;
+right: -20px;
+  #img-max-tren{
+  cursor: pointer; 
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
   }
-article{
-margin-top: 100px;
-text-align: center;
-background: #202021 ;
-color: #fff;
-  h2{
-  color: #fff;
+  #img-fav-tren{
+  cursor: pointer; 
+  width: 20px;
+  height: 20px;
   }
-  .container-box{
-    display: flex;
-    #trending-container{
-    display: flex;
-    width: 75%;
-    height: 200px;
-    margin: auto;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    }
-    .trending{
-    align-items: center;
-    padding: 10px;
-      img{
-      width: 230px;
-      height: 180px;
-      object-fit: cover;
-      margin-left: 20px;
-      
-      }  
-    }
-   figure{
-     position: relative;
-     top: 60px;
-     #right-arrow , #left-arrow{
-       height: 50px;
-     }
-   }
-   figure:hover{
-     background: rgb(111, 0, 255);
-     height: 50px;
-     opacity: 0.7;
-   }
+  #img-dow-tren{
+  cursor: pointer; 
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
   }
 }
 footer{
@@ -371,7 +370,7 @@ margin: auto;
   display: block;
   }
   figure{
-    display: none;
+  display: none;
   }
   footer{
   width: 80%;

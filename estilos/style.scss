@@ -181,8 +181,7 @@ align-items: center;
   .gifos{
   width: 250px;
   height: 170px;
-  
-  border: 1px solid black;
+  border: 2px solid black;
   img{
   width: 250px;
   height: 170px;
@@ -197,43 +196,38 @@ align-items: center;
   color: rgb(111, 0, 255);
   margin-top: -15px;
   }
- 
 }
-
 #card1{
-  display: block;
-  
-  width: 250px;
-  height: 170px;
-  position: absolute;
-  z-index: 100;
-  object-fit: cover;
+display: block;
+width: 250px;
+height: 170px;
+position: absolute;
+object-fit: cover;
   #img-max{
-    cursor: pointer; 
-     margin-left: 90px;
-     width: 20px;
-     height: 20px;
-     position: absolute;
-     top: -170px;
-   }
-   #img-fav{
-    cursor: pointer; 
-    margin-left: 10px;
-    width: 20px;
-     height: 20px;
-    position: absolute;
-    top: -170px;
-   }
-   #img-dow{
-    cursor: pointer; 
-    margin-left: 50px;
-    width: 20px;
-     height: 20px;
-    position: absolute;
-    top: -170px;
-   }
+  cursor: pointer; 
+  margin-left: 90px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -170px;
   }
-
+  #img-fav{
+  cursor: pointer; 
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -170px;
+  }
+  #img-dow{
+  cursor: pointer; 
+  margin-left: 50px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -170px;
+  }
+}
 article{
 margin-top: 100px;
 text-align: center;
@@ -241,82 +235,71 @@ text-align: center;
   color: rgb(111, 0, 255);
   }
   .container-box{
-    display: flex;
-    
+  display: flex;
     #trending-container{
     display: flex;
     width: 75%;
-    height: 250px;
-    
-    overflow-x: scroll hidden;
+    height: 200px;
+    overflow-x: hidden;
     overflow-y: hidden;
     }
     .trending{
     align-items: center;
-    
-    height: 300px;
+    height: 200px;
+    position: relative;
+    object-fit: cover;
       img{
       width: 320px;
-      height: 170px;
-      object-fit: cover;
-      
-      
+      height: 180px;
+      margin: 10px;
       }  
     }
    figure{
-     position: relative;
-     top: 60px;
-     #right-arrow , #left-arrow{
-       height: 50px;
-     }
-   }
-   figure:hover{
-     background: rgb(111, 0, 255);
-     height: 50px;
-     opacity: 0.7;
-   }
-
+    position: relative;
+    top: 60px;
+    height: 35px;
+    #right-arrow , #left-arrow{
+    height: 35px;
+    }
+  }
+  figure:hover{
+  background: rgb(111, 0, 255);
+  height: 35px;
+  opacity: 0.7;
+  }
 }
 }
 #card2{
-  display: none;
-  
-  border: 2px solid black;
+  display: block;
   margin: 30px;
   object-fit: cover;
-  
-  
+  position: absolute;
+  top: -20px;
+  right: -20px;
   #img-max-tren{
-    cursor: pointer; 
-     margin-left: 90px;
-     width: 30px;
-     height: 40px;
-    position: absolute;
-    z-index: 10;
-   }
-   #img-fav-tren{
-    cursor: pointer; 
-    margin-left: 10px;
-    width: 30px;
-    height: 40px;
-    position: absolute;
-    z-index: 10;
-   }
-   #img-dow-tren{
-    cursor: pointer; 
-    margin-left: 50px;
-    width: 30px;
-    height: 40px;
-    position: absolute;
-    z-index: 10;
-   }
+  cursor: pointer; 
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
   }
+  #img-fav-tren{
+  cursor: pointer; 
+  width: 20px;
+  height: 20px;
+  }
+  #img-dow-tren{
+  cursor: pointer; 
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  }
+}
 footer{
-  display: flex;
-  padding: 10px 120px;
-  font-size: 12px;
-  width: 80%;
-  justify-content: space-evenly;
+display: flex;
+padding: 10px 120px;
+font-size: 12px;
+width: 80%;
+justify-content: space-evenly;
   .contactos{
   display: flex;
   cursor: pointer;
@@ -373,15 +356,14 @@ footer{
   display: block;
   }
   #trending-container{
-    display: block;
-    overflow-x:hidden;
+  display: block;
+  overflow-x:hidden;
   }
   figure{
-    display: none;
-  
+  display: none;
   }
   footer{
-    width: 80%;
-    padding: 30px;
+  width: 80%;
+  padding: 30px;
   }
 }

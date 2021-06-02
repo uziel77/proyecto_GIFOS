@@ -11,10 +11,10 @@ function modoOscuro() {
   let theme = document.getElementById("theme");
   if (theme.getAttribute("href") == "./estilos/style.css") {
   theme.href = "./estilos/styleNoc.css";
-  localStorage.setItem("fondo","./estilos/styleNoc.css")
+  localStorage.setItem("fondo","./estilos/styleNoc.css");
   } else {
   theme.href = "./estilos/style.css";
-  localStorage.setItem("fondo","./estilos/style.css")
+  localStorage.setItem("fondo","./estilos/style.css");
   }
 }
 function localColor(){
@@ -45,11 +45,11 @@ const righttArrow = document.getElementById("right-arrow");
 const content = document.getElementById("trending-container");
 
 righttArrow.addEventListener("click", e => {
-    content.scrollLeft += 100;
+  content.scrollLeft += 100;
 })
 
 leftArrow.addEventListener("click", e => {
-    content.scrollLeft -= 100;
+  content.scrollLeft -= 100;
 });
 
 

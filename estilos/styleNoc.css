@@ -267,8 +267,9 @@ main p {
 
 #card1 {
   display: block;
-  border: 2px solid white;
-  margin: 30px;
+  width: 250px;
+  height: 170px;
+  position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -276,64 +277,35 @@ main p {
 #card1 #img-max {
   cursor: pointer;
   margin-left: 90px;
-  width: 30px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   position: absolute;
+  top: -170px;
 }
 
 #card1 #img-fav {
   cursor: pointer;
   margin-left: 10px;
-  width: 30px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   position: absolute;
+  top: -170px;
 }
 
 #card1 #img-dow {
   cursor: pointer;
   margin-left: 50px;
-  width: 30px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   position: absolute;
-}
-
-#card2 {
-  display: block;
-  border: 2px solid white;
-  margin: 30px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-#card2 #img-max {
-  cursor: pointer;
-  margin-left: 90px;
-  width: 30px;
-  height: 40px;
-  position: absolute;
-}
-
-#card2 #img-fav {
-  cursor: pointer;
-  margin-left: 10px;
-  width: 30px;
-  height: 40px;
-  position: absolute;
-}
-
-#card2 #img-dow {
-  cursor: pointer;
-  margin-left: 50px;
-  width: 30px;
-  height: 40px;
-  position: absolute;
+  top: -170px;
 }
 
 article {
   margin-top: 100px;
   text-align: center;
   background: #202021;
-  color: #fff;
+  color: white;
 }
 
 article h2 {
@@ -352,7 +324,6 @@ article .container-box #trending-container {
   display: flex;
   width: 75%;
   height: 200px;
-  margin: auto;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -361,30 +332,63 @@ article .container-box .trending {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
+  height: 200px;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 article .container-box .trending img {
-  width: 230px;
+  width: 320px;
   height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-left: 20px;
+  margin: 10px;
 }
 
 article .container-box figure {
   position: relative;
   top: 60px;
+  background-color: white;
+  height: 35px;
 }
 
 article .container-box figure #right-arrow, article .container-box figure #left-arrow {
-  height: 50px;
+  height: 35px;
 }
 
 article .container-box figure:hover {
-  background: #6f00ff;
-  height: 50px;
+  background: cyan;
+  height: 35px;
   opacity: 0.7;
+}
+
+#card2 {
+  display: block;
+  margin: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+#card2 #img-max-tren {
+  cursor: pointer;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#card2 #img-fav-tren {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+#card2 #img-dow-tren {
+  cursor: pointer;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 footer {

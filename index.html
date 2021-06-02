@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="./estilos/style.css" id="theme" />
 </head>
 <body>
-    <header>
-        <a href="./index.html" id="logo"> <img src="" alt=""></a>
-        <nav class="menu1">
-          <ul>
-            <button onclick="modoOscuro()" id="mod"></button>
-            <li><a href="./htmls/favoritos.html">FAVORITOS</a></li>
-            <li><a href="./htmls/mis-gifos.html">MIS GIFOS</a></li>
-            <a href="./htmls/crear-gifo.html" id="cruz"><img src="" alt=""></a>
-          </ul>
-        </nav>
-    </header>
+  <header>
+    <a href="./index.html" id="logo"> <img src="" alt=""></a>
+    <nav class="menu1">
+      <ul>
+      <button onclick="modoOscuro()" id="mod"></button>
+        <li><a href="./htmls/favoritos.html">FAVORITOS</a></li>
+        <li><a href="./htmls/mis-gifos.html">MIS GIFOS</a></li>
+        <a href="./htmls/crear-gifo.html" id="cruz"><img src="" alt=""></a>
+      </ul>
+    </nav>
+  </header>
     <div class="menu-hamburguesa">
         <div class="icono-menu">
           <img src="./assets/burger.svg" alt="">
@@ -31,47 +31,40 @@
           </ul>
         </div>
        </div>
-    <main>
-        <h1>Inspirate, busca, guarda y crea los mejores <span>GIFOS</span></h1>
-        <img src="./assets/ilustra_header.svg" alt="">
-        <div class="busqueda">
-            <input type="text" id="search" placeholder="Buscar Gifos y mas">
-            <input title="Buscar" id="btn" alt="boton-enviar" accesskey="1" src="./assets/icon-search.svg" type="image" />
-        </div>
-        </div>   
-        <h4>Trending:</h4>
-        <p> Reactions, Entertainment, Sports, Stickers, Artists</p>
-        <div id="gifs"></div>
-    </main>
-   
-    <article>
-        <h2>Trending GIFOS</h2>
-        <p>mira los ultimos GIFOS de nuestra comunidad.</p>
-        <div class="container-box">
-       <figure>
-          <img src="./assets/button-slider-left.svg" id="left-arrow" alt="as">
-        </figure>
-        <div id="trending-container">
-        </div>
-        <figure>
+  <main>
+    <h1>Inspirate, busca, guarda y crea los mejores <span>GIFOS</span></h1>
+    <img src="./assets/ilustra_header.svg" alt="">
+    <div class="busqueda">
+      <input type="text" id="search" placeholder="Buscar Gifos y mas">
+      <input title="Buscar" id="btn" alt="boton-enviar" accesskey="1" src="./assets/icon-search.svg" type="image" />
+    </div> 
+      <h4>Trending:</h4>
+      <p> Reactions, Entertainment, Sports, Stickers, Artists</p>
+    <div id="gifs"></div>
+  </main>
+  <article>
+    <h2>Trending GIFOS</h2>
+    <p>mira los ultimos GIFOS de nuestra comunidad.</p>
+    <div class="container-box">
+      <figure>
+        <img src="./assets/button-slider-left.svg" id="left-arrow" alt="as">
+      </figure>
+      <div id="trending-container"></div>
+      <figure>
         <img src="./assets/Button-Slider-right.svg" id="right-arrow" alt="ad">
       </figure>
-      </div>
-     
-   </article>
-  
-    <footer>
-        <div class="contactos">
-            <h4>Compartir en:</h4>
-            <a href="https://twitter.com/?lang=es" target="_blank"><div id="twitter"></div></a> 
-            <a href="https://es-la.facebook.com/" target="_blank"><div id="face"></div></a>
-            <a href="https://www.instagram.com/?hl=es-la" target="_blank"><div id="inst"></div></a>
-        </div>
-        <p>©GIFOS 2021 All Rights Reserved.</p>
-    </footer>
-
-    <script src="./scripts/app.js"></script>
-    <script src="./scripts/app2.js"></script>
-   
+    </div>
+  </article>
+  <footer>
+    <div class="contactos">
+      <h4>Compartir en:</h4>
+      <a href="https://twitter.com/?lang=es" target="_blank"><div id="twitter"></div></a> 
+      <a href="https://es-la.facebook.com/" target="_blank"><div id="face"></div></a>
+      <a href="https://www.instagram.com/?hl=es-la" target="_blank"><div id="inst"></div></a>
+    </div>
+    <p>©GIFOS 2021 All Rights Reserved.</p>
+  </footer>
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/app2.js"></script>
 </body>
 </html>

@@ -237,7 +237,7 @@ main #gifs {
 main .gifos {
   width: 250px;
   height: 170px;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 main .gifos img {
@@ -262,7 +262,6 @@ main p {
   width: 250px;
   height: 170px;
   position: absolute;
-  z-index: 100;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -314,8 +313,8 @@ article .container-box #trending-container {
   display: -ms-flexbox;
   display: flex;
   width: 75%;
-  height: 250px;
-  overflow-x: scroll hidden;
+  height: 200px;
+  overflow-x: hidden;
   overflow-y: hidden;
 }
 
@@ -323,64 +322,62 @@ article .container-box .trending {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 300px;
+  height: 200px;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 article .container-box .trending img {
   width: 320px;
-  height: 170px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 180px;
+  margin: 10px;
 }
 
 article .container-box figure {
   position: relative;
   top: 60px;
+  height: 35px;
 }
 
 article .container-box figure #right-arrow, article .container-box figure #left-arrow {
-  height: 50px;
+  height: 35px;
 }
 
 article .container-box figure:hover {
   background: #6f00ff;
-  height: 50px;
+  height: 35px;
   opacity: 0.7;
 }
 
 #card2 {
-  display: none;
-  border: 2px solid black;
+  display: block;
   margin: 30px;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+  top: -20px;
+  right: -20px;
 }
 
 #card2 #img-max-tren {
   cursor: pointer;
-  margin-left: 90px;
-  width: 30px;
-  height: 40px;
-  position: absolute;
-  z-index: 10;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 #card2 #img-fav-tren {
   cursor: pointer;
-  margin-left: 10px;
-  width: 30px;
-  height: 40px;
-  position: absolute;
-  z-index: 10;
+  width: 20px;
+  height: 20px;
 }
 
 #card2 #img-dow-tren {
   cursor: pointer;
-  margin-left: 50px;
-  width: 30px;
-  height: 40px;
-  position: absolute;
-  z-index: 10;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 footer {

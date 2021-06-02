@@ -140,9 +140,9 @@ main{
   justify-content: center;
   }
   .camara-luz{
-    width: 250px;
-    height: 300px;
-    display: flex;
+  width: 250px;
+  height: 300px;
+  display: flex;
     #camara{
     background: url(../assets/camara-modo-noc.svg) no-repeat;
     margin-top: 60px;
@@ -150,113 +150,106 @@ main{
     object-fit: cover;
   }
   #luz{
-    margin-left: -28px;
-    background: url(../assets/element-luz-camara.svg) no-repeat;
-    margin-top: 78px;
-    width: 50px;
-    object-fit: cover;
+  margin-left: -28px;
+  background: url(../assets/element-luz-camara.svg) no-repeat;
+  margin-top: 78px;
+  width: 50px;
+  object-fit: cover;
   }
-  }
+}
 .cuadrado{
-  width: 700px;
-  height: 300px;
-  border: 1px solid black;
-  display: flex;
-    #titulo{
-    width: 300px;
-    margin: auto;
-    text-align: center;
+width: 700px;
+height: 300px;
+border: 1px solid black;
+display: flex;
+  #titulo{
+  width: 300px;
+  margin: auto;
+  text-align: center;
     h2{
-      color: white;
+    color: white;
     }
   }
-  }
-  .grabar{
-  width: 70%;
-  height: 100px;
+}
+.grabar{
+width: 70%;
+height: 100px;
+display: flex;
+justify-content: center;
+  .spn{
+  text-align: center;
   display: flex;
-  justify-content: center;
-  
-  
-    .spn{
-   text-align: center;
-   display: flex;
-   margin-top: 50px;
-   margin-left: 500px;
-      #sp1 , #sp2 , #sp3{
-      color: white;
-      margin-left: 50px;
-      font-size: 20px;
-      border: 2px solid white;
-      border-radius: 30px;
-      display: inline-block;
-      text-align: center;
-      width: 30px;
-      line-height: 30px;
-      height: 30px;
-      }
+  margin-top: 50px;
+  margin-left: 500px;
+    #sp1 , #sp2 , #sp3{
+    color: white;
+    margin-left: 50px;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    line-height: 30px;
+    height: 30px;
     }
-   
-  
   }
-  
-  
-  #barra{
-    width: 500px;
-    height: 15px;
-    background: white;
-    margin-left: 35%;
-    border-radius: 10px;
-    
-    }
-  footer{
+}
+#barra{
+width: 500px;
+height: 15px;
+background: white;
+margin-left: 35%;
+border-radius: 10px;
+}
+footer{
+display: flex;
+padding: 10px 120px;
+font-size: 12px;
+  .contactos{
   display: flex;
-  padding: 10px 120px;
-  font-size: 12px;
-    .contactos{
-    display: flex;
-      div{
-      margin-left: 5px;
-      cursor: pointer;
-      }
-      #twitter{
-      margin-top: 12px;
-      min-height: 20px;
-      min-width: 20px;
-      background: url(../assets/icon-twitter.svg) no-repeat;
-      }
-      #face{
-      margin-top: 10px;
-      min-height: 20px;
-      min-width: 20px;
-      background: url(../assets/icon_facebook.svg) no-repeat;
-      }
-      #inst{
-      margin-left: -4px;
-      margin-top: 10px;
-      min-height: 20px;
-      min-width: 20px;
-      background: url(../assets/icon_instagram.svg) no-repeat;
-      }
+    div{
+    margin-left: 5px;
+    cursor: pointer;
     }
-    p{
-    margin-left: auto;
+    #twitter{
+    margin-top: 12px;
+    min-height: 20px;
+    min-width: 20px;
+    background: url(../assets/icon-twitter.svg) no-repeat;
     }
-    #twitter:hover{
-    background: url(../assets/icon-twitter-hover.svg) no-repeat;
+    #face{
+    margin-top: 10px;
+    min-height: 20px;
+    min-width: 20px;
+    background: url(../assets/icon_facebook.svg) no-repeat;
     }
-    #face:hover{
-    background: url(../assets/icon_facebook_hover.svg) no-repeat;
-    }
-    #inst:hover{
-    background: url(../assets/icon_instagram-hover.svg) no-repeat;
+    #inst{
+    margin-left: -4px;
+    margin-top: 10px;
+    min-height: 20px;
+    min-width: 20px;
+    background: url(../assets/icon_instagram.svg) no-repeat;
     }
   }
-  @media screen and (max-width:1000px){
-    article .spn{
-      margin-right: 150px;
-    }
+  p{
+  margin-left: auto;
   }
+  #twitter:hover{
+  background: url(../assets/icon-twitter-hover.svg) no-repeat;
+  }
+  #face:hover{
+  background: url(../assets/icon_facebook_hover.svg) no-repeat;
+  }
+  #inst:hover{
+  background: url(../assets/icon_instagram-hover.svg) no-repeat;
+  }
+}
+@media screen and (max-width:1000px){
+  article .spn{
+  margin-right: 150px;
+  }
+}
 @media screen and (max-width:600px){
   body{
   width: 110%;
