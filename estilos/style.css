@@ -349,7 +349,7 @@ article .container-box figure:hover {
 }
 
 #card2 {
-  display: block;
+  display: none;
   border: 2px solid black;
   margin: 30px;
   -o-object-fit: cover;
