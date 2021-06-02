@@ -33,10 +33,10 @@ const iconoMenu = document.querySelector(".icono-menu"),
   menu.classList.toggle("active");
   document.body.classList.toggle("opacity");
   const rutaActual = e.target.getAttribute("src");
-  if(rutaActual == "./assets/burger.svg"){
-  e.target.setAttribute("src","./assets/close.svg");
+  if(rutaActual == "../assets/burger.svg"){
+  e.target.setAttribute("src","../assets/close.svg");
   } else {
-  e.target.setAttribute("src","./assets/burger.svg");
+  e.target.setAttribute("src","../assets/burger.svg");
   }
 })
 
