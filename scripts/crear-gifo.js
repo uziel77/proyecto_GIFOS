@@ -21,9 +21,9 @@ iconoMenu.addEventListener("click", (e)=>{
 })
 
 
-const video_container = document.getElementById("video-container");
-const start_button = document.getElementById("start-button");
-const stop_button = document.getElementById("stop-button");
+const video_container = document.querySelector(".cuadrado");
+const start_button = document.getElementById("btn-grabar");
+const stop_button = document.getElementById("btn-finalizar");
 const img_element = document.getElementById("img-element");
 
 let camera;
@@ -93,3 +93,4 @@ function main() {
 }
 
 main();
+

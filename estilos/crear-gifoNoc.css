@@ -61,7 +61,7 @@ header ul #cruz {
   margin-bottom: -10px;
   margin-left: 30px;
   cursor: pointer;
-  background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
+  background: url(../assets/CTA-crear-gifo-active.svg) no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
 }

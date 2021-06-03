@@ -1,6 +1,9 @@
 document.getElementById("btn").addEventListener("click", e=>{
+  
   let keyword = document.getElementById("search").value;
   llamadaGif(keyword);
+
+
 })
 
 window.onload = function() {

@@ -15,12 +15,15 @@ async function llamadaGif(keyword) {
    function cargarImagen(imagen){
    return new Promise(resolve => imagen.onload = resolve);
    }
+   
    function agregarImagen(imagen){
    let div = document.createElement('div');
    div.className = 'gifos';
+   div.addEventListener("click", cardEvent)
    div.appendChild(imagen);
    let divCard = document.createElement('div');
    divCard.id = "card1"
+   divCard.className = "kinter"
    let imagenFav = new Image();
    let imagenDow = new Image();
    let imagenMax = new Image();
@@ -78,7 +81,14 @@ async function llamadaTrending(tren) {
    divImg.appendChild(div);
 }
 
-card.addEventListener("click", e =>{
-  let card1 = document.getElementById("card1");
-  card1.style.display.getAttribute("block");
-})
+function cardEvent(e){
+   e.children
+   let imagenCard = e.currentTarget.getElementsByClassName("kinter")[0]
+   imagenCard.style.display = "block"
+}
+ //[devolvio un array]
+// card.addEventListener("click", (e) =>{
+//   let card1 = document.getElementById("card1");
+//   card1.style.display.getAttribute("block");
+//   alert()
+// })
