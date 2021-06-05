@@ -26,10 +26,10 @@ let grabar = document.getElementById("btn-grabar");
 let finalizar = document.getElementById("btn-finalizar");
 let subirGifo = document.getElementById("btn-gifo");
 let spans = document.querySelectorAll("#sp");
-let contador = document.getElementById("contador");
+let contador = document.getElementById("reloj");
 let repetir = document.getElementById("repetir");
 let cargando = document.getElementById("cargando");
-let loader = document.getElementById("load");
+let loader = document.getElementById("loader");
 let parrafoVideo = document.getElementById("video-p");
 let cargandoVideo = document.getElementById("cargando-video");
 let cargaDeVideo = document.getElementById("cargando-video");
@@ -37,7 +37,7 @@ let cargaDeVideo = document.getElementById("cargando-video");
 let recorder;
 let blob;
 let dateStarted;
-
+let is_recording = false; 
 let from = new FormData();
 let misGifosArray = [];
 let misGifosString = localStorage.getItem("misGifos");
@@ -55,7 +55,7 @@ function comenzarGifo(){
     texto.innerHTML = "El acceso a tu camara sera valido solo en el tiempo que estes creando tu gifo."
     spans[0].classList.add("spans");
     
-    navigator.mediaDevices.getUserMedia({audio: false,video:{width: 480, height:320}})
+    navigator.mediaDevices.getUserMedia({audio: false, video:{width: 480, height:320}})
 
 
     .then(function(mediaStream){
@@ -75,21 +75,23 @@ function comenzarGifo(){
     })
 }
 
-grabar.addEventListener("click",grabarGifo);
+grabar.addEventListener("click", grabarGifo);
 function grabarGifo(){
     recorder.startRecording();
     console.log("grabando el gifo");
     grabar.style.display="none";
     finalizar.style.display ="block";
+    contador.style.display = "block"
     repetir.style.display = "none";
+    is_recording = true;
     dateStarted = new Date().getTime();
     (function looper(){
         if(!recorder){
             return;
         }
-        contador.innerHTML = calculateTimeDuration((new Date().getTime() - dateStarted)/ 1000);
+        contador.innerHTML = timeGif((new Date().getTime() - dateStarted) / 1000);
         setTimeout(looper, 1000);
-    })
+    })();
 }
 
 
@@ -99,13 +101,13 @@ function finalizarGif(){
     console.log("gif terminado");
     finalizar.style.display ="none";
     subirGifo.style.display ="block";
-    contador.style.display ="block";
+    
     repetir.style.display ="block";
 
     recorder.stopRecording(function(){
         video.style.display = "none";
         gifTerminado.style.display ="block";
-        blob = recorder.getBlob();
+        blob = recorder.destroy();
         gifTerminado.src = URL.createObjectURL(recorder.getBlob());
         from.append("file", recorder.getBlob(), "mygif.gif");
         from.append("api_key","k7myyVYXWc9zebI6Yrrm5zPMspeexlxV")
@@ -113,9 +115,90 @@ function finalizarGif(){
 }
 
 
+subirGifo.addEventListener("click", subirGifos);
+
+function subirGifos(){
+    cargando.style.display = "flex";
+    subirGifo.style.display = "none";
+    spans[1].classList.remove("spans");
+    spans[2].classList.add("spans");
+    repetir.style.display = "none";
+
+}
+fetch(`https://upload.giphy.com/v1/gifs`,{
+    method: "POST",
+    body: from,
+})
+    .then(response =>{
+    return response.json();
+})
+
+.then(objeto =>{
+    console.log(objeto);
+    let miGifId = objeto.data.id;
+
+    cargandoVideo.style.display = "block";
+    loader.setAttribute("src", "./assets/check.svg");
+    texto.innerText = "GIFO subido con exito";
+    cargaDeVideo.innerHTML = `
+    <button class="overlay" id="btn-descargar" onclick="descargarGif('${miGifId}')">
+    <img src="./assents/icon-download.svg" alt="descargar">
+    </button>
+    <button class="btn-video" id="btn-link">
+    <img src="./assets/icon-link.svg" alt="link">
+    </button>
+    `;
 
 
+if(misGifosString == null){
+    misGifosArray = [];
+} else {
+    misGifosArray = JSON.parse(misGifosString);
+}
+misGifosArray.push(miGifId);
+misGifosString = JSON.stringify(misGifosArray);
+localStorage.setItem("misGifos", misGifosString);
+})
+.catch(error => console.log("error al subir gif" + error))
 
+async function descargarGif(gifImg){
+    let blob = await fetch(gifImg).then(img => img.blob());
+    invokeSaveAsDialog(blob, "migifo.gif");
+}
+
+repetir.addEventListener("click", repetirGif);
+function repetirGif(){
+    recorder.clearRecordedData();
+    console.log("re-grabando gif");
+    repetir.style.display ="none";
+    subirGifo.style.display = "none";
+    gifTerminado.style.display = "none";
+    grabar.style.display = "block";
+    navigator.mediaDevices.getUserMedia({audio: false, video: {width: 480, height: 320}})
+    .then(function(mediaStream){
+        video.style.display ="block";
+        video.srcObject = mediaStream;
+        video.onloadedmetadata = function (e){
+            video.play();
+        };
+        recorder = RecordRTC(mediaStream, {
+            type: "gif"
+        });
+    })
+}
+
+function timeGif(segundos){
+    let hr = Math.floor(segundos / 3600);
+    let min = Math.floor((segundos - (hr * 3600)) / 60);
+    let seg = Math.floor(segundos - (hr * 3600) - (min * 60));
+    if(min < 10){
+        min = "0" + min;
+    }
+    if(seg < 10){
+        seg = "0" + seg;
+    }
+    return hr + ":" + min + ":" + sec;
+}
 
 
 

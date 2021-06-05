@@ -201,18 +201,22 @@ main {
 }
 
 .cuadrado {
-  width: 600px;
-  height: 300px;
+  width: 480px;
+  height: 320px;
   border: 1px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cuadrado #titulo {
   width: 300px;
-  margin: auto;
+  position: absolute;
+  left: 100px;
   text-align: center;
 }
 
@@ -225,14 +229,34 @@ main {
 }
 
 .grabar {
-  width: 70%;
-  height: 100px;
+  width: 95%;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.grabar .grabando {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grabar .grabando #cinta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  position: absolute;
+  right: 0px;
 }
 
 .grabar .spn {
@@ -241,7 +265,9 @@ main {
   display: -ms-flexbox;
   display: flex;
   margin-top: 50px;
-  margin-left: 500px;
+  position: absolute;
+  top: -20px;
+  left: 500px;
 }
 
 .grabar .spn #sp {
@@ -258,8 +284,8 @@ main {
 }
 
 .grabar .spn .spans {
-  background-color: blueviolet;
-  color: white;
+  background-color: #6f00ff;
+  color: honeydew !important;
 }
 
 .grabar #grabacion {
@@ -276,25 +302,8 @@ main {
   z-index: 2;
 }
 
-.grabando {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100px;
-}
-
-#barra {
-  width: 500px;
-  height: 15px;
-  background: #6f00ff;
-  margin-left: 35%;
-  border-radius: 10px;
-}
-
-#cinta {
-  margin-top: -60px;
-  margin-left: 30px;
-  height: 80px;
+#cargando-texto {
+  display: none;
 }
 
 #btn-comenzar {
@@ -306,6 +315,8 @@ main {
   height: 40px;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 80px;
+  margin-left: 280px;
 }
 
 #btn-comenzar:hover {
@@ -323,6 +334,8 @@ main {
   height: 40px;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 80px;
+  margin-left: 280px;
 }
 
 #btn-gifo:hover {
@@ -340,6 +353,8 @@ main {
   height: 40px;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 80px;
+  margin-left: 280px;
 }
 
 #btn-grabar:hover {
@@ -357,6 +372,8 @@ main {
   height: 40px;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 80px;
+  margin-left: 280px;
 }
 
 #btn-finalizar:hover {
@@ -366,7 +383,7 @@ main {
 
 .contador {
   position: absolute;
-  right: 0;
+  left: 400px;
 }
 
 .contador #reloj {

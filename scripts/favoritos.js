@@ -58,3 +58,5 @@ const content = document.getElementById("trending-container");
 leftArrow.addEventListener("click", e => {
   content.scrollLeft -= 100;
 });
+
+

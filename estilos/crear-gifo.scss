@@ -155,14 +155,16 @@ justify-content: center;
 }
 }
 .cuadrado{
-width: 600px;
-height: 300px;
+width: 480px;
+height: 320px;
 border: 1px solid black;
 display: flex;
 position: relative;
+align-items: center;
   #titulo{
   width: 300px;
-  margin: auto;
+  position: absolute;
+  left: 100px;
   text-align: center;
   h2{
     color: rgb(111, 0, 255);
@@ -173,17 +175,30 @@ position: relative;
 }
 }
 .grabar{
-width: 70%;
-height: 100px;
+width: 95%;
+height: 150px;
 display: flex;
 justify-content: center;
-
+position: relative;
+.grabando{
+  display: flex;
+  height: 100px;
+  align-items: center;
+  #cinta{
+    display: flex;
+    height: 80px;
+    position: absolute;
+    right: 0px;
+    }
+}
 
   .spn{
  text-align: center;
  display: flex;
  margin-top: 50px;
- margin-left: 500px;
+ position: absolute;
+ top: -20px;
+ left: 500px;
     #sp{
     color: rgb(111, 0, 255);
     margin-left: 50px;
@@ -197,8 +212,8 @@ justify-content: center;
     height: 30px;
     }
     .spans{
-      background-color: blueviolet;
-      color: white;
+      background-color: rgb(111, 0, 255);
+      color: honeydew !important;
     }
    
   }
@@ -215,23 +230,13 @@ justify-content: center;
    z-index: 2;
  }
 }
-.grabando{
-  display: flex;
-  height: 100px;
+
+#cargando-texto{
+  display: none;
 }
 
-#barra{
-  width: 500px;
-  height: 15px;
-  background: rgb(111, 0, 255);
-  margin-left: 35%;
-  border-radius: 10px;
-  }
-  #cinta{
-    margin-top: -60px;
-    margin-left: 30px;
-    height: 80px;
-  }
+
+  
  
   
   #btn-comenzar{
@@ -243,6 +248,8 @@ justify-content: center;
   height: 40px;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 80px;
+  margin-left: 280px;
   }
   #btn-comenzar:hover{
     background-color: blueviolet;
@@ -258,6 +265,8 @@ justify-content: center;
     height: 40px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 80px;
+  margin-left: 280px;
   }
   #btn-gifo:hover{
     background-color: blueviolet;
@@ -273,6 +282,8 @@ justify-content: center;
     height: 40px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 80px;
+  margin-left: 280px;
   }
   #btn-grabar:hover{
     background-color: blueviolet;
@@ -288,6 +299,8 @@ justify-content: center;
     height: 40px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 80px;
+  margin-left: 280px;
   }
   #btn-finalizar:hover{
     background-color: blueviolet;
@@ -295,7 +308,7 @@ justify-content: center;
   }
   .contador{
     position: absolute;
-    right: 0;
+    left: 400px;
     #reloj{
       display: none;
       font-size: 17px;
