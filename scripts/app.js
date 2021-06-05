@@ -1,3 +1,16 @@
+let barraSearch = document.getElementById("search");
+let btnSearch = document.getElementById("btn");
+let barraDesp = document.getElementsByClassName("barra-desp");
+let busqueda = document.getElementById("busqueda");
+let desplegable;
+
+
+
+
+
+
+
+
 function getGifUrl(keyword){
 return fetch("https://api.giphy.com/v1/gifs/search?api_key=k7myyVYXWc9zebI6Yrrm5zPMspeexlxV&q="+keyword+"&limit=12").then(response => response.json());
 }
@@ -86,9 +99,74 @@ function cardEvent(e){
    let imagenCard = e.currentTarget.getElementsByClassName("kinter")[0]
    imagenCard.style.display = "block"
 }
- //[devolvio un array]
-// card.addEventListener("click", (e) =>{
-//   let card1 = document.getElementById("card1");
-//   card1.style.display.getAttribute("block");
-//   alert()
-// })
+
+
+barraSearch.addEventListener("keyup", sugerencia);
+
+function sugerencia(){
+ desplegable = barraSearch.value;
+ busqueda.classList.remove("busqueda")
+ busqueda.classList.add("buscando")
+
+ if(desplegable.length >=1){
+   fetch(`https://api.giphy.com/v1/tags/related/${desplegable}?api_key=k7myyVYXWc9zebI6Yrrm5zPMspeexlxV&q=&limit=4`)
+   .then(response => response.json())
+   .then(data =>{
+      optionsData(data);
+   }).catch(e => {console.error("problemas con la busqueda"),e})
+  } else {
+     closeBox();
+   }
+}
+ function optionsData(data){
+    let option = data.data;
+    busqueda.innerHTML = `
+    <li class="options">
+    <p class="option-p">${option[0].name}<p>
+    </li>
+    <li class="options">
+    <p class="option-p">${option[1].name}<p>
+    </li>
+    <li class="options">
+    <p class="option-p">${option[2].name}<p>
+    </li>
+    <li class="options">
+    <p class="option-p">${option[3].name}<p>
+    </li>
+    `
+ }
+ busqueda.addEventListener("click", function
+ (li) {
+    barraSearch.value = li.target.textContent;
+    llamadaGif();
+ })
+
+ btnSearch.addEventListener("click",vaciar);
+ function vaciar(){
+    barraSearch.value ="";
+    barraSearch.placeholder = "busca GIFOS y mas";
+    busqueda.classList.add("busqueda");
+    busqueda.classList.remove("buscando");
+ }
+
+
+
+let imgFav = document.getElementById("img-fav")
+imgFav.addEventListener("click", agregarAFav)
+ function agregarAFav(imagen){
+    let iconFav = document.getElementById("img-fav" + imagen);
+    iconFav.setAttribute("src","./assets/icon-fav-hover.svg");
+    agregarF(imagen);
+ }
+
+ 
+ function agregarF(imagen){
+    if(gifFav == null){
+       gifosFav = [];
+    } else {
+       gifosFav = JSON.parse(gifFav);
+    }
+    gifosFav.push(imagen);
+    gifFav = JSON.stringify(gifosFav);
+    localStorage.setItem("gifosFav",gifFav)
+ }

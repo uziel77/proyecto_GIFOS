@@ -173,7 +173,17 @@ align-items: center;
     #search:focus{
     outline: none;
     }
-  }
+    .barra-desp{
+      display: none;
+    }
+ }
+ .buscando{
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  border: 2px solid blue;
+  margin: auto;
+}
   #gifs{
   width: 90%;
   flex-wrap: wrap;
@@ -234,7 +244,7 @@ object-fit: cover;
   }
 }
 article{
-margin-top: 100px;
+margin-left: 5%;
 text-align: center;
   h2{
   color: rgb(111, 0, 255);

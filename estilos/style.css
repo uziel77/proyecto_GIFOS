@@ -225,6 +225,18 @@ main .busqueda #search:focus {
   outline: none;
 }
 
+main .busqueda .barra-desp {
+  display: none;
+}
+
+main .buscando {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  border: 2px solid blue;
+  margin: auto;
+}
+
 main #gifs {
   width: 90%;
   -ms-flex-wrap: wrap;
@@ -299,7 +311,7 @@ main p {
 }
 
 article {
-  margin-top: 100px;
+  margin-left: 5%;
   text-align: center;
 }
 

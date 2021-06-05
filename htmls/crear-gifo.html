@@ -39,31 +39,44 @@
     <div class="pagina1">
       <div class="cuadrado">
         <div id="titulo">
-          <h2>Aqui podras crear tus propios <span>GIFOS</span></h2>
-          <p>¡Crea tu GIFO en solo 3 pasos! (solo necesitas una camara para grabar un video)</p>
+          <h2 id="titulo-grabar">Aqui podras crear tus propios <span>GIFOS</span></h2>
+          <p id="texto-grabar">¡Crea tu GIFO en solo 3 pasos! (solo necesitas una camara para grabar un video)</p>
         </div>
-      </div>
+     
+    
+    <div class="cargando"></div>
+    <div id="cargando-video"></div>
+    <div id="cargando-texto">
+      <img src="/assets/loader.svg" alt="load" id="load">
+      <p id="video-p">Estamos subiendo tu GIFO</p>
     </div>
+    <video src="" id="grabacion"></video>
+    <img src="" alt="" id="gif-iniciado">
+  </div>
+</div>
   </main>
   <article class="grabar">
     <div class="spn">
-      <span id="sp1">1</span>
-      <span id="sp2">2</span>
-      <span id="sp3">3</span>
+      <span id="sp">1</span>
+      <span id="sp">2</span>
+      <span id="sp">3</span>
     </div>
   </article>
     <div>
       <div class="grabando">
-        <div id="barra"></div>
         <img src="../assets/pelicula.svg" alt="" id="cinta">
       </div>
-     
+    <div class="botones">
       <button id="btn-comenzar">COMENZAR</button>
       <button id="btn-grabar">GRABAR</button>
       <button id="btn-finalizar">FINALIZAR</button>
       <button id="btn-gifo">SUBIR GIFO</button>
-      <input type="reset" value="REPETIR CAPTURA" id="repetir">
+    </div>  
     </div> 
+    <div class="contador">
+      <p id="reloj">0:00:00</p>
+      <button id="repetir">REPETIR CAPTURA</button>
+    </div>
   <footer>
     <div class="contactos">
       <p>Compartir en:</p>

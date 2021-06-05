@@ -207,6 +207,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .cuadrado #titulo {
@@ -243,7 +244,7 @@ main {
   margin-left: 500px;
 }
 
-.grabar .spn #sp1, .grabar .spn #sp2, .grabar .spn #sp3 {
+.grabar .spn #sp {
   color: #6f00ff;
   margin-left: 50px;
   font-size: 20px;
@@ -254,6 +255,25 @@ main {
   width: 30px;
   line-height: 30px;
   height: 30px;
+}
+
+.grabar .spn .spans {
+  background-color: blueviolet;
+  color: white;
+}
+
+.grabar #grabacion {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.grabar #gif-iniciado {
+  display: none;
+  width: 480px;
+  height: 320px;
+  position: absolute;
+  z-index: 2;
 }
 
 .grabando {
@@ -294,6 +314,7 @@ main {
 }
 
 #btn-gifo {
+  display: none;
   font-size: 10px;
   color: blueviolet;
   border: 2px solid blueviolet;
@@ -310,6 +331,7 @@ main {
 }
 
 #btn-grabar {
+  display: none;
   font-size: 10px;
   color: blueviolet;
   border: 2px solid blueviolet;
@@ -326,6 +348,7 @@ main {
 }
 
 #btn-finalizar {
+  display: none;
   font-size: 10px;
   color: blueviolet;
   border: 2px solid blueviolet;
@@ -341,7 +364,20 @@ main {
   color: white;
 }
 
-#repetir {
+.contador {
+  position: absolute;
+  right: 0;
+}
+
+.contador #reloj {
+  display: none;
+  font-size: 17px;
+  line-height: 20px;
+  color: #6f00ff;
+}
+
+.contador #repetir {
+  display: none;
   border: none;
   border-bottom: 2px solid cyan;
   font-size: 12px;

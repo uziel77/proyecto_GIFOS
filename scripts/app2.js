@@ -1,15 +1,24 @@
-document.getElementById("btn").addEventListener("click", e=>{
-  
+
+
+
+
+btnSearch.addEventListener("click", e=>{
   let keyword = document.getElementById("search").value;
   llamadaGif(keyword);
-
-
 })
+
+
+
+
 
 window.onload = function() {
   llamadaTrending();
 }
 
+
+
+
+//modo oscuro
 function modoOscuro() {
   let theme = document.getElementById("theme");
   if (theme.getAttribute("href") == "./estilos/style.css") {
