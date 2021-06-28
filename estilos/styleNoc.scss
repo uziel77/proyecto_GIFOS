@@ -142,7 +142,7 @@ align-items: center;
   h1{
   margin: 50px auto;
   width: 400px;
-  color: #fff;
+  color: white;
   }
   span{
   color: cyan;
@@ -157,12 +157,13 @@ align-items: center;
   width: 400px;
   margin: 0 auto;
   margin-top: -4px;
-  border: 2px solid #fff;
+  border: 1px solid white;
   border-radius: 30px;
     #btn{
     width: 20px;
     margin-right: 20px;
     cursor: pointer;
+    
     }
     #search{
     margin: auto;
@@ -172,45 +173,107 @@ align-items: center;
     border: none;
     padding: 20px;
     display: block;
-    background: #353638 ;
-    color: #fff;
+    background-color: #353638;
+    
     }
     #search:focus{
     outline: none;
     }
+    
+ }
+
+ .buscando{
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  border: 1px solid white;
+  margin: auto;
+  input{
+    width: 320px;
+    height: 20px;
+    margin-top: 10px;
+    border: none;
   }
-  #gifs{
+  #barra-desp{
+    display: none;
+    margin: 0 ;
+    width: 300px;
+    height: 300px;
+    
+   }
+    .options{
+     list-style: none;
+     display: flex;
+     font-size: 15px;
+     margin-top: 25px ;
+     justify-content: space-between;
+      
+     .lupa{
+       width: 20px;
+       height: 20px;
+       margin-right: 10px;
+     }
+     .option-p{
+       font-size: 20px;
+       cursor: pointer;
+       margin-left: 10px;
+     }
+   }
+ 
+}
+#cerrar{
+  display: none;
+  border: none;
+  position: relative;
+  img{
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 365px;
+  top: -20px;
+}
+#titulo-gifs{
+  font-size: 20px;
+  color:white ;
+}
+}
+#ver-mas{
+  display: none;
+}
+  #container-gifs{
   width: 90%;
   flex-wrap: wrap;
-  display: flex;
+  display: none;
   justify-content: center;
   margin: auto;
   }
   .gifos{
   width: 250px;
   height: 170px;
-  border: 1px solid white;
-    img{
-    width: 250px;
-    height: 170px;
-    object-fit: cover;
-    }
+  border: 2px solid black;
+  margin: 10px;
+  img{
+  width: 250px;
+  height: 170px;
+  object-fit: cover;
+  
+  }
   }
   h4{
   margin-top: 10px;
-  color: #fff;
+  color: white;
   }
   p{
-  color: #fff;
+  color: white;
   margin-top: -15px;
   }
 }
 #card1{
-  display: block;
-  width: 250px;
-  height: 170px;
-  position: absolute;
-  object-fit: cover;
+display: none;
+width: 250px;
+height: 170px;
+position: absolute;
+object-fit: cover;
   #img-max{
   cursor: pointer; 
   margin-left: 90px;
@@ -236,6 +299,7 @@ align-items: center;
   top: -170px;
   }
 }
+
   article{
     margin-top: 100px;
     text-align: center;

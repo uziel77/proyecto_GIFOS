@@ -182,8 +182,9 @@ header a {
   margin-top: -5px;
 }
 
-.galeria-fav .contenido {
+.galeria-fav #contenido {
   margin-top: 100px;
+  display: none;
 }
 
 .galeria-fav h3 {

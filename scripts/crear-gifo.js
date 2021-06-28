@@ -29,7 +29,7 @@ let spans = document.querySelectorAll("#sp");
 let contador = document.getElementById("reloj");
 let repetir = document.getElementById("repetir");
 let cargando = document.getElementById("cargando");
-let loader = document.getElementById("loader");
+let loaderIcon = document.getElementById("icon-loader");
 let parrafoVideo = document.getElementById("video-p");
 let cargandoVideo = document.getElementById("cargando-video");
 let cargaDeVideo = document.getElementById("cargando-video");
@@ -37,8 +37,8 @@ let cargaDeVideo = document.getElementById("cargando-video");
 let recorder;
 let blob;
 let dateStarted;
-let is_recording = false; 
-let from = new FormData();
+
+let form = new FormData();
 let misGifosArray = [];
 let misGifosString = localStorage.getItem("misGifos");
 let video = document.getElementById("grabacion");
@@ -71,7 +71,7 @@ function comenzarGifo(){
         };
         recorder = RecordRTC(mediaStream,{
             type: "gif"
-        })
+        });
     })
 }
 
@@ -83,7 +83,7 @@ function grabarGifo(){
     finalizar.style.display ="block";
     contador.style.display = "block"
     repetir.style.display = "none";
-    is_recording = true;
+  
     dateStarted = new Date().getTime();
     (function looper(){
         if(!recorder){
@@ -101,16 +101,16 @@ function finalizarGif(){
     console.log("gif terminado");
     finalizar.style.display ="none";
     subirGifo.style.display ="block";
-    
+    contador.style.display ="none";
     repetir.style.display ="block";
 
     recorder.stopRecording(function(){
         video.style.display = "none";
         gifTerminado.style.display ="block";
-        blob = recorder.destroy();
+        blob = recorder.getBlob();
         gifTerminado.src = URL.createObjectURL(recorder.getBlob());
-        from.append("file", recorder.getBlob(), "mygif.gif");
-        from.append("api_key","k7myyVYXWc9zebI6Yrrm5zPMspeexlxV")
+        form.append("file", recorder.getBlob(), "myGif.gif");
+        form.append("api_key","k7myyVYXWc9zebI6Yrrm5zPMspeexlxV");
     })
 }
 
@@ -124,10 +124,10 @@ function subirGifos(){
     spans[2].classList.add("spans");
     repetir.style.display = "none";
 
-}
+
 fetch(`https://upload.giphy.com/v1/gifs`,{
     method: "POST",
-    body: from,
+    body: form,
 })
     .then(response =>{
     return response.json();
@@ -137,15 +137,15 @@ fetch(`https://upload.giphy.com/v1/gifs`,{
     console.log(objeto);
     let miGifId = objeto.data.id;
 
-    cargandoVideo.style.display = "block";
-    loader.setAttribute("src", "./assets/check.svg");
-    texto.innerText = "GIFO subido con exito";
-    cargaDeVideo.innerHTML = `
-    <button class="overlay" id="btn-descargar" onclick="descargarGif('${miGifId}')">
-    <img src="./assents/icon-download.svg" alt="descargar">
+    cargaDeVideo.style.display = "block";
+    loaderIcon.setAttribute("src", "../assets/check.svg");
+    parrafoVideo.innerText = "GIFO subido con exito";
+    cargandoVideo.innerHTML = `
+    <button id="btn-descargar" onclick="descargarGif('${miGifId}')">
+    <img src="../assets/icon-download.svg" alt="download">
     </button>
-    <button class="btn-video" id="btn-link">
-    <img src="./assets/icon-link.svg" alt="link">
+    <button id="btn-link">
+    <img src="../assets/icon-link-normal.svg" alt="link">
     </button>
     `;
 
@@ -160,7 +160,7 @@ misGifosString = JSON.stringify(misGifosArray);
 localStorage.setItem("misGifos", misGifosString);
 })
 .catch(error => console.log("error al subir gif" + error))
-
+}
 async function descargarGif(gifImg){
     let blob = await fetch(gifImg).then(img => img.blob());
     invokeSaveAsDialog(blob, "migifo.gif");
@@ -197,7 +197,7 @@ function timeGif(segundos){
     if(seg < 10){
         seg = "0" + seg;
     }
-    return hr + ":" + min + ":" + sec;
+    return hr + ":" + min + ":" + seg;
 }
 
 

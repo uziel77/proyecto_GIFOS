@@ -225,25 +225,81 @@ main .busqueda #search:focus {
   outline: none;
 }
 
-main .busqueda .barra-desp {
-  display: none;
-}
-
 main .buscando {
-  width: 300px;
+  width: 400px;
   height: 200px;
   border-radius: 20px;
-  border: 2px solid blue;
+  border: 1px solid #6f00ff;
   margin: auto;
 }
 
-main #gifs {
-  width: 90%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+main .buscando input {
+  width: 320px;
+  height: 20px;
+  margin-top: 10px;
+  border: none;
+}
+
+main .buscando #barra-desp {
+  display: none;
+  margin: 0;
+  border: none;
+  width: 300px;
+  height: 300px;
+}
+
+main .buscando .options {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 15px;
+  margin-top: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .buscando .options .lupa {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+main .buscando .options .option-p {
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+main #cerrar {
+  display: none;
+  border: none;
+  position: relative;
+}
+
+main #cerrar img {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 365px;
+  top: -20px;
+}
+
+main #titulo-gifs {
+  font-size: 20px;
+  color: #6f00ff;
+}
+
+main #ver-mas {
+  display: none;
+}
+
+main #container-gifs {
+  width: 90%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -311,7 +367,6 @@ main p {
 }
 
 article {
-  margin-left: 5%;
   text-align: center;
 }
 

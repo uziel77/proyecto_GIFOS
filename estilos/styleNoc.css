@@ -181,7 +181,7 @@ main {
 main h1 {
   margin: 50px auto;
   width: 400px;
-  color: #fff;
+  color: white;
 }
 
 main span {
@@ -203,7 +203,7 @@ main .busqueda {
   width: 400px;
   margin: 0 auto;
   margin-top: -4px;
-  border: 2px solid #fff;
+  border: 1px solid white;
   border-radius: 30px;
 }
 
@@ -221,21 +221,87 @@ main .busqueda #search {
   border: none;
   padding: 20px;
   display: block;
-  background: #353638;
-  color: #fff;
+  background-color: #353638;
 }
 
 main .busqueda #search:focus {
   outline: none;
 }
 
-main #gifs {
-  width: 90%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+main .buscando {
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  border: 1px solid white;
+  margin: auto;
+}
+
+main .buscando input {
+  width: 320px;
+  height: 20px;
+  margin-top: 10px;
+  border: none;
+}
+
+main .buscando #barra-desp {
+  display: none;
+  margin: 0;
+  width: 300px;
+  height: 300px;
+}
+
+main .buscando .options {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 15px;
+  margin-top: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .buscando .options .lupa {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+main .buscando .options .option-p {
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+main #cerrar {
+  display: none;
+  border: none;
+  position: relative;
+}
+
+main #cerrar img {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 365px;
+  top: -20px;
+}
+
+main #cerrar #titulo-gifs {
+  font-size: 20px;
+  color: white;
+}
+
+main #ver-mas {
+  display: none;
+}
+
+main #container-gifs {
+  width: 90%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -245,7 +311,8 @@ main #gifs {
 main .gifos {
   width: 250px;
   height: 170px;
-  border: 1px solid white;
+  border: 2px solid black;
+  margin: 10px;
 }
 
 main .gifos img {
@@ -257,16 +324,16 @@ main .gifos img {
 
 main h4 {
   margin-top: 10px;
-  color: #fff;
+  color: white;
 }
 
 main p {
-  color: #fff;
+  color: white;
   margin-top: -15px;
 }
 
 #card1 {
-  display: block;
+  display: none;
   width: 250px;
   height: 170px;
   position: absolute;

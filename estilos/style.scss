@@ -173,21 +173,72 @@ align-items: center;
     #search:focus{
     outline: none;
     }
-    .barra-desp{
-      display: none;
-    }
+    
  }
+
  .buscando{
-  width: 300px;
+  width: 400px;
   height: 200px;
   border-radius: 20px;
-  border: 2px solid blue;
+  border: 1px solid rgb(111, 0, 255);
   margin: auto;
+  input{
+    width: 320px;
+    height: 20px;
+    margin-top: 10px;
+    border: none;
+  }
+  #barra-desp{
+    display: none;
+    margin: 0 ;
+    border: none;
+    width: 300px;
+    height: 300px;
+    
+   }
+    .options{
+     list-style: none;
+     display: flex;
+     font-size: 15px;
+     margin-top: 25px ;
+     justify-content: space-between;
+      
+     .lupa{
+       width: 20px;
+       height: 20px;
+       margin-right: 10px;
+     }
+     .option-p{
+       font-size: 20px;
+       cursor: pointer;
+       margin-left: 10px;
+     }
+   }
+ 
 }
-  #gifs{
+#cerrar{
+  display: none;
+  border: none;
+  position: relative;
+  img{
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 365px;
+  top: -20px;
+}
+}
+#titulo-gifs{
+  font-size: 20px;
+  color:rgb(111, 0, 255) ;
+}
+#ver-mas{
+  display: none;
+}
+  #container-gifs{
   width: 90%;
   flex-wrap: wrap;
-  display: flex;
+  display: none;
   justify-content: center;
   margin: auto;
   }
@@ -243,8 +294,10 @@ object-fit: cover;
   top: -170px;
   }
 }
+
+
 article{
-margin-left: 5%;
+
 text-align: center;
   h2{
   color: rgb(111, 0, 255);

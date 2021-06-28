@@ -184,6 +184,7 @@ header a {
 
 .galeria-fav .contenido {
   margin-top: 100px;
+  display: none;
 }
 
 .galeria-fav h3 {
@@ -204,6 +205,54 @@ header a {
   cursor: pointer;
   margin-top: 50px;
   display: none;
+}
+
+#resultado-misgifos {
+  margin: 38px 10px 53px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.resultados-gif-box-misgifos {
+  width: 220px;
+  height: 200px;
+  margin: 10px;
+}
+
+.gif-acciones-resultados-misgifos {
+  position: absolute;
+  z-index: 0;
+  width: 220px;
+  height: 200px;
+}
+
+.iconos-acciones-gif {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.textos-descripcion-gif-misgifos {
+  position: absolute;
+  bottom: 30px;
+  left: 18px;
+}
+
+.user-gif-misgifos {
+  color: black;
+}
+
+.titulo-gif-misgifos {
+  color: black;
 }
 
 article {
