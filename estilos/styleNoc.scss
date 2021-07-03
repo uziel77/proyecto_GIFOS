@@ -132,7 +132,6 @@ margin: 30px;
 background-color: rgb(228, 228, 228);
 color: rgb(42, 42, 42);
 }
-
 main{
 width: 100%;
 height: 100%;
@@ -159,72 +158,65 @@ align-items: center;
   margin-top: -4px;
   border: 1px solid white;
   border-radius: 30px;
-    #btn{
-    width: 20px;
-    margin-right: 20px;
-    cursor: pointer;
-    
-    }
-    #search{
-    margin: auto;
-    width: 70%;
-    height: 5px;
-    border-radius: 30px;
-    border: none;
-    padding: 20px;
-    display: block;
-    background-color: #353638;
-    
-    }
-    #search:focus{
-    outline: none;
-    }
-    
- }
-
- .buscando{
-  width: 400px;
-  height: 200px;
-  border-radius: 20px;
-  border: 1px solid white;
+  #btn{
+  width: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  }
+  #search{
   margin: auto;
+  width: 70%;
+  height: 5px;
+  border-radius: 30px;
+  border: none;
+  padding: 20px;
+  display: block;
+  background-color: #353638;
+  }
+  #search:focus{
+  outline: none;
+  }
+}
+.buscando{
+width: 400px;
+height: 200px;
+border-radius: 20px;
+border: 1px solid white;
+margin: auto;
   input{
-    width: 320px;
-    height: 20px;
-    margin-top: 10px;
-    border: none;
+  width: 320px;
+  height: 20px;
+  margin-top: 10px;
+  border: none;
   }
   #barra-desp{
-    display: none;
-    margin: 0 ;
-    width: 300px;
-    height: 300px;
-    
-   }
-    .options{
-     list-style: none;
-     display: flex;
-     font-size: 15px;
-     margin-top: 25px ;
-     justify-content: space-between;
-      
-     .lupa{
-       width: 20px;
-       height: 20px;
-       margin-right: 10px;
-     }
-     .option-p{
-       font-size: 20px;
-       cursor: pointer;
-       margin-left: 10px;
-     }
-   }
- 
+  display: none;
+  margin: 0 ;
+  width: 300px;
+  height: 300px;
+  }
+  .options{
+  list-style: none;
+  display: flex;
+  font-size: 15px;
+  margin-top: 25px ;
+  justify-content: space-between;
+  .lupa{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  }
+  .option-p{
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  }
+}
 }
 #cerrar{
-  display: none;
-  border: none;
-  position: relative;
+display: none;
+border: none;
+position: relative;
   img{
   width: 15px;
   height: 15px;
@@ -233,40 +225,39 @@ align-items: center;
   top: -20px;
 }
 #titulo-gifs{
-  font-size: 20px;
-  color:white ;
+font-size: 20px;
+color:white ;
 }
 }
 #ver-mas{
-  display: none;
+display: none;
 }
-  #container-gifs{
-  width: 90%;
-  flex-wrap: wrap;
-  display: none;
-  justify-content: center;
-  margin: auto;
-  }
-  .gifos{
-  width: 250px;
-  height: 170px;
-  border: 2px solid black;
-  margin: 10px;
+#container-gifs{
+width: 90%;
+flex-wrap: wrap;
+display: none;
+justify-content: center;
+margin: auto;
+}
+.gifos{
+width: 250px;
+height: 170px;
+border: 2px solid black;
+margin: 10px;
   img{
   width: 250px;
   height: 170px;
   object-fit: cover;
-  
   }
-  }
-  h4{
-  margin-top: 10px;
-  color: white;
-  }
-  p{
-  color: white;
-  margin-top: -15px;
-  }
+}
+h4{
+margin-top: 10px;
+color: white;
+}
+p{
+color: white;
+margin-top: -15px;
+}
 }
 #card1{
 display: none;
@@ -299,51 +290,50 @@ object-fit: cover;
   top: -170px;
   }
 }
-
-  article{
-    margin-top: 100px;
-    text-align: center;
-    background: #202021;
-    color: white;
-      h2{
-      color: #fff;
-      }
-      .container-box{
-      display: flex;
-        #trending-container{
-        display: flex;
-        width: 75%;
-        height: 200px;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        }
-        .trending{
-        align-items: center;
-        height: 200px;
-        position: relative;
-        object-fit: cover;
-          img{
-          width: 320px;
-          height: 180px;
-          margin: 10px;
-        }  
-      }
-      figure{
-      position: relative;
-      top: 60px;
-      background-color: white;
-      height: 35px;
-        #right-arrow , #left-arrow{
-        height: 35px;
-        }
-      }
-      figure:hover{
-      background: cyan;
-      height: 35px;
-      opacity: 0.7;
-      }
-    }
-    }
+article{
+margin-top: 100px;
+text-align: center;
+background: #202021;
+color: white;
+  h2{
+  color: #fff;
+  }
+  .container-box{
+  display: flex;
+  #trending-container{
+  display: flex;
+  width: 75%;
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  }
+  .trending{
+  align-items: center;
+  height: 200px;
+  position: relative;
+  object-fit: cover;
+  img{
+  width: 320px;
+  height: 180px;
+  margin: 10px;
+  }  
+}
+figure{
+position: relative;
+top: 60px;
+background-color: white;
+height: 35px;
+  #right-arrow , #left-arrow{
+  height: 35px;
+  }
+}
+figure:hover{
+background: cyan;
+height: 35px;
+opacity: 0.7;
+}
+}
+}
 #card2{
 display: block;
 margin: 30px;
