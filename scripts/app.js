@@ -7,6 +7,8 @@ let containerGif = document.getElementById("container-gifs"); //resultados busqu
 let verMas = document.getElementById("ver-mas"); // resultados ver mas
 let desplegable; 
 let offset = 0;
+let favoritosString;
+let favoritosArray;
 
 let apikey = "k7myyVYXWc9zebI6Yrrm5zPMspeexlxV";
 let imgFav = document.getElementById("img-fav-tren")
@@ -89,7 +91,6 @@ function sugerencia(){
     }
  })
  function searchGif(){
-    event.preventDefault();
     let urlSearch = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&limit=12&offset=${offset}&q=`;
     let strSearch = barraSearch.value.trim();
     urlSearch = urlSearch.concat(strSearch);
@@ -100,6 +101,7 @@ function sugerencia(){
     gifs.innerHTML= "";
     containerGif.style.display = "block";
     let tituloGifs = document.getElementById("titulo-gifs");
+    verMas.style.display = "block";
     tituloGifs.innerHTML = barraSearch.value;
     if(content.data == 0){
        gifs.innerHTML = `<div id="search-error">
@@ -121,24 +123,18 @@ function sugerencia(){
 }
 function agregarGif(content) {
    gifs.innerHTML += `
-   <div id="container-cards" onclick="maxGifMobile('${content.images.downsized.url}', '${content.id}', '${content.slug}', '${content.username}', '${content.title}')">
-      <div class="box-card">
-         <div id="card1">
-         <button id="img-fav" onclick="agregarFav('${content.id}')">
-         <img src="./assets/icon-fav-hover.svg" alt="icon-favorito" id="fav${content.id}">
-         </button>
-         <button id="img-dow" onclick="descargarGif('${content.images.downsized.url}', '${content.slug}')">
-         <img src="./assets/icon-download.svg" alt="icon-dowlnoad" id="dow">
-         </button>
-         <button id="img-max" onclick="maxGifDesktop('${content.images.downsized.url}', '${content.id}', '${content.slug}', '${content.username}', '${content.title}')">
-         <img src="./assets/icon-max.svg" alt="icon-max" id="max">
-         </button>
-      </div>
+   <div class="container-cards">
+       <div id="box-card">
+         <div class="card1">
+         <img src="./assets/icon-fav.svg" alt="icon-favorito" id="icon-fav-${content.id}" onclick="agregarFavBus('${content.id}')" class="fav">
+         <img src="./assets/icon-download.svg" alt="icon-dowlnoad" id="dow" onclick="descargaGif('${content.images.downsized.url}', '${content.slug}')">
+         <img src="./assets/icon-max-normal.svg" alt="icon-max" id="max" onclick="maxGifDesktop('${content.images.downsized.url}', '${content.id}', '${content.slug}', '${content.username}', '${content.title}')"onclick="maxGifDesktop('${content.images.downsized.url}', '${content.id}', '${content.slug}', '${content.username}', '${content.title}')">
+         </div>
       <div id="texto-gif">
       <p id="titulo-gif-res">${content.title}</p>
       </div>
       </div>
-      <img src="${content.images.downsized.url}" alt="${content.id}" class="res-gif" >
+         <img src="${content.images.downsized.url}" alt="${content.id}" class="res-gif" >
    </div>
    `;
 }
@@ -146,11 +142,10 @@ function agregarGif(content) {
 verMas.addEventListener("click", verMasGifs);
 function verMasGifs(){
    offset = offset + 12;
-   llamadaGif();
+   searchGif();
 }
 
 function llamadaGif(){
-   preventDefault();
    let urlSearch = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&limit=12&offset=${offset}&q=`;
    let strSearch = barraSearch.value.trim();
    urlSearch = urlSearch.concat(strSearch);
@@ -178,6 +173,31 @@ function llamadaGif(){
       console.log("error busqueda");
    })
 }
+
+
+
+function agregarFavBus(gif){
+  let btnFav = document.getElementById('icon-fav-' + gif)
+  btnFav.setAttribute("src","./assets/icon-fav-active.svg")
+  agregarFav(gif);
+}
+
+function agregarFav(gif){
+   if(favoritosString == null){
+      favoritosArray = [];
+   } else {
+      favoritosArray = JSON.parse(favoritosString);
+   }
+   favoritosArray.push(gif);
+   favoritosString = JSON.stringify(favoritosArray);
+   localStorage.setItem("gifosFavoritos", favoritosString);
+}
+
+async function descargaGif(gifImg, gifName){
+   let blob = await fetch(gifImg).then(img => img.blob());
+   invokeSaveAsDialog(blob, gifName + ".gif");
+}
+
 
 function getTrendingUrl(tren){
 return fetch("https://api.giphy.com/v1/gifs/trending?api_key=k7myyVYXWc9zebI6Yrrm5zPMspeexlxV&q="+tren+"&limit=20"+"rating=g").then(response => response.json());
@@ -217,26 +237,7 @@ return fetch("https://api.giphy.com/v1/gifs/trending?api_key=k7myyVYXWc9zebI6Yrr
       div.appendChild(divCard);
       let divImg = document.getElementById("trending-container");
       divImg.appendChild(div);
+      imagenDow.addEventListener("click", descargaGif);
       
-   }
- 
-function agregarFav(gif){
-   let fav = document.getElementById("fav");
-   fav.setAttribute("src","./assets/icon-fav-active.svg");
-   agregarGifFav();
-}
-function agregarGifFav(){
-   if(favoritosString == null){
-      favoritosArray = []
-   } else {
-      favoritosArray = JSON.parse(favoritosString);
-   }
-   favoritosArray.push(gif);
-   favoritosString = JSON.stringify(favoritosArray);
-   localStorage.setItem("gifosFavoritos", favoritosString);
-}
-
-async function descargarGif(gifImg,gifName){
-   let blob = await fetch(gifImg).then(img => img.blob());
-   invokeSaveAsDialog(blob, gifName + ".gif");
+      
 }

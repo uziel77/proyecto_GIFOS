@@ -83,8 +83,7 @@ function buscarFav(){
   } else {
     favoritosArray = JSON.parse(favoritosString);
     let urlFav = `https://api.giphy.com/v1/gifs?ids=${favoritosArray.toString()}&api_key=k7myyVYXWc9zebI6Yrrm5zPMspeexlxV`
-  }
-}
+
 fetch(urlFav)
 .then(res => res.json())
 .then(content =>{
@@ -92,7 +91,8 @@ fetch(urlFav)
 }).catch(e =>{
   console.error("fallo favorito", e)
 })
-
+}
+}
 function mostrarFavoritos(content) {
   let gifosFavoritosArray = content.data;
 
