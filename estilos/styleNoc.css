@@ -181,7 +181,7 @@ main {
 main h1 {
   margin: 50px auto;
   width: 400px;
-  color: #6f00ff;
+  color: #fff;
 }
 
 main span {
@@ -204,7 +204,7 @@ main .busqueda {
   height: 50px;
   margin: 0 auto;
   margin-top: -4px;
-  border: 1px solid #6f00ff;
+  border: 1px solid #fff;
   border-radius: 30px;
 }
 
@@ -222,6 +222,8 @@ main .busqueda #search {
   border: none;
   padding: 20px;
   display: block;
+  color: white;
+  background: #353638;
 }
 
 main .busqueda #search:focus {
@@ -233,7 +235,7 @@ main .buscando {
   width: 400px;
   height: 300px;
   border-radius: 20px;
-  border: 1px solid #6f00ff;
+  border: 1px solid #fff;
   margin: auto;
   margin-top: -4px;
 }
@@ -248,7 +250,7 @@ main .buscando input {
 
 main .buscando #barra-desp {
   margin-top: 10px;
-  border-top: 1px solid black;
+  border-top: 1px solid #fff;
   width: 380px;
   height: 200px;
   padding: 10px;
@@ -294,7 +296,7 @@ main #cerrar img {
 
 main #titulo-gifs {
   font-size: 50px;
-  color: #6f00ff;
+  color: #fff;
   text-transform: uppercase;
 }
 
@@ -347,26 +349,26 @@ main #container-gifos img {
 main #ver-mas {
   width: 100px;
   height: 50px;
-  background: blueviolet;
+  background: cyan;
   margin: auto;
   border: none;
   border-radius: 30px;
   text-transform: uppercase;
-  color: #fff;
+  color: black;
   cursor: pointer;
 }
 
 main #ver-mas:hover {
-  background: cornflowerblue;
-  color: black;
+  background: black;
+  color: #fff;
 }
 
 main .container-cards {
   width: 250px;
   height: 200px;
-  border: 2px solid black;
-  -webkit-box-shadow: 10px 5px 5px #6f00ff;
-          box-shadow: 10px 5px 5px #6f00ff;
+  border: 2px solid #fff;
+  -webkit-box-shadow: 10px 5px 5px cyan;
+          box-shadow: 10px 5px 5px cyan;
   position: relative;
   margin: 20px;
 }
@@ -426,11 +428,11 @@ main #titulo-gif-res {
 
 main h4 {
   margin-top: 10px;
-  color: #6f00ff;
+  color: #fff;
 }
 
 main p {
-  color: #6f00ff;
+  color: #fff;
   margin-top: -15px;
 }
 

@@ -199,45 +199,86 @@ async function descargaGif(gifImg, gifName){
 }
 
 
-function getTrendingUrl(tren){
-return fetch("https://api.giphy.com/v1/gifs/trending?api_key=k7myyVYXWc9zebI6Yrrm5zPMspeexlxV&q="+tren+"&limit=20"+"rating=g").then(response => response.json());
-   }
-   async function llamadaTrending(tren) {
-      const result = await this.getTrendingUrl(tren);
-      let promesa = [];
-      result.data.forEach(gif => {
-      let imagen = new Image();
-      imagen.src = gif.images.original.url;
-      promesa.push(cargarTrending(imagen));
-      agregarTrending(imagen);
-      });
-      await Promise.all(promesa);
-      }
-      function cargarTrending(imagen){
-      return new Promise(resolve => imagen.onload = resolve);
-      }
-      function agregarTrending(imagen){
-      let div = document.createElement('div');
-      div.className = 'trending';
-      div.appendChild(imagen);
-      let divCard = document.createElement('div');
-      divCard.id = "card2";
-      let imagenFav = new Image();
-      let imagenDow = new Image();
-      let imagenMax = new Image();
-      imagenFav.id = "img-fav-tren";
-      imagenDow.id = "img-dow-tren";
-      imagenMax.id = "img-max-tren";
-      imagenFav.src ="./assets/icon-fav.svg";
-      imagenDow.src = "./assets/icon-download.svg";
-      imagenMax.src = "./assets/icon-max-normal.svg";
-      divCard.appendChild(imagenFav);
-      divCard.appendChild(imagenDow);
-      divCard.appendChild(imagenMax);
-      div.appendChild(divCard);
-      let divImg = document.getElementById("trending-container");
-      divImg.appendChild(div);
-      imagenDow.addEventListener("click", descargaGif);
+// function getTrendingUrl(tren){
+// return fetch("https://api.giphy.com/v1/gifs/trending?api_key=k7myyVYXWc9zebI6Yrrm5zPMspeexlxV&q="+tren+"&limit=20"+"rating=g").then(response => response.json());
+//    }
+//    async function llamadaTrending(tren) {
+//       const result = await this.getTrendingUrl(tren);
+//       let promesa = [];
+//       result.data.forEach(gif => {
+//       let imagen = new Image();
+//       imagen.src = gif.images.original.url;
+//       promesa.push(cargarTrending(imagen));
+//       agregarTrending(imagen);
+//       });
+//       await Promise.all(promesa);
+//       }
+//       function cargarTrending(imagen){
+//       return new Promise(resolve => imagen.onload = resolve);
+//       }
+//       function agregarTrending(imagen){
+//       let div = document.createElement('div');
+//       div.className = 'trending';
+//       div.appendChild(imagen);
+//       let divCard = document.createElement('div');
+//       divCard.id = "card2";
+//       let imagenFav = new Image();
+//       let imagenDow = new Image();
+//       let imagenMax = new Image();
+//       imagenFav.id = "img-fav-tren";
+//       imagenDow.id = "img-dow-tren";
+//       imagenMax.id = "img-max-tren";
+//       imagenFav.src ="./assets/icon-fav.svg";
+//       imagenDow.src = "./assets/icon-download.svg";
+//       imagenMax.src = "./assets/icon-max-normal.svg";
+//       divCard.appendChild(imagenFav);
+//       divCard.appendChild(imagenDow);
+//       divCard.appendChild(imagenMax);
+//       div.appendChild(divCard);
+//       let divImg = document.getElementById("trending-container");
+//       divImg.appendChild(div);
+//       imagenDow.addEventListener("click", descargaGif);
       
       
+// }
+
+let sliderTrendingGifos = document.getElementById('trending-container');
+window.onload = trendingGifos();
+
+function trendingGifos() {
+   let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=12`;
+
+   fetch(url)
+       .then(resp => resp.json()) //me trae el json con los 4 trending gifos
+       .then(content => {
+           //object with data, pagination, meta
+           let trendingGifArray = content.data;
+
+           let trendingGIFOhtml = "";
+
+           for (let i = 0; i < trendingGifArray.length; i++) {
+               let trendingGif = trendingGifArray[i];
+               trendingGIFOhtml += `
+           <div class="trending-box" onclick="maxGifMobileTrending('${trendingGif.images.downsized.url}', '${trendingGif.id}', '${trendingGif.slug}', '${trendingGif.username}', '${trendingGif.title}')">
+                   <div class="box-card2">
+                       <div class="card2">
+                           <img src="./assets/icon-fav.svg" alt="icon-favorito" id="icon-fav-trending-${trendingGif.id}" class="icon-fav-trending">
+                           <img src="./assets/icon-download.svg" alt="icon-download" id="dow-trending">
+                           <img src="./assets/icon-max-normal.svg" alt="icon-max" id="max-trending">
+                       </div>
+                       <div class="textos-trending">
+                           <p id="titulo-gif">${trendingGif.title}</p>
+                       </div>
+                       <img src="${trendingGif.images.downsized.url}" alt="${trendingGif.title}" class="trending-gif">
+                   </div>
+                  
+               </div>`
+            }
+
+            sliderTrendingGifos.innerHTML = trendingGIFOhtml;
+
+        })
+        .catch(err => {
+            console.log(err);
+        })
 }

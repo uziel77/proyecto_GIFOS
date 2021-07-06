@@ -141,7 +141,7 @@ main{
     h1{
     margin: 50px auto;
     width: 400px;
-    color: rgb(111, 0, 255);
+    color: #fff;
     }
     span{
     color: cyan;
@@ -157,7 +157,7 @@ main{
     height: 50px;
     margin: 0 auto;
     margin-top: -4px;
-    border: 1px solid rgb(111, 0, 255);
+    border: 1px solid #fff;
     border-radius: 30px;
       #btn{
       width: 20px;
@@ -172,6 +172,8 @@ main{
       border: none;
       padding: 20px;
       display: block;
+      color: white;
+      background: #353638;
       }
       #search:focus{
       outline: none;
@@ -182,7 +184,7 @@ main{
   width: 400px;
   height: 300px;
   border-radius: 20px;
-  border: 1px solid rgb(111, 0, 255);
+  border: 1px solid #fff;
   margin: auto;
   margin-top: -4px;
     input{
@@ -194,7 +196,7 @@ main{
     }
     #barra-desp{
     margin-top: 10px;
-    border-top: 1px solid black;
+    border-top: 1px solid #fff;
     width: 380px;
     height: 200px;
     padding: 10px;
@@ -232,7 +234,7 @@ main{
   
   #titulo-gifs{
   font-size: 50px;
-  color:rgb(111, 0, 255) ;
+  color:#fff ;
   text-transform: uppercase;
   }
   #ver-mas{
@@ -266,23 +268,23 @@ main{
   #ver-mas{
   width: 100px;
   height: 50px;
-  background: blueviolet;
+  background: cyan;
   margin: auto;
   border: none;
   border-radius: 30px;
   text-transform: uppercase;
-  color: #fff;
+  color: black;
   cursor: pointer;
   }
   #ver-mas:hover{
-  background: cornflowerblue;
-  color: black;
+  background: black;
+  color: #fff;
   }
   .container-cards{
     width: 250px;
     height: 200px;
-    border: 2px solid black;
-    box-shadow: 10px 5px 5px rgb(111, 0, 255);
+    border: 2px solid #fff;
+    box-shadow: 10px 5px 5px cyan;
     position: relative;
     margin: 20px;
     .res-gif{
@@ -334,10 +336,10 @@ main{
   }
   h4{
   margin-top: 10px;
-  color: rgb(111, 0, 255);
+  color: #fff;
   }
   p{
-  color: rgb(111, 0, 255);
+  color: #fff;
   margin-top: -15px;
   }
   }

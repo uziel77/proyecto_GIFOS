@@ -305,13 +305,11 @@ color: black;
   }
   .fav{
   cursor: pointer; 
-  
   position: absolute;
   left: 220px;
   top: 5px;
   width: 25px;
   height: 25px;
-  
   }
   #dow{
   cursor: pointer; 
@@ -346,24 +344,7 @@ text-align: center;
   }
   .container-box{
   display: flex;
-    #trending-container{
-    display: flex;
-    width: 75%;
-    height: 200px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    }
-    .trending{
-    align-items: center;
-    height: 200px;
-    position: relative;
-    object-fit: cover;
-      img{
-      width: 320px;
-      height: 180px;
-      margin: 10px;
-      }  
-    }
+  }
   figure{
   position: relative;
   top: 60px;
@@ -378,31 +359,68 @@ height: 35px;
 opacity: 0.7;
 }
 }
+#trending-container{
+display: flex;
+width: 75%;
+height: 300px;
+overflow-x: hidden;
+overflow-y: hidden;
+  .trending-box{
+    width: 300px;
+    height: 200px;
+    margin-left: 10px;
+    position: relative;
+    box-shadow: 10px 5px 5px rgb(111, 0, 255);
+    border: 2px solid black;
+    .trending-gif{
+    width: 250px;
+    height: 200px;
+   
+    object-fit: cover;
+  }
 }
-#card2{
-display: block;
-margin: 30px;
-object-fit: cover;
-position: absolute;
-top: -20px;
-right: -20px;
-#img-max-tren{
-cursor: pointer; 
-margin-left: 10px;
-width: 20px;
-height: 20px;
+ .card2{
+ display: block;
+ margin: 30px;
+ object-fit: cover;
+ position: absolute;
+ z-index: 10;
+ height: 100px;
+  #max-trending{
+  cursor: pointer; 
+  left: 180px;
+  top: -30px;
+  width: 30px;
+  height: 35px;
+  position: absolute;
+  }
+  .icon-fav-trending{
+  cursor: pointer; 
+  width: 30px;
+  height: 35px;
+  position: absolute;
+  left: 100px;
+  top: -30px;
+  }
+  #dow-trending{
+  cursor: pointer; 
+  left: 140px;
+  top: -30px;
+  width: 30px;
+  height: 35px;
+  position: absolute;
+  }
+
 }
-#img-fav-tren{
-cursor: pointer; 
-width: 20px;
-height: 20px;
+#titulo-gif{
+  position: absolute;
+  color: #fff;
+  width: 150px;
+  font-size: 15px;
+  top: 120px;
+  left: 10px;
 }
-#img-dow-tren{
-cursor: pointer; 
-margin-left: 10px;
-width: 20px;
-height: 20px;
-}
+
 }
 footer{
 display: flex;

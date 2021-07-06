@@ -3,9 +3,6 @@ btnSearch.addEventListener("click", e=>{
   llamadaGif(keyword);
 })
 
-window.onload = function() {
-  llamadaTrending();
-}
 //modo oscuro
 function modoOscuro() {
   let theme = document.getElementById("theme");
