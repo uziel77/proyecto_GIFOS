@@ -194,21 +194,91 @@ header a {
   color: cyan;
 }
 
-.galeria-fav .ver {
-  font-size: 10px;
-  color: #6f00ff;
-  width: 100px;
-  height: 40px;
-  border-radius: 30px;
-  border: 1px solid #6f00ff;
-  background: #fff;
+.galeria-fav #resultados-fav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.galeria-fav .box-fav {
+  width: 300px;
+  height: 200px;
+  margin: 15px;
+  position: relative;
+  -webkit-box-shadow: 10px 5px 5px #6f00ff;
+          box-shadow: 10px 5px 5px #6f00ff;
+  border: 2px solid black;
+}
+
+.galeria-fav .fav-accion {
+  display: block;
+  margin: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: 10;
+  height: 100px;
+}
+
+.galeria-fav .card-fav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+}
+
+.galeria-fav .card-fav #max {
   cursor: pointer;
-  margin-top: 50px;
-  display: none;
+  border: none;
+  position: absolute;
+  left: 180px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+}
+
+.galeria-fav .card-fav #dow {
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  left: 220px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  left: 140px;
+}
+
+.galeria-fav .card-fav .fav {
+  cursor: pointer;
+  position: absolute;
+  left: 220px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+}
+
+.galeria-fav .texto-fav {
+  color: blue;
+  position: absolute;
+  left: 10px;
+  top: 70px;
+  width: 150px;
+}
+
+.galeria-fav #resultados-gif {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 article {
-  margin-top: 100px;
   text-align: center;
 }
 
@@ -222,102 +292,169 @@ article .container-box {
   display: flex;
 }
 
-article .container-box #trending-container {
+article figure {
+  position: relative;
+  top: 60px;
+  height: 35px;
+}
+
+article figure #right-arrow, article figure #left-arrow {
+  height: 35px;
+}
+
+article figure:hover {
+  background: #6f00ff;
+  height: 35px;
+  opacity: 0.7;
+}
+
+#trending-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 75%;
-  height: 200px;
-  margin: auto;
+  height: 300px;
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
-article .container-box .trending {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
+#trending-container .trending-box {
+  width: 300px;
+  height: 200px;
+  margin-left: 10px;
+  position: relative;
+  -webkit-box-shadow: 10px 5px 5px #6f00ff;
+          box-shadow: 10px 5px 5px #6f00ff;
+  border: 2px solid black;
 }
 
-article .container-box .trending img {
-  width: 230px;
-  height: 180px;
+#trending-container .trending-box .trending-gif {
+  width: 250px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-left: 20px;
 }
 
-article .container-box figure {
-  position: relative;
-  top: 60px;
+#trending-container .card2 {
+  display: block;
+  margin: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: 10;
+  height: 100px;
 }
 
-article .container-box figure #right-arrow, article .container-box figure #left-arrow {
-  height: 50px;
+#trending-container .card2 #max-trending {
+  cursor: pointer;
+  left: 180px;
+  top: -30px;
+  width: 30px;
+  height: 35px;
+  position: absolute;
 }
 
-article .container-box figure:hover {
-  background: #6f00ff;
-  height: 50px;
-  opacity: 0.7;
+#trending-container .card2 .icon-fav-trending {
+  cursor: pointer;
+  width: 30px;
+  height: 35px;
+  position: absolute;
+  left: 100px;
+  top: -30px;
 }
 
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 10px 120px;
-  font-size: 12px;
+#trending-container .card2 #dow-trending {
+  cursor: pointer;
+  left: 140px;
+  top: -30px;
+  width: 30px;
+  height: 35px;
+  position: absolute;
 }
 
-footer .contactos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#trending-container #titulo-gif {
+  position: absolute;
+  color: #fff;
+  width: 150px;
+  font-size: 15px;
+  top: 120px;
+  left: 10px;
 }
 
-footer .contactos div {
-  margin-left: 5px;
+.modal-activo {
+  position: fixed;
+  padding: 0 20px;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+
+.modal-activo .modal-close {
+  background-color: unset;
+  border: 0;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50px;
+  right: 100px;
   cursor: pointer;
 }
 
-footer .contactos #twitter {
-  margin-top: 12px;
-  min-height: 20px;
-  min-width: 20px;
-  background: url(../assets/icon-twitter.svg) no-repeat;
+.modal-activo .modal-gif {
+  width: 80%;
+  margin-top: 160px;
+  margin-left: 30px;
 }
 
-footer .contactos #face {
-  margin-top: 10px;
-  min-height: 20px;
-  min-width: 20px;
-  background: url(../assets/icon_facebook.svg) no-repeat;
+.modal-activo .modal-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 27px auto;
+  position: relative;
 }
 
-footer .contactos #inst {
-  margin-left: -4px;
-  margin-top: 10px;
-  min-height: 20px;
-  min-width: 20px;
-  background: url(../assets/icon_instagram.svg) no-repeat;
+.modal-activo .modal-bar .modal-texto {
+  max-width: 80%;
 }
 
-footer p {
-  margin-left: auto;
+.modal-activo .modal-bar .modal-texto .modal-user {
+  text-align: left;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 300;
+  margin: 0;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-footer #twitter:hover {
-  background: url(../assets/icon-twitter-hover.svg) no-repeat;
+.modal-activo .modal-bar .modal-texto .modal-titulo {
+  text-align: left;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  margin-top: 6px;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-footer #face:hover {
-  background: url(../assets/icon_facebook_hover.svg) no-repeat;
-}
-
-footer #inst:hover {
-  background: url(../assets/icon_instagram-hover.svg) no-repeat;
+.modal-activo .modal-bar .btn-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  margin-right: 50px;
 }
 
 footer {

@@ -415,7 +415,7 @@ main #dow {
 }
 
 main #titulo-gif-res {
-  color: blue;
+  color: red;
   z-index: 10;
   position: absolute;
   left: 10px;
@@ -533,6 +533,82 @@ article figure:hover {
   font-size: 15px;
   top: 120px;
   left: 10px;
+}
+
+.modal-activo {
+  position: fixed;
+  padding: 0 20px;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+
+.modal-activo .modal-close {
+  background-color: unset;
+  border: 0;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50px;
+  right: 100px;
+  cursor: pointer;
+}
+
+.modal-activo .modal-gif {
+  width: 80%;
+  margin-top: 160px;
+  margin-left: 30px;
+}
+
+.modal-activo .modal-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 27px auto;
+  position: relative;
+}
+
+.modal-activo .modal-bar .modal-texto {
+  max-width: 80%;
+}
+
+.modal-activo .modal-bar .modal-texto .modal-user {
+  text-align: left;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 300;
+  margin: 0;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.modal-activo .modal-bar .modal-texto .modal-titulo {
+  text-align: left;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  margin-top: 6px;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.modal-activo .modal-bar .btn-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  margin-right: 50px;
 }
 
 footer {

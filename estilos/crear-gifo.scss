@@ -65,10 +65,10 @@ content: "MODO NOCTURNO";
   display: none;
 }
 .icono-menu{
-  position: absolute;
-  left: 90%;
-  top: 40px;
-  z-index: 10;
+position: absolute;
+left: 90%;
+top: 40px;
+z-index: 10;
   }
   .icono-menu img{
   vertical-align: top;
@@ -98,15 +98,15 @@ content: "MODO NOCTURNO";
   list-style: none;
   text-align: center;
   margin-top: -25px;
-    button{
-    border: none;
-    font-size: 25px;
-    background: rgb(111, 0, 255);
-    color: white;
-    border-bottom: 1px solid white;
-    width: 87%;
-    height: 45px;
-    outline: none;
+  button{
+  border: none;
+  font-size: 25px;
+  background: rgb(111, 0, 255);
+  color: white;
+  border-bottom: 1px solid white;
+  width: 87%;
+  height: 45px;
+  outline: none;
   }
 }
 .cont-menu ul li{
@@ -127,7 +127,6 @@ margin: 30px;
 background-color: rgb(228, 228, 228);
 color: rgb(42, 42, 42);
 }
-
 main{
 width: 80%;
 height: 100%;
@@ -137,9 +136,9 @@ margin-top: 30px;
 justify-content: center;
 }
 .camara-luz{
-  width: 250px;
-  height: 300px;
-  display: flex;
+width: 250px;
+height: 300px;
+display: flex;
   #camara{
   background: url(../assets/camara.svg) no-repeat;
   margin-top: 60px;
@@ -147,11 +146,11 @@ justify-content: center;
   object-fit: cover;
 }
 #luz{
-  margin-left: -28px;
-  background: url(../assets/element-luz-camara.svg) no-repeat;
-  margin-top: 78px;
-  width: 50px;
-  object-fit: cover;
+margin-left: -28px;
+background: url(../assets/element-luz-camara.svg) no-repeat;
+margin-top: 78px;
+width: 50px;
+object-fit: cover;
 }
 }
 .cuadrado{
@@ -167,7 +166,7 @@ align-items: center;
   left: 100px;
   text-align: center;
   h2{
-    color: rgb(111, 0, 255);
+  color: rgb(111, 0, 255);
   }
   span{
   color: cyan;
@@ -181,262 +180,247 @@ display: flex;
 justify-content: center;
 position: relative;
 .grabando{
-  display: flex;
-  height: 100px;
-  align-items: center;
+display: flex;
+height: 100px;
+align-items: center;
   #cinta{
-    display: flex;
-    height: 80px;
-    position: absolute;
-    right: 0px;
-    }
-}
-
-  .spn{
- text-align: center;
- display: flex;
- margin-top: 50px;
- position: absolute;
- top: -20px;
- left: 500px;
-    #sp{
-    color: rgb(111, 0, 255);
-    margin-left: 50px;
-    font-size: 20px;
-    border: 2px solid rgb(111, 0, 255);
-    border-radius: 30px;
-    display: inline-block;
-    text-align: center;
-    width: 30px;
-    line-height: 30px;
-    height: 30px;
-    }
-    .spans{
-      background-color: rgb(111, 0, 255);
-      color: honeydew !important;
-    }
-   
+  display: flex;
+  height: 80px;
+  position: absolute;
+  right: 0px;
   }
- #grabacion{
-   display: none;
-   position: absolute;
-   z-index: 1;
- }
- #gif-iniciado{
-   display: none;
-   width: 480px;
-   height: 320px;
-   position: absolute;
-   z-index: 2;
- }
 }
-
+.spn{
+text-align: center;
+display: flex;
+margin-top: 50px;
+position: absolute;
+top: -20px;
+left: 500px;
+  #sp{
+  color: rgb(111, 0, 255);
+  margin-left: 50px;
+  font-size: 20px;
+  border: 2px solid rgb(111, 0, 255);
+  border-radius: 30px;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  line-height: 30px;
+  height: 30px;
+  }
+  .spans{
+  background-color: rgb(111, 0, 255);
+  color: honeydew !important;
+  }
+}
+#grabacion{
+display: none;
+position: absolute;
+z-index: 1;
+}
+#gif-iniciado{
+display: none;
+width: 480px;
+height: 320px;
+position: absolute;
+z-index: 2;
+}
+}
 #cargando-texto{
-  display: block;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  margin-top: 100px;
+display: block;
+width: 100%;
+height: 100%;
+align-items: center;
+margin-top: 100px;
   #icon-loader{
-    width: 30px;
-    height: 30px;
-   
-   
+  width: 30px;
+  height: 30px;
   }
   #video-p{
-    font-weight: 500;
-    font-size:20px;
-    line-height: 19px;
-    color: white;
-    margin: 10px 0;
+  font-weight: 500;
+  font-size:20px;
+  line-height: 19px;
+  color: white;
+  margin: 10px 0;
   }
 }
 #gif-terminado{
-  display: none;
-  width: 480px;
-  height: 320px;
-  position: absolute;
-  z-index: 2;
+display: none;
+width: 480px;
+height: 320px;
+position: absolute;
+z-index: 2;
 }
 #cargando{
- display: none;
- width: 100%;
- height: 100%;
- text-align: center;
- background: blue;
- opacity: 0.7;
- color: wheat;
- position: absolute;
- z-index: 3;
-
+display: none;
+width: 100%;
+height: 100%;
+text-align: center;
+background: blue;
+opacity: 0.7;
+color: wheat;
+position: absolute;
+z-index: 3;
 }
-
-
-
 #cargando-video{
-  display: none;
-  position: absolute;
-  top: 12px;
-  right:15px;
+display: none;
+position: absolute;
+top: 12px;
+right:15px;
   #btn-descargar{
-    position: absolute;
-    top: 0;
-    right: 40px;
-    width: 32px;
-    height: 32px;
-    border: none;
-    margin: 0;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  margin: 0;
+  cursor: pointer;
   }
   #btn-link{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 32px;
-    height: 32px;
-    border: none;
-    margin: 0;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  border: none;
+  margin: 0;
+  cursor: pointer;
   }
 }
- 
-  
-  #btn-comenzar{
-  font-size: 10px;
+#btn-comenzar{
+font-size: 10px;
+color: blueviolet;
+border: 2px solid blueviolet;
+border-radius: 30px;
+width: 90px;
+height: 40px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 80px;
+margin-left: 270px;
+}
+#btn-comenzar:hover{
+background-color: blueviolet;
+color: white;
+}
+#btn-gifo{
+display: none;
+font-size: 10px;
+color: blueviolet;
+border: 2px solid blueviolet;
+border-radius: 30px;
+width: 90px;
+height: 40px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 80px;
+margin-left: 270px;
+}
+#btn-gifo:hover{
+background-color: blueviolet;
+color: white;
+}
+#btn-grabar{
+display: none;
+font-size: 10px;
+color: blueviolet;
+border: 2px solid blueviolet;
+border-radius: 30px;
+width: 90px;
+height: 40px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 80px;
+margin-left: 270px;
+}
+#btn-grabar:hover{
+background-color: blueviolet;
+color: white;
+}
+#btn-finalizar{
+display: none;
+font-size: 10px;
+color: blueviolet;
+border: 2px solid blueviolet;
+border-radius: 30px;
+width: 90px;
+height: 40px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 80px;
+margin-left: 270px;
+}
+#btn-finalizar:hover{
+background-color: blueviolet;
+color: white;
+}
+.contador{
+position: absolute;
+left: 400px;
+  #reloj{
+  display: none;
+  font-size: 17px;
+  line-height: 20px;
+  color: rgb(111, 0, 255);
+  }
+  #repetir{
+  display: none;
+  border: none;
+  border-bottom: 2px solid cyan;
+  font-size: 12px;
   color: blueviolet;
-  border: 2px solid blueviolet;
-  border-radius: 30px;
-  width: 90px;
-  height: 40px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 80px;
-  margin-left: 270px;
   }
-  #btn-comenzar:hover{
-    background-color: blueviolet;
-    color: white;
-  }
-  #btn-gifo{
-    display: none;
-    font-size: 10px;
-    color: blueviolet;
-    border: 2px solid blueviolet;
-    border-radius: 30px;
-    width: 90px;
-    height: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 80px;
-  margin-left: 270px;
-  }
-  #btn-gifo:hover{
-    background-color: blueviolet;
-    color: white;
-  }
-  #btn-grabar{
-    display: none;
-    font-size: 10px;
-    color: blueviolet;
-    border: 2px solid blueviolet;
-    border-radius: 30px;
-    width: 90px;
-    height: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 80px;
-  margin-left: 270px;
-  }
-  #btn-grabar:hover{
-    background-color: blueviolet;
-    color: white;
-  }
-  #btn-finalizar{
-    display: none;
-    font-size: 10px;
-    color: blueviolet;
-    border: 2px solid blueviolet;
-    border-radius: 30px;
-    width: 90px;
-    height: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 80px;
-  margin-left: 270px;
-  }
-  #btn-finalizar:hover{
-    background-color: blueviolet;
-    color: white;
-  }
-  .contador{
-    position: absolute;
-    left: 400px;
-    #reloj{
-      display: none;
-      font-size: 17px;
-      line-height: 20px;
-      color: rgb(111, 0, 255);
-     
-    }
-    #repetir{
-      display: none;
-      border: none;
-      border-bottom: 2px solid cyan;
-      font-size: 12px;
-      color: blueviolet;
-      font-weight: bold;
-      cursor: pointer;
-    }
-   
-  }
-  
-
+}
 footer{
 display: flex;
 padding: 10px 120px;
 font-size: 12px;
   .contactos{
   display: flex;
-    div{
-    margin-left: 5px;
-    cursor: pointer;
-    }
-    #twitter{
-    margin-top: 12px;
-    min-height: 20px;
-    min-width: 20px;
-    background: url(../assets/icon-twitter.svg) no-repeat;
-    }
-    #face{
-    margin-top: 10px;
-    min-height: 20px;
-    min-width: 20px;
-    background: url(../assets/icon_facebook.svg) no-repeat;
-    }
-    #inst{
-    margin-left: -4px;
-    margin-top: 10px;
-    min-height: 20px;
-    min-width: 20px;
-    background: url(../assets/icon_instagram.svg) no-repeat;
-    }
+  div{
+  margin-left: 5px;
+  cursor: pointer;
   }
-  p{
-  margin-left: auto;
+  #twitter{
+  margin-top: 12px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon-twitter.svg) no-repeat;
   }
-  #twitter:hover{
-  background: url(../assets/icon-twitter-hover.svg) no-repeat;
+  #face{
+  margin-top: 10px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon_facebook.svg) no-repeat;
   }
-  #face:hover{
-  background: url(../assets/icon_facebook_hover.svg) no-repeat;
+  #inst{
+  margin-left: -4px;
+  margin-top: 10px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon_instagram.svg) no-repeat;
   }
-  #inst:hover{
-  background: url(../assets/icon_instagram-hover.svg) no-repeat;
-  }
+}
+p{
+margin-left: auto;
+}
+#twitter:hover{
+background: url(../assets/icon-twitter-hover.svg) no-repeat;
+}
+#face:hover{
+background: url(../assets/icon_facebook_hover.svg) no-repeat;
+}
+#inst:hover{
+background: url(../assets/icon_instagram-hover.svg) no-repeat;
+}
 }
 @media screen and (max-width:1000px){
   article .spn{
-    margin-right: 150px;
+  margin-right: 150px;
   }
 }
 @media screen and (max-width:600px){

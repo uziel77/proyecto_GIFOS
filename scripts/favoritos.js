@@ -3,7 +3,8 @@ const righttArrow = document.getElementById("right-arrow");
 const content = document.getElementById("trending-container");
 const iconoMenu = document.querySelector(".icono-menu");
 let menu = document.querySelector("#menu");
-
+let modalDesktop = document.createElement("div")
+let apikey = "k7myyVYXWc9zebI6Yrrm5zPMspeexlxV";
 
 function modoOscuro() {
 let theme = document.getElementById("noc");
@@ -14,14 +15,10 @@ let theme = document.getElementById("noc");
   }
 }
 
-
-
-
-
 iconoMenu.addEventListener("click", (e)=>{
-  menu.classList.toggle("active");
-  document.body.classList.toggle("opacity");
-  const rutaActual = e.target.getAttribute("src");
+menu.classList.toggle("active");
+document.body.classList.toggle("opacity");
+const rutaActual = e.target.getAttribute("src");
   if(rutaActual == "../assets/burger.svg"){
   e.target.setAttribute("src","../assets/close.svg");
   } else {
@@ -29,44 +26,13 @@ iconoMenu.addEventListener("click", (e)=>{
   }
 })
 
-function getTrendingUrl(tren){
-  return fetch("https://api.giphy.com/v1/gifs/trending?api_key=k7myyVYXWc9zebI6Yrrm5zPMspeexlxV&q="+tren+"&limit=20"+"rating=g").then(response => response.json());
-  }
-
-  async function llamadaTrending(tren) {
-  const result = await this.getTrendingUrl(tren);
-  let promesa = [];
-  result.data.forEach(gif => {
-  let imagen = new Image();
-  imagen.src = gif.images.original.url;
-  promesa.push(cargarTrending(imagen));
-  agregarTrending(imagen);
-  });
-  await Promise.all(promesa)
-  }
-function cargarTrending(imagen){
-  return new Promise(resolve => imagen.onload = resolve);
-  }
-function agregarTrending(imagen){
-  let div = document.createElement('div');
-  div.className = 'trending';
-  div.appendChild(imagen);
-  let divImg = document.getElementById("trending-container");
-  divImg.appendChild(div);
-}
-window.onload = function() {
-  llamadaTrending();
-}
-  
-
-  righttArrow.addEventListener("click", e => {
-  content.scrollLeft += 100;
+righttArrow.addEventListener("click", e => {
+content.scrollLeft += 100;
 })
 
 leftArrow.addEventListener("click", e => {
-  content.scrollLeft -= 100;
+content.scrollLeft -= 100;
 });
-
 
 let pantallaFav = document.getElementById("resultados-fav")
 let favoritosArray = [];
@@ -76,82 +42,177 @@ let urlActual = window.location.pathname;
 buscarFav();
 
 function buscarFav(){
-  let pantallaFavVacio = document.getElementById("contenido")
+let pantallaFavVacio = document.getElementById("contenido")
   if(favoritosString == null || favoritosString == "[]"){
-    pantallaFavVacio.style.display = "block";
-    pantallaFav.style.display = "none";
+  pantallaFavVacio.style.display = "block";
+  pantallaFav.style.display = "none";
   } else {
-    favoritosArray = JSON.parse(favoritosString);
-    let urlFav = `https://api.giphy.com/v1/gifs?ids=${favoritosArray.toString()}&api_key=k7myyVYXWc9zebI6Yrrm5zPMspeexlxV`
-
-fetch(urlFav)
-.then(res => res.json())
-.then(content =>{
+  favoritosArray = JSON.parse(favoritosString);
+  let urlFav = `https://api.giphy.com/v1/gifs?ids=${favoritosArray.toString()}&api_key=k7myyVYXWc9zebI6Yrrm5zPMspeexlxV`
+  fetch(urlFav)
+  .then(res => res.json())
+  .then(content =>{
   mostrarFav(content)
 }).catch(e =>{
-  console.error("fallo favorito", e)
+console.error("fallo favorito", e)
 })
 }
 }
-function mostrarFavoritos(content) {
-  let gifosFavoritosArray = content.data;
-
+function mostrarFav(content) {
+let gifosFavoritosArray = content.data;
   for(let i=0; i< gifosFavoritosArray.length; i++) {
-      pantallaFavoritos.innerHTML += `
-      <div class="resultados-gif-box-fav" onclick="maxGifMobileFav('${content.data[i].images.downsized.url}', '${content.data[i].id}', '${content.data[i].slug}', '${content.data[i].username}', '${content.data[i].title}')">
-      <div class="gif-acciones-resultados-fav">
-          <div class="iconos-acciones-gif">
-              <button class="iconos-acciones-box favorito-fav" onclick="borrarFav('${content.data[i].id}')">
-                  <img src="./assets/icon-fav-active.svg" alt="icon-favorito" id="icon-borrar-fav-${content.data[i].id}">
-              </button>
-              <button class="iconos-acciones-box download" onclick="descargarGif('${content.data[i].images.downsized.url}', '${content.data[i].slug}')">
-                  <img src="./assets/icon-download.svg" alt="icon-dowlnoad">
-              </button>
-              <button class="iconos-acciones-box max" onclick="maxGifDesktopFav('${content.data[i].images.downsized.url}', '${content.data[i].id}', '${content.data[i].slug}', '${content.data[i].username}', '${content.data[i].title}')">
-                  <img src="./assets/icon-max.svg" alt="icon-max">
-              </button>
-          </div>
-          <div class="textos-descripcion-gif-favoritos">
-              <p class="user-gif-favoritos">${content.data[i].username}</p>
-              <p class="titulo-gif-favoritos">${content.data[i].title}</p>
-          </div>
-      </div>
-      <img src="${content.data[i].images.downsized.url}" alt="${content.data[i].title}" class="resultados-gif">
+  pantallaFav.innerHTML += `
+  <div class="box-fav">
+  <div class="fav-accion">
+  <div class="card-fav">
+  <img src="../assets/icon-fav-active.svg" alt="icon-favorito" id="icon-borrar-fav-${content.data[i].id}" class="fav" onclick="borrarFav('${content.data[i].id}')">
+  <img src="../assets/icon-download.svg" alt="icon-dowlnoad" id="dow" onclick="descargarGif('${content.data[i].images.downsized.url}', '${content.data[i].slug}')">
+  <img src="../assets/icon-max-normal.svg" alt="icon-max" onclick="maxGifDesktopFav('${content.data[i].images.downsized.url}', '${content.data[i].id}', '${content.data[i].slug}', '${content.data[i].title}')" id="max">
   </div>
-      `;
-  }
+  <div class="fav-texto">
+  <p class="texto-fav">${content.data[i].title}</p>
+  </div>
+  </div>
+  <img src="${content.data[i].images.downsized.url}" alt="${content.data[i].title}" id="resultados-gif">
+  </div>
+  `;
+}
 }
 
-//FUNCION BORRAR FAV
 function borrarFav(gif){
-  let arrayAux = [];
-  arrayAux = JSON.parse(favoritosString);
-  let indice = arrayAux.indexOf(gif);
-  //console.log(arrayAux);
-  //console.log(indice);
-
-  arrayAux.splice(indice, 1);
-
-  let nuevoFavoritosString = JSON.stringify(arrayAux);
-  localStorage.setItem("gifosFavoritos", nuevoFavoritosString);
-  //console.log(favoritosString);
-
-  //cambio icono
-  let iconFavBorrar = document.getElementById('icon-borrar-fav-' + gif);
-  iconFavBorrar.setAttribute("src", "./assets/icon-fav-hover.svg");
-
-  //refresco pag
-  location.reload();
+let arrayAux = [];
+arrayAux = JSON.parse(favoritosString);
+let indice = arrayAux.indexOf(gif);
+arrayAux.splice(indice, 1);
+let nuevoFavoritosString = JSON.stringify(arrayAux);
+localStorage.setItem("gifosFavoritos", nuevoFavoritosString);
+let iconFavBorrar = document.getElementById('icon-borrar-fav-' + gif);
+iconFavBorrar.setAttribute("src", "../assets/icon-fav-hover.svg");
+location.reload();
 }
 
-//FUNCION DESCARGAR GIF
 async function descargarGif(gifImg, gifNombre) {
-  let blob = await fetch(gifImg).then( img => img.blob());;
-  invokeSaveAsDialog(blob, gifNombre + ".gif");
+let blob = await fetch(gifImg).then( img => img.blob());;
+invokeSaveAsDialog(blob, gifNombre + ".gif");
 }
 
 function borrarFavMaxMob(gif){
-  let iconNoFavMaxMob = document.getElementById('icon-borrar-fav-max-mobile-' + gif);
-  iconNoFavMaxMob.setAttribute("src", "./assets/icon-fav-hover.svg");
-  borrarFav(gif);
+let iconNoFavMaxMob = document.getElementById('icon-borrar-fav-max-mobile-' + gif);
+iconNoFavMaxMob.setAttribute("src", "../assets/icon-fav-hover.svg");
+borrarFav(gif);
+}
+
+function maxGifDesktopFav(img, id, slug, title) {
+  if(window.matchMedia("(min-width: 1023px)").matches){
+    modalDesktop.style.display = "block";
+    modalDesktop.innerHTML = `<img src="../assets/close.svg" alt="" class="modal-close" onclick="cerrarModalDesktop()">
+    <img src="${img}" alt="${id}" class="modal-gif">
+    <div class="modal-bar">
+    <div class="modal-texto">
+    <p class="modal-titulo">${title}</p>
+    </div>
+    <div class="btn-modal">
+    <img src="../assets/icon-fav-hover.svg" alt="fav" id="icon-fav-max-${id}" onclick="agregarFavoritoMax('${id}')">
+    <img src="../assets/icon-download-hover.svg" alt="down" onclick="descargaGif('${img}','${slug}')">
+    </div>
+    </div>
+    `
+ modalDesktop.classList.add("modal-activo");
+ document.body.appendChild(modalDesktop)
+ }
+}
+
+//trendings
+let sliderTrendingGifos = document.getElementById('trending-container');
+window.onload = trendingGifos();
+
+function trendingGifos() {
+let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=12`;
+  fetch(url)
+  .then(resp => resp.json()) //me trae el json con los 4 trending gifos
+  .then(content => {
+  let trendingGifArray = content.data;
+  let trendingGIFOhtml = "";
+  for (let i = 0; i < trendingGifArray.length; i++) {
+  let trendingGif = trendingGifArray[i];
+  trendingGIFOhtml += `
+  <div class="trending-box">
+  <div class="box-card2">
+  <div class="card2">
+  <img src="../assets/icon-fav.svg" alt="icon-favorito" id="icon-fav-trending-${trendingGif.id}" class="icon-fav-trending" onclick="agregarFavoritoTrending('${trendingGif.id}')">
+  <img src="../assets/icon-download.svg" alt="icon-download" id="dow-trending" onclick="descargarGifTrending('${trendingGif.images.downsized.url}', '${trendingGif.slug}')">
+  <img src="../assets/icon-max-normal.svg" alt="icon-max" id="max-trending" onclick="maxGifDesktopTrending('${trendingGif.images.downsized.url}', '${trendingGif.id}', '${trendingGif.slug}', '${trendingGif.username}', '${trendingGif.title}')">
+  </div>
+  <div class="textos-trending">
+  <p id="titulo-gif">${trendingGif.title}</p>
+  </div>
+  <img src="${trendingGif.images.downsized.url}" alt="${trendingGif.title}" class="trending-gif">
+  </div>
+  </div>`;
+}
+sliderTrendingGifos.innerHTML = trendingGIFOhtml;
+})
+.catch(err => {
+console.log(err);
+})
+}
+
+function maxGifDesktopTrending(img, id, slug, title) {
+  if (window.matchMedia("(min-width: 1023px)").matches) {
+  modalDesktop.style.display = "block";
+  modalDesktop.innerHTML = `
+  <img src="../assets/close.svg" alt=""  class="modal-close" onclick="cerrarModalDesktop()">
+  <img src="${img}" alt="${id}" class="modal-gif">
+  <div class="modal-bar">
+  <div class="modal-textos">
+  <p class="modal-titulo">${title}</p>
+  </div>
+  <div class="btn-modal">
+  <img src="../assets/icon-fav-hover.svg" alt="fav-gif" id="icon-fav-max-${id}" onclick="agregarFavoritoMaxTren('${id}')">
+  <img src="../assets/icon-download-hover.svg" alt="download-gif" onclick="descargarGifTrending('${img}','${slug}')">
+  </div>
+  </div>
+  `;
+  modalDesktop.classList.add("modal-activo");
+  document.body.appendChild(modalDesktop);
+  }
+}
+
+function cerrarModalDesktop() {
+modalDesktop.style.display = "none";
+}
+
+function cerrarModalDesktop() {
+modalDesktop.style.display = "none";
+}
+
+function agregarFavoritoMaxTren(gif) {
+let iconFavMax = document.getElementById('icon-fav-max-' + gif);
+iconFavMax.setAttribute("src", "../assets/icon-fav-active.svg");
+agregarFavoritoTrendingGral(gif);
+}
+
+favoritosArray = [];
+favoritosString = localStorage.getItem("gifosFavoritos");
+
+function agregarFavoritoTrending(gif) {
+let iconFav = document.getElementById('icon-fav-trending-' + gif);
+iconFav.setAttribute("src", "../assets/icon-fav-active.svg");
+agregarFavoritoTrendingGral(gif);
+}
+
+function agregarFavoritoTrendingGral(gif) {
+  if (favoritosString == null) {
+  favoritosArray = [];
+  } else {
+  favoritosArray = JSON.parse(favoritosString);
+  }
+  favoritosArray.push(gif);
+  favoritosString = JSON.stringify(favoritosArray);
+  localStorage.setItem("gifosFavoritos", favoritosString);
+}
+
+async function descargarGifTrending(gifImg, gifNombre) {
+let blob = await fetch(gifImg).then(img => img.blob());
+invokeSaveAsDialog(blob, gifNombre + ".gif");
 }

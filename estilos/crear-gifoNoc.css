@@ -206,17 +206,22 @@ main {
 }
 
 .cuadrado {
-  width: 700px;
-  height: 300px;
-  border: 1px solid black;
+  width: 480px;
+  height: 320px;
+  border: 2px solid white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cuadrado #titulo {
   width: 300px;
-  margin: auto;
+  position: absolute;
+  left: 100px;
   text-align: center;
 }
 
@@ -224,15 +229,43 @@ main {
   color: white;
 }
 
+.cuadrado #titulo span {
+  color: cyan;
+}
+
+.cuadrado #texto-grabar {
+  color: white;
+}
+
 .grabar {
-  width: 70%;
-  height: 100px;
+  width: 95%;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.grabar .grabando {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grabar .grabando #cinta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  position: absolute;
+  right: 0px;
 }
 
 .grabar .spn {
@@ -241,14 +274,16 @@ main {
   display: -ms-flexbox;
   display: flex;
   margin-top: 50px;
-  margin-left: 500px;
+  position: absolute;
+  top: -20px;
+  left: 500px;
 }
 
-.grabar .spn #sp1, .grabar .spn #sp2, .grabar .spn #sp3 {
-  color: white;
+.grabar .spn #sp {
+  color: cyan;
   margin-left: 50px;
   font-size: 20px;
-  border: 2px solid white;
+  border: 2px solid cyan;
   border-radius: 30px;
   display: inline-block;
   text-align: center;
@@ -257,12 +292,193 @@ main {
   height: 30px;
 }
 
-#barra {
-  width: 500px;
-  height: 15px;
-  background: white;
-  margin-left: 35%;
-  border-radius: 10px;
+.grabar .spn .spans {
+  background-color: cyan;
+  color: black !important;
+}
+
+.grabar #grabacion {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.grabar #gif-iniciado {
+  display: none;
+  width: 480px;
+  height: 320px;
+  position: absolute;
+  z-index: 2;
+}
+
+#cargando-texto {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+}
+
+#cargando-texto #icon-loader {
+  width: 30px;
+  height: 30px;
+}
+
+#cargando-texto #video-p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 19px;
+  color: white;
+  margin: 10px 0;
+}
+
+#gif-terminado {
+  display: none;
+  width: 480px;
+  height: 320px;
+  position: absolute;
+  z-index: 2;
+}
+
+#cargando {
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: blue;
+  opacity: 0.7;
+  color: wheat;
+  position: absolute;
+  z-index: 3;
+}
+
+#cargando-video {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+}
+
+#cargando-video #btn-descargar {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+#cargando-video #btn-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+#btn-comenzar {
+  font-size: 10px;
+  color: cyan;
+  border: 2px solid cyan;
+  border-radius: 30px;
+  width: 90px;
+  height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 80px;
+  margin-left: 270px;
+}
+
+#btn-comenzar:hover {
+  background-color: cyan;
+  color: black;
+}
+
+#btn-gifo {
+  display: none;
+  font-size: 10px;
+  color: cyan;
+  border: 2px solid cyan;
+  border-radius: 30px;
+  width: 90px;
+  height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 80px;
+  margin-left: 270px;
+}
+
+#btn-gifo:hover {
+  background-color: cyan;
+  color: black;
+}
+
+#btn-grabar {
+  display: none;
+  font-size: 10px;
+  color: cyan;
+  border: 2px solid cyan;
+  border-radius: 30px;
+  width: 90px;
+  height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 80px;
+  margin-left: 270px;
+}
+
+#btn-grabar:hover {
+  background-color: cyan;
+  color: black;
+}
+
+#btn-finalizar {
+  display: none;
+  font-size: 10px;
+  color: cyan;
+  border: 2px solid cyan;
+  border-radius: 30px;
+  width: 90px;
+  height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 80px;
+  margin-left: 270px;
+}
+
+#btn-finalizar:hover {
+  background-color: cyan;
+  color: black;
+}
+
+.contador {
+  position: absolute;
+  left: 400px;
+}
+
+.contador #reloj {
+  display: none;
+  font-size: 17px;
+  line-height: 20px;
+  color: cyan;
+}
+
+.contador #repetir {
+  display: none;
+  border: none;
+  border-bottom: 2px solid cyan;
+  font-size: 12px;
+  color: cyan;
+  background: #353638;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 footer {

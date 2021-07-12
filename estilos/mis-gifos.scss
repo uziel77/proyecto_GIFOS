@@ -6,6 +6,7 @@ margin: 0;
 box-sizing: border-box;
 border-top: 4px solid rgb(111, 0, 255);
 border-bottom: 4px solid rgb(111, 0, 255);
+overflow-x: hidden;
 }
 header{
 display: flex;
@@ -130,17 +131,17 @@ color: rgb(42, 42, 42);
 #cruz:hover{
   background: url(../assets/CTA-crear-gifo-hover.svg) no-repeat;
 }
-.galeria-fav{
+.galeria-gifos{
 max-width: 100%;
 height: 100%;
 text-align: center;
-  .titulo-fav{
+  .titulo-gifos{
   margin-top: 30px;
   color: rgb(111, 0, 255);
-    h2{
-    font-size: 30px;
-    margin-top: -5px;
-    }
+  h2{
+  font-size: 30px;
+  margin-top: -5px;
+  }
   }
   .contenido{
   margin-top: 100px;
@@ -152,94 +153,217 @@ text-align: center;
   margin: auto;
   color: cyan;
   }
-  .ver{
-  font-size: 10px;
-  color: rgb(111, 0, 255);
-  width: 100px;
-  height: 40px;
-  border-radius: 30px;
-  border: 1px solid rgb(111, 0, 255);
-  background: #fff;
-  cursor: pointer;
-  margin-top: 50px;
-  display: none;
+}
+.resultados-misgifos{
+width: 100%;
+height: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.resultados-gifos{
+width: 300px;
+height: 200px;
+margin: 15px;
+position: relative;
+box-shadow: 10px 5px 5px rgb(111, 0, 255);
+border: 2px solid black;
+}
+.box-mis-gifos{
+display: block;
+margin: 30px;
+object-fit: cover;
+position: absolute;
+z-index: 10;
+height: 100px;
+}
+.card-gifos{
+display: flex;
+position: absolute;
+width: 100%;
+  #max{
+  cursor: pointer; 
+  border: none;
+  position: absolute;
+  left: 180px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  }
+  #dow{
+  cursor: pointer; 
+  border: none;
+  position: absolute;
+  left: 220px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  left: 140px;
+  }
+  .borrar{
+  cursor: pointer; 
+  position: absolute;
+  left: 220px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
   }
 }
-#resultado-misgifos{
-  margin: 38px 10px 53px 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.texto-mis-gifos{
+color: blue;
+position: absolute;
+left: 0px;
+top: 80px;
+width: 150px;
 }
-.resultados-gif-box-misgifos{
-  width: 220px;
-  height: 200px;
-  margin: 10px;
-  
-}
-.gif-acciones-resultados-misgifos{
-  position: absolute;
-  z-index: 0;
-  width: 220px;
-  height: 200px;
-  
-}
-.iconos-acciones-gif{
-  display: flex;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-.textos-descripcion-gif-misgifos{
-  position: absolute;
-  bottom: 30px;
-  left: 18px;
-}
-.user-gif-misgifos{
-  color: black;
-}
-.titulo-gif-misgifos{
-  color: black;
+.resultados-gif{
+width: 300px;
+height: 200px;
+object-fit: cover;
 }
 article{
-  margin-top: 100px;
-  text-align: center;
+text-align: center;
   h2{
   color: rgb(111, 0, 255);
   }
   .container-box{
   display: flex;
-    #trending-container{
-    display: flex;
-    width: 75%;
-    height: 200px;
-    margin: auto;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    }
-    .trending{
-    align-items: center;
-    padding: 10px;
-      img{
-      width: 230px;
-      height: 180px;
-      object-fit: cover;
-      margin-left: 20px;
-      }  
-    }
-    figure{
-    position: relative;
-    top: 60px;
-      #right-arrow , #left-arrow{
-      height: 50px;
-      }
-    }
-    figure:hover{
-      background: rgb(111, 0, 255);
-      height: 50px;
-      opacity: 0.7;
-    }
   }
+  figure{
+  position: relative;
+  top: 60px;
+  height: 35px;
+  #right-arrow , #left-arrow{
+  height: 35px;
+  }
+}
+figure:hover{
+background: rgb(111, 0, 255);
+height: 35px;
+opacity: 0.7;
+}
+}
+#trending-container{
+display: flex;
+width: 75%;
+height: 300px;
+overflow-x: hidden;
+overflow-y: hidden;
+  .trending-box{
+  width: 300px;
+  height: 200px;
+  margin-left: 10px;
+  position: relative;
+  box-shadow: 10px 5px 5px rgb(111, 0, 255);
+  border: 2px solid black;
+  .trending-gif{
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  }
+}
+.card2{
+display: block;
+margin: 30px;
+object-fit: cover;
+position: absolute;
+z-index: 10;
+height: 100px;
+  #max-trending{
+  cursor: pointer; 
+  left: 180px;
+  top: -30px;
+  width: 30px;
+  height: 35px;
+  position: absolute;
+  }
+  .icon-fav-trending{
+  cursor: pointer; 
+  width: 30px;
+  height: 35px;
+  position: absolute;
+  left: 100px;
+  top: -30px;
+  }
+  #dow-trending{
+  cursor: pointer; 
+  left: 140px;
+  top: -30px;
+  width: 30px;
+  height: 35px;
+  position: absolute;
+  }
+}
+#titulo-gif{
+position: absolute;
+color: #fff;
+width: 150px;
+font-size: 15px;
+top: 120px;
+left: 10px;
+}
+}
+.modal-activo{
+position: fixed;
+padding: 0 20px;
+z-index: 20;
+left: 0;
+top: 0;
+width: 100%;
+height: 100vh;
+overflow-y: scroll;
+background-color: #fff;
+.modal-close{
+background-color: unset;
+border: 0;
+position: absolute;
+width: 24px;
+height: 24px;
+top: 50px;
+right: 100px;
+cursor: pointer;
+}
+.modal-gif{
+width: 80%;
+margin-top: 160px;
+margin-left: 30px;
+}
+.modal-bar{
+display: flex;
+justify-content: space-between;
+margin: 27px auto;
+position: relative;
+  .modal-texto{
+  max-width: 80%;
+  .modal-user{
+  text-align: left;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 300;
+  margin: 0;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .modal-titulo{
+  text-align: left;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  margin-top: 6px;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+}
+.btn-modal{
+display: flex;
+background-color: unset;
+border: none;
+cursor: pointer;
+width: 36px;
+height: 36px;
+margin-right: 50px;
+}
+}
 }
 footer{
 display: flex;
@@ -250,42 +374,42 @@ margin: auto;
   .contactos{
   margin-left: 5%;
   display: flex;
-    div{
-    margin-left: 5px;
-    cursor: pointer;
-    }
-    #twitter{
-    margin-top: 12px;
-    min-height: 20px;
-    min-width: 20px;
-    background: url(../assets/icon-twitter.svg) no-repeat;
-    }
-    #face{
-    margin-top: 10px;
-    min-height: 20px;
-    min-width: 20px;
-    background: url(../assets/icon_facebook.svg) no-repeat;
-    }
-    #inst{
-    margin-left: -4px;
-    margin-top: 10px;
-    min-height: 20px;
-    min-width: 20px;
-    background: url(../assets/icon_instagram.svg) no-repeat;
-    }
+  div{
+  margin-left: 5px;
+  cursor: pointer;
   }
-  p{
-  margin-left: auto;
+  #twitter{
+  margin-top: 12px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon-twitter.svg) no-repeat;
   }
-  #twitter:hover{
-  background: url(../assets/icon-twitter-hover.svg) no-repeat;
+  #face{
+  margin-top: 10px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon_facebook.svg) no-repeat;
   }
-  #face:hover{
-  background: url(../assets/icon_facebook_hover.svg) no-repeat;
+  #inst{
+  margin-left: -4px;
+  margin-top: 10px;
+  min-height: 20px;
+  min-width: 20px;
+  background: url(../assets/icon_instagram.svg) no-repeat;
   }
-  #inst:hover{
-  background: url(../assets/icon_instagram-hover.svg) no-repeat;
-  }
+}
+p{
+margin-left: auto;
+}
+#twitter:hover{
+background: url(../assets/icon-twitter-hover.svg) no-repeat;
+}
+#face:hover{
+background: url(../assets/icon_facebook_hover.svg) no-repeat;
+}
+#inst:hover{
+background: url(../assets/icon_instagram-hover.svg) no-repeat;
+}
 }
 @media screen and (max-width:600px){
   body{
