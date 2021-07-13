@@ -404,7 +404,6 @@ display: block;
 margin: 30px;
 object-fit: cover;
 position: absolute;
-z-index: 10;
 height: 100px;
   #max-trending{
   cursor: pointer; 
@@ -561,10 +560,6 @@ background: url(../assets/icon_instagram-hover.svg) no-repeat;
   }
   .menu-hamburguesa{
   display: block;
-  }
-  #trending-container{
-  display: block;
-  overflow-x:hidden;
   }
   figure{
   display: none;

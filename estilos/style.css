@@ -521,7 +521,6 @@ article figure:hover {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
-  z-index: 10;
   height: 100px;
 }
 
@@ -710,10 +709,6 @@ footer #inst:hover {
   }
   .menu-hamburguesa {
     display: block;
-  }
-  #trending-container {
-    display: block;
-    overflow-x: hidden;
   }
   figure {
     display: none;
