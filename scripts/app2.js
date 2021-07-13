@@ -2,7 +2,14 @@ btnSearch.addEventListener("click", e=>{
 let keyword = document.getElementById("search").value;
 llamadaGif(keyword);
 })
-
+let btnNoc = document.getElementById("mod");
+let btnNoc1 = document.getElementById("mod1");
+btnNoc.addEventListener("click", e=> {
+   modoOscuro()
+})
+btnNoc1.addEventListener("click", e=> {
+   modoOscuro()
+})
 //modo oscuro
 function modoOscuro() {
 let theme = document.getElementById("theme");

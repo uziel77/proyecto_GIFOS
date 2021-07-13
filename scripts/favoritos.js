@@ -6,6 +6,15 @@ let menu = document.querySelector("#menu");
 let modalDesktop = document.createElement("div")
 let apikey = "k7myyVYXWc9zebI6Yrrm5zPMspeexlxV";
 
+let btnNoc = document.getElementById("mod");
+let btnNoc1 = document.getElementById("mod1");
+btnNoc.addEventListener("click", e=> {
+   modoOscuro()
+})
+btnNoc1.addEventListener("click", e=> {
+   modoOscuro()
+})
+
 function modoOscuro() {
 let theme = document.getElementById("noc");
   if (noc.getAttribute("href") == "../estilos/favoritos.css") {
@@ -104,32 +113,31 @@ borrarFav(gif);
 
 function maxGifDesktopFav(img, id, slug, title) {
   if(window.matchMedia("(min-width: 1023px)").matches){
-    modalDesktop.style.display = "block";
-    modalDesktop.innerHTML = `<img src="../assets/close.svg" alt="" class="modal-close" onclick="cerrarModalDesktop()">
-    <img src="${img}" alt="${id}" class="modal-gif">
-    <div class="modal-bar">
-    <div class="modal-texto">
-    <p class="modal-titulo">${title}</p>
-    </div>
-    <div class="btn-modal">
-    <img src="../assets/icon-fav-hover.svg" alt="fav" id="icon-fav-max-${id}" onclick="agregarFavoritoMax('${id}')">
-    <img src="../assets/icon-download-hover.svg" alt="down" onclick="descargaGif('${img}','${slug}')">
-    </div>
-    </div>
-    `
+  modalDesktop.style.display = "block";
+  modalDesktop.innerHTML = `<img src="../assets/close.svg" alt="" class="modal-close" onclick="cerrarModalDesktop()">
+  <img src="${img}" alt="${id}" class="modal-gif">
+  <div class="modal-bar">
+  <div class="modal-texto">
+  <p class="modal-titulo">${title}</p>
+  </div>
+  <div class="btn-modal">
+  <img src="../assets/icon-fav-hover.svg" alt="fav" id="icon-fav-max-${id}" onclick="agregarFavoritoMax('${id}')">
+  <img src="../assets/icon-download-hover.svg" alt="down" onclick="descargaGif('${img}','${slug}')">
+  </div>
+  </div>
+  `
  modalDesktop.classList.add("modal-activo");
  document.body.appendChild(modalDesktop)
  }
 }
 
-//trendings
 let sliderTrendingGifos = document.getElementById('trending-container');
 window.onload = trendingGifos();
 
 function trendingGifos() {
 let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=12`;
   fetch(url)
-  .then(resp => resp.json()) //me trae el json con los 4 trending gifos
+  .then(resp => resp.json())
   .then(content => {
   let trendingGifArray = content.data;
   let trendingGIFOhtml = "";

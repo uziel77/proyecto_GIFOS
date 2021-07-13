@@ -49,9 +49,9 @@ header ul #mod {
   color: #fff;
   border: none;
   background: #353638;
-  font-size: 12px;
-  margin-top: 13px;
-  margin-right: 0px;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-right: -40px;
   cursor: pointer;
   height: 30px;
   width: 200px;
@@ -59,12 +59,19 @@ header ul #mod {
 
 header ul #cruz {
   width: 70px;
-  margin-bottom: -10px;
-  margin-left: 30px;
+  height: 60px;
+  margin-top: 0px;
+  margin-left: 10px;
   cursor: pointer;
   background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
-  -o-object-fit: cover;
-     object-fit: cover;
+}
+
+header ul #a-img {
+  margin-left: 20px;
+  font-size: 28px;
+  position: absolute;
+  top: 30px;
+  color: black;
 }
 
 header li {
@@ -85,16 +92,14 @@ header a {
 
 .menu-hamburguesa {
   display: none;
-}
-
-.menu-hamburguesa {
-  display: none;
+  position: relative;
+  z-index: 90;
 }
 
 .icono-menu {
   position: absolute;
-  left: 90%;
-  top: 40px;
+  left: 80%;
+  top: -40px;
   z-index: 10;
 }
 
@@ -112,7 +117,7 @@ header a {
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 0;
+  top: -70px;
   left: 0;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
@@ -136,17 +141,6 @@ header a {
   margin-top: -25px;
 }
 
-.cont-menu ul button {
-  border: none;
-  font-size: 25px;
-  background: black;
-  color: white;
-  border-bottom: 1px solid white;
-  width: 87%;
-  height: 45px;
-  outline: none;
-}
-
 .cont-menu ul li {
   color: white;
   display: block;
@@ -165,7 +159,32 @@ header a {
 
 .cont-menu ul li:hover {
   background-color: #e4e4e4;
-  color: #2a2a2a;
+  color: black;
+}
+
+.cont-menu ul li:hover a:hover {
+  color: black;
+}
+
+#mod1 {
+  color: #fff;
+  border-bottom: 1px solid white;
+  background: black;
+  font-size: 22px;
+  margin-top: 13px;
+  margin-right: 0px;
+  cursor: pointer;
+  height: 30px;
+  width: 70%;
+}
+
+#mod1::before {
+  content: "MODO DIURNO";
+}
+
+#mod1:hover {
+  background-color: white;
+  color: black;
 }
 
 .galeria-gifos {

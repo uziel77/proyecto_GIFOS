@@ -8,10 +8,10 @@ border-top: 4px solid rgb(111, 0, 255);
 border-bottom: 4px solid rgb(111, 0, 255);
 }
 header{
-display: flex;
-width: 70%;
-justify-content: space-between;
-margin: auto;
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin: auto;
   #logo{
   background: url(../assets/logo-desktop.svg) no-repeat;
   margin: 20px 0 0 0;
@@ -27,87 +27,86 @@ margin: auto;
   width: 100%;
   height: 50px;
   justify-content: space-between;
-    #mod{
-    color: rgb(111, 0, 255);
-    border: none;
-    background: #fff;
-    font-size: 12px;
-    margin-top: 13px;
-    margin-right: 0px;
-    cursor: pointer;
-    height: 30px;
-    width: 200px;
-    }
-    #cruz{
-    width: 70px;
-    margin-bottom: -10px;
-    margin-left: 30px;
-    cursor: pointer;
-    background: url(../assets/CTA-crear-gifo-active.svg) no-repeat;
-    object-fit: cover;
-    }
-  }
-  li{
-  margin: 20px;
-  font-size: 13px;
-  width: 70px;
-  height: 20px;
-  }
-  a{
-  text-decoration: none;
+  #mod{
   color: rgb(111, 0, 255);
+  border: none;
+  background: #fff;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-right: -40px;
+  cursor: pointer;
+  height: 30px;
+  width: 200px;
+  }
+  #cruz{
+  width: 70px;
+  height: 60px;
+  margin-top: 0px;
+  margin-left: 10px;
+  cursor: pointer;
+  background: url(../assets/button-crear-gifo.svg) no-repeat;
+  }
+  #a-img{
+  margin-left: 20px;
+  font-size: 28px;
+  position: absolute;
+  top: 30px;
+  color: rgb(111, 0, 255);
+  }
+}
+li{
+margin: 20px;
+font-size: 13px;
+width: 70px;
+height: 20px;
+}
+a{
+text-decoration: none;
+color: rgb(111, 0, 255);
 }
 }
 #mod::after{
 content: "MODO NOCTURNO";
 }
 .menu-hamburguesa{
-  display: none;
+display: none;
+position: relative;
+z-index: 90;
 }
 .icono-menu{
 position: absolute;
-left: 90%;
-top: 40px;
+left: 80%;
+top: -40px;
 z-index: 10;
-  }
-  .icono-menu img{
-  vertical-align: top;
-  width: 30px;
-  cursor: pointer;
-  }
-  .cont-menu{
-  background-color: rgb(111, 0, 255);
-  opacity: 0.9;
-  box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all .5s ease;
-  margin-top: 100px;
-  }
-  .active{
-  transform: translate(-600px);
-  }
-  .opacity{
-  transition: all .0s ease;
-  }
-  .cont-menu ul{
-  padding: 100px 0px 20px 0px;
-  list-style: none;
-  text-align: center;
-  margin-top: -25px;
-  button{
-  border: none;
-  font-size: 25px;
-  background: rgb(111, 0, 255);
-  color: white;
-  border-bottom: 1px solid white;
-  width: 87%;
-  height: 45px;
-  outline: none;
-  }
+}
+.icono-menu img{
+vertical-align: top;
+width: 30px;
+cursor: pointer;
+}
+.cont-menu{
+background-color: rgb(111, 0, 255);
+opacity: 0.9;
+box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
+width: 100%;
+height: 100vh;
+position: absolute;
+top: -70px;
+left: 0;
+transition: all .5s ease;
+margin-top: 100px;
+}
+.active{
+transform: translate(-600px);
+}
+.opacity{
+transition: all .0s ease;
+}
+.cont-menu ul{
+padding: 100px 0px 20px 0px;
+list-style: none;
+text-align: center;
+margin-top: -25px;
 }
 .cont-menu ul li{
 color: white;
@@ -125,7 +124,33 @@ margin: 30px;
 }
 .cont-menu ul li:hover{
 background-color: rgb(228, 228, 228);
-color: rgb(42, 42, 42);
+  a:hover{
+  color: black;
+  }
+}
+#cruz:hover{
+background: url(../assets/CTA-crear-gifo-hover.svg) no-repeat;
+}
+#a-img:hover{
+color: white;
+}
+#mod1{
+color: #fff;
+border-bottom: 1px solid white;
+background: rgb(111, 0, 255);
+font-size: 22px;
+margin-top: 13px;
+margin-right: 0px;
+cursor: pointer;
+height: 30px;
+width: 70%;
+}
+#mod1::before{
+content: "MODO NOCTURNO";
+}
+#mod1:hover{
+background-color: white;
+color: black;
 }
 main{
 width: 80%;
@@ -156,10 +181,12 @@ object-fit: cover;
 .cuadrado{
 width: 480px;
 height: 320px;
-border: 1px solid black;
+border: 2px solid rgb(111, 0, 255);
 display: flex;
 position: relative;
 align-items: center;
+box-shadow: 10px 5px 5px rgb(111, 0, 255);
+
   #titulo{
   width: 300px;
   position: absolute;
@@ -179,15 +206,16 @@ height: 150px;
 display: flex;
 justify-content: center;
 position: relative;
-.grabando{
-display: flex;
+#grabando{
+display: block;
 height: 100px;
 align-items: center;
   #cinta{
   display: flex;
   height: 80px;
-  position: absolute;
-  right: 0px;
+  position: relative;
+  top: 20px;
+  left: 450px;
   }
 }
 .spn{
@@ -196,8 +224,8 @@ display: flex;
 margin-top: 50px;
 position: absolute;
 top: -20px;
-left: 500px;
-  #sp{
+left: 480px;
+  #sp1 , #sp2, #sp3{
   color: rgb(111, 0, 255);
   margin-left: 50px;
   font-size: 20px;
@@ -298,8 +326,8 @@ width: 90px;
 height: 40px;
 font-weight: bold;
 cursor: pointer;
-margin-top: 80px;
-margin-left: 270px;
+margin-top: 45px;
+margin-left: -170px;
 }
 #btn-comenzar:hover{
 background-color: blueviolet;
@@ -315,8 +343,8 @@ width: 90px;
 height: 40px;
 font-weight: bold;
 cursor: pointer;
-margin-top: 80px;
-margin-left: 270px;
+margin-top: 90px;
+margin-left: -170px;
 }
 #btn-gifo:hover{
 background-color: blueviolet;
@@ -332,8 +360,8 @@ width: 90px;
 height: 40px;
 font-weight: bold;
 cursor: pointer;
-margin-top: 80px;
-margin-left: 270px;
+margin-top: 90px;
+margin-left: -170px;
 }
 #btn-grabar:hover{
 background-color: blueviolet;
@@ -349,8 +377,8 @@ width: 90px;
 height: 40px;
 font-weight: bold;
 cursor: pointer;
-margin-top: 80px;
-margin-left: 270px;
+margin-top: 90px;
+margin-left: -170px;
 }
 #btn-finalizar:hover{
 background-color: blueviolet;
@@ -419,8 +447,11 @@ background: url(../assets/icon_instagram-hover.svg) no-repeat;
 }
 }
 @media screen and (max-width:1000px){
-  article .spn{
-  margin-right: 150px;
+  .grabar .spn{
+  margin-right: 200px;
+  }
+  #cinta{
+    display: none;
   }
 }
 @media screen and (max-width:600px){
@@ -442,6 +473,12 @@ background: url(../assets/icon_instagram-hover.svg) no-repeat;
   }
   .menu-hamburguesa{
   display: block;
+  }
+  #grabando{
+    display: none;
+    #cinta{
+      display: none;
+    }
   }
   footer{
   width: 80%;

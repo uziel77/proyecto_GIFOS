@@ -9,38 +9,38 @@
 </head>
 <body>
 
-  <!---------header menu------------>
+  <!--header menu-->
 
   <header>
-    <a href="../index.html" id="logo"> <img src="" alt=""></a>
+    <a href="../index.html" id="logo"></a>
     <nav class="menu1">
       <ul>
-      <button onclick="modoOscuro()" id="mod"></button>
-      <li><a href="../htmls/favoritos.html">FAVORITOS</a></li>
-      <li><a href="../htmls/mis-gifos.html">MIS GIFOS</a></li>
-      <a href="../htmls/crear-gifo.html" id="cruz"><img src="" alt=""></a>
+      <li id="mod"></li>
+        <li><a href="../htmls/favoritos.html">FAVORITOS</a></li>
+        <li><a href="../htmls/mis-gifos.html">MIS GIFOS</a></li>
+        <li id="cruz"><a href="../htmls/crear-gifo.html"></a></li>
       </ul>
     </nav>
   </header>
-  <div class="menu-hamburguesa">
-    <div class="icono-menu">
-      <img src="../assets/burger.svg" alt="">
+    <div class="menu-hamburguesa">
+        <div class="icono-menu">
+          <img src="../assets/burger.svg" alt="">
+        </div>
+        <div class="cont-menu active" id="menu">
+          <ul>
+            <li id="mod1"></li>
+            <li><a href="../htmls/favoritos.html">FAVORITOS</a></li>
+            <li><a href="../htmls/mis-gifos.html">MIS GIFOS</a></li>
+          </ul>
+      </div>
     </div>
-    <div class="cont-menu active" id="menu">
-      <ul>
-        <button onclick="modoOscuro()" id="mod"></button>
-        <li><a href="../htmls/favoritos.html">FAVORITOS</a></li>
-        <li><a href="../htmls/mis-gifos.html">MIS GIFOS</a></li>
-      </ul>
-    </div>
-  </div>
 
-  <!---------camara y creador de gifos------------>
+  <!--camara y creador de gifos-->
 
   <main>
     <div class="camara-luz">
-      <img src="" alt="" id="camara">
-      <img src="" alt="" id="luz">
+      <div id="camara"></div>
+      <div id="luz"></div>
     </div>
     <div class="pagina1">
       <div class="cuadrado">
@@ -56,17 +56,20 @@
     </div>
   </div>
     <video src="" id="grabacion"></video>
-    <img src="" alt="" id="gif-terminado">
+    <img src=""id="gif-terminado">
   </div>
   </div>
   </main>
-  <article class="grabar">
+ 
+  <!--grabar-->
+
+  <div class="grabar">
     <div class="spn">
-      <span id="sp">1</span>
-      <span id="sp">2</span>
-      <span id="sp">3</span>
+      <p id="sp1">1</p>
+      <p id="sp2">2</p>
+      <p id="sp3">3</p>
     </div>
-    <div class="grabando">
+    <div id="grabando">
       <img src="../assets/pelicula.svg" alt="" id="cinta">
     </div>
   <div class="botones">
@@ -75,14 +78,13 @@
     <button id="btn-finalizar">FINALIZAR</button>
     <button id="btn-gifo">SUBIR GIFO</button>
   </div>  
-  </div> 
   <div class="contador">
     <p id="reloj">0:00:00</p>
     <button id="repetir">REPETIR CAPTURA</button>
   </div>
-  </article>
+</div>
 
-  <!---------footer y redes------------>
+  <!--footer y redes-->
 
   <footer>
     <div class="contactos">

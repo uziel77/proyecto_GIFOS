@@ -10,10 +10,10 @@ border-bottom: 4px solid black;
 overflow-x: hidden;
 }
 header{
-display: flex;
-width: 70%;
-justify-content: space-between;
-margin: auto;
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin: auto;
   #logo{    
   background: url(../assets/Logo-modo-noc.svg) no-repeat;
   margin: 20px 0 0 0;
@@ -29,50 +29,56 @@ margin: auto;
   width: 100%;
   height: 50px;
   justify-content: space-between;
-    #mod{
-    color: #fff;
-    border: none;
-    background: #353638 ;
-    font-size: 12px;
-    margin-top: 13px;
-    margin-right: 0px;
-    cursor: pointer;
-    height: 30px;
-    width: 200px;
-    }
-    #cruz{
-    width: 70px;
-    margin-bottom: -10px;
-    margin-left: 30px;
-    cursor: pointer;
-    background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
-    object-fit: cover;
-    }
-  }
-  li{
-  margin: 20px;
-  font-size: 13px;
-  width: 70px;
-  height: 20px;
-  }
-  a{
-  text-decoration: none;
+  #mod{
   color: #fff;
+  border: none;
+  background: #353638 ;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-right: -40px;
+  cursor: pointer;
+  height: 30px;
+  width: 200px;
   }
+  #cruz{
+  width: 70px;
+  height: 60px;
+  margin-top: 0px;
+  margin-left: 10px;
+  cursor: pointer;
+  background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
+  }
+  #a-img{
+  margin-left: 20px;
+  font-size: 28px;
+  position: absolute;
+  top: 30px;
+  color: black;
+  }
+}
+li{
+margin: 20px;
+font-size: 13px;
+width: 70px;
+height: 20px;
+}
+a{
+text-decoration: none;
+color: #fff;
+}
 }
 #mod::before{
 content: "MODO DIURNO";
 }
 .menu-hamburguesa{
 display: none;
-}
-.menu-hamburguesa{
-display: none;
+position: relative;
+z-index: 90;
 }
 .icono-menu{
 position: absolute;
-left: 90%;
-top: 40px;
+left: 80%;
+top: -40px;
 z-index: 10;
 }
 .icono-menu img{
@@ -87,7 +93,7 @@ box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
 width: 100%;
 height: 100vh;
 position: absolute;
-top: 0;
+top: -70px;
 left: 0;
 transition: all .5s ease;
 margin-top: 100px;
@@ -103,16 +109,6 @@ padding: 100px 0px 20px 0px;
 list-style: none;
 text-align: center;
 margin-top: -25px;
-button{
-border: none;
-font-size: 25px;
-background: black;
-color: white;
-border-bottom: 1px solid white;
-width: 87%;
-height: 45px;
-outline: none;
-}
 }
 .cont-menu ul li{
 color: white;
@@ -123,14 +119,35 @@ padding: 10px 50px;
 cursor: pointer;
 border-bottom: 1px solid white;
 margin: 30px;
-a{
-color: white;
-text-decoration: none;
-}
+  a{
+  color: white;
+  text-decoration: none;
+  }
 }
 .cont-menu ul li:hover{
 background-color: rgb(228, 228, 228);
-color: rgb(42, 42, 42);
+color: black;
+  a:hover{
+  color: black;
+}
+}
+#mod1{
+color: #fff;
+border-bottom: 1px solid white;
+background: black;
+font-size: 22px;
+margin-top: 13px;
+margin-right: 0px;
+cursor: pointer;
+height: 30px;
+width: 70%;
+}
+#mod1::before{
+content: "MODO DIURNO";
+}
+#mod1:hover{
+background-color: white;
+color: black;
 }
 .galeria-gifos{
 max-width: 100%;
@@ -322,48 +339,48 @@ left: 10px;
   height: 100vh;
   overflow-y: scroll;
   background: #353638;
-    .modal-close{
-    background-color: unset;
-    border: 0;
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 50px;
-    right: 100px;
-    cursor: pointer;
-    }
-    .modal-gif{
-    width: 80%;
-    margin-top: 160px;
-    margin-left: 30px;
-    }
-    .modal-bar{
-    display: flex;
-    justify-content: space-between;
-    margin: 27px auto;
-    position: relative;
-    .modal-texto{
-    max-width: 80%;
-    .modal-titulo{
-    text-align: left;
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 500;
-    margin-top: 6px;
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-  }
-  .btn-modal{
-  display: flex;
-  border: none;
+  .modal-close{
+  background-color: unset;
+  border: 0;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50px;
+  right: 100px;
   cursor: pointer;
-  width: 36px;
-  height: 36px;
-  margin-right: 50px;
   }
+  .modal-gif{
+  width: 80%;
+  margin-top: 160px;
+  margin-left: 30px;
   }
+  .modal-bar{
+  display: flex;
+  justify-content: space-between;
+  margin: 27px auto;
+  position: relative;
+  .modal-texto{
+  max-width: 80%;
+  .modal-titulo{
+  text-align: left;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  margin-top: 6px;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   }
+}
+.btn-modal{
+display: flex;
+border: none;
+cursor: pointer;
+width: 36px;
+height: 36px;
+margin-right: 50px;
+}
+}
+}
 footer{
 display: flex;
 padding: 10px 120px;

@@ -1,10 +1,10 @@
-let barraSearch = document.getElementById("search"); //input-buscador
-let btnSearch = document.getElementById("btn"); // buscador lupa
-let barraDesp = document.getElementById("barra-desp"); // buscador sugerencia
-let busqueda = document.getElementById("busqueda"); // bloque buscador
-let cerrar = document.getElementById("cerrar"); // cerrar busqueda
-let containerGif = document.getElementById("container-gifs"); //resultados busqueda
-let verMas = document.getElementById("ver-mas"); // resultados ver mas
+let barraSearch = document.getElementById("search");
+let btnSearch = document.getElementById("btn"); 
+let barraDesp = document.getElementById("barra-desp");
+let busqueda = document.getElementById("busqueda"); 
+let cerrar = document.getElementById("cerrar"); 
+let containerGif = document.getElementById("container-gifs");
+let verMas = document.getElementById("ver-mas");
 let desplegable; 
 let offset = 0;
 let favoritosString;
@@ -87,7 +87,7 @@ barraSearch.addEventListener("keyup", (e)=>{
    searchGif();
    }
 })
- //busqueda de gifos
+
 function searchGif(){
 let urlSearch = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&limit=12&offset=${offset}&q=`;
 let strSearch = barraSearch.value.trim();
@@ -142,7 +142,7 @@ function verMasGifs(){
 offset = offset + 12;
 searchGif();
 }
-//traer gifos
+
 function llamadaGif(){
 let urlSearch = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&limit=12&offset=${offset}&q=`;
 let strSearch = barraSearch.value.trim();
@@ -172,7 +172,7 @@ console.log("error busqueda");
 })
 }
 
-// funcion iconos
+
 function agregarFavBus(gif){
 let btnFav = document.getElementById('icon-fav-' + gif)
 btnFav.setAttribute("src","./assets/icon-fav-active.svg")
@@ -225,7 +225,7 @@ iconFavMax.setAttribute("src", "./assets/icon-fav-active.svg");
 agregarFav(gif);
 }
 
-//trendings
+
 let sliderTrendingGifos = document.getElementById('trending-container');
 window.onload = trendingGifos();
 
@@ -294,7 +294,7 @@ iconFavMax.setAttribute("src", "./assets/icon-fav-active.svg");
 agregarFavoritoTrendingGral(gif);
 }
 
-// favoritos
+
 favoritosArray = [];
 favoritosString = localStorage.getItem("gifosFavoritos");
 
@@ -315,7 +315,6 @@ favoritosString = JSON.stringify(favoritosArray);
 localStorage.setItem("gifosFavoritos", favoritosString);
 }
 
-//descarga
 async function descargarGifTrending(gifImg, gifNombre) {
 let blob = await fetch(gifImg).then(img => img.blob());
 invokeSaveAsDialog(blob, gifNombre + ".gif");
@@ -323,46 +322,3 @@ invokeSaveAsDialog(blob, gifNombre + ".gif");
 
 
 
-
-// function getTrendingUrl(tren){
-// return fetch("https://api.giphy.com/v1/gifs/trending?api_key=k7myyVYXWc9zebI6Yrrm5zPMspeexlxV&q="+tren+"&limit=20"+"rating=g").then(response => response.json());
-//    }
-//    async function llamadaTrending(tren) {
-//       const result = await this.getTrendingUrl(tren);
-//       let promesa = [];
-//       result.data.forEach(gif => {
-//       let imagen = new Image();
-//       imagen.src = gif.images.original.url;
-//       promesa.push(cargarTrending(imagen));
-//       agregarTrending(imagen);
-//       });
-//       await Promise.all(promesa);
-//       }
-//       function cargarTrending(imagen){
-//       return new Promise(resolve => imagen.onload = resolve);
-//       }
-//       function agregarTrending(imagen){
-//       let div = document.createElement('div');
-//       div.className = 'trending';
-//       div.appendChild(imagen);
-//       let divCard = document.createElement('div');
-//       divCard.id = "card2";
-//       let imagenFav = new Image();
-//       let imagenDow = new Image();
-//       let imagenMax = new Image();
-//       imagenFav.id = "img-fav-tren";
-//       imagenDow.id = "img-dow-tren";
-//       imagenMax.id = "img-max-tren";
-//       imagenFav.src ="./assets/icon-fav.svg";
-//       imagenDow.src = "./assets/icon-download.svg";
-//       imagenMax.src = "./assets/icon-max-normal.svg";
-//       divCard.appendChild(imagenFav);
-//       divCard.appendChild(imagenDow);
-//       divCard.appendChild(imagenMax);
-//       div.appendChild(divCard);
-//       let divImg = document.getElementById("trending-container");
-//       divImg.appendChild(div);
-//       imagenDow.addEventListener("click", descargaGif);
-      
-      
-// }

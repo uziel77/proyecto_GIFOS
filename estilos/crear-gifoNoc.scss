@@ -28,50 +28,50 @@ margin: auto;
   width: 100%;
   height: 50px;
   justify-content: space-between;
-    #mod{
-    color: #fff;
-    border: none;
-    background: #353638 ;
-    font-size: 12px;
-    margin-top: 13px;
-    margin-right: 0px;
-    cursor: pointer;
-    height: 30px;
-    width: 200px;
-    }
-    #cruz{
-    width: 70px;
-    margin-bottom: -10px;
-    margin-left: 30px;
-    cursor: pointer;
-    background: url(../assets/CTA-crear-gifo-active.svg) no-repeat;
-    object-fit: cover;
-    }
-  } 
-  li{
-  margin: 20px;
-  font-size: 13px;
-  width: 70px;
-  height: 20px;
-  }
-  a{
-  text-decoration: none;
+  #mod{
   color: #fff;
+  border: none;
+  background: #353638 ;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-right: -40px;
+  cursor: pointer;
+  height: 30px;
+  width: 200px;
   }
+  #cruz{
+  width: 70px;
+  height: 60px;
+  margin-top: 0px;
+  margin-left: 10px;
+  cursor: pointer;
+  background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
+  object-fit: cover;
+  }
+}
+li{
+margin: 20px;
+font-size: 13px;
+width: 70px;
+height: 20px;
+}
+a{
+text-decoration: none;
+color: #fff;
+}
 }
 #mod::before{
-  content: "MODO DIURNO";
+content: "MODO DIURNO";
 }
 .menu-hamburguesa{
 display: none;
-}
-.menu-hamburguesa{
-display: none;
+position: relative;
+z-index: 90;
 }
 .icono-menu{
 position: absolute;
-left: 90%;
-top: 40px;
+left: 80%;
+top: -40px;
 z-index: 10;
 }
 .icono-menu img{
@@ -86,7 +86,7 @@ box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
 width: 100%;
 height: 100vh;
 position: absolute;
-top: 0;
+top: -70px;
 left: 0;
 transition: all .5s ease;
 margin-top: 100px;
@@ -102,16 +102,6 @@ padding: 100px 0px 20px 0px;
 list-style: none;
 text-align: center;
 margin-top: -25px;
-button{
-border: none;
-font-size: 25px;
-background: black;
-color: white;
-border-bottom: 1px solid white;
-width: 87%;
-height: 45px;
-outline: none;
-}
 }
 .cont-menu ul li{
 color: white;
@@ -129,7 +119,28 @@ margin: 30px;
 }
 .cont-menu ul li:hover{
 background-color: rgb(228, 228, 228);
-color: rgb(42, 42, 42);
+color: black;
+  a:hover{
+  color: black;
+  }
+}
+#mod1{
+color: #fff;
+border-bottom: 1px solid white;
+background: black;
+font-size: 22px;
+margin-top: 13px;
+margin-right: 0px;
+cursor: pointer;
+height: 30px;
+width: 70%;
+}
+#mod1::before{
+content: "MODO DIURNO";
+}
+#mod1:hover{
+background-color: white;
+color: black;
 }
 main{
 width: 80%;
@@ -186,15 +197,16 @@ height: 150px;
 display: flex;
 justify-content: center;
 position: relative;
-  .grabando{
-  display: flex;
+  #grabando{
+  display: block;
   height: 100px;
   align-items: center;
   #cinta{
   display: flex;
   height: 80px;
-  position: absolute;
-  right: 0px;
+  position: relative;
+  top: 20px;
+  left: 450px;
   }
 }
 .spn{
@@ -203,8 +215,8 @@ display: flex;
 margin-top: 50px;
 position: absolute;
 top: -20px;
-left: 500px;
-  #sp{
+left: 480px;
+  #sp1 , #sp2, #sp3{
   color: cyan;
   margin-left: 50px;
   font-size: 20px;
@@ -217,8 +229,8 @@ left: 500px;
   height: 30px;
   }
   .spans{
-  background-color: cyan;
-  color: black !important;
+  background-color: rgb(111, 0, 255);
+  color: honeydew !important;
   }
 }
 #grabacion{
@@ -240,17 +252,17 @@ width: 100%;
 height: 100%;
 align-items: center;
 margin-top: 100px;
-#icon-loader{
-width: 30px;
-height: 30px;
-}
-#video-p{
-font-weight: 500;
-font-size:20px;
-line-height: 19px;
-color: white;
-margin: 10px 0;
-}
+  #icon-loader{
+  width: 30px;
+  height: 30px;
+  }
+  #video-p{
+  font-weight: 500;
+  font-size:20px;
+  line-height: 19px;
+  color: white;
+  margin: 10px 0;
+  }
 }
 #gif-terminado{
 display: none;
@@ -298,70 +310,74 @@ right:15px;
 }
 #btn-comenzar{
 font-size: 10px;
-color: cyan;
-border: 2px solid cyan;
+color: black;
+background: cyan;
+border: 2px solid white;
 border-radius: 30px;
 width: 90px;
 height: 40px;
 font-weight: bold;
 cursor: pointer;
-margin-top: 80px;
-margin-left: 270px;
+margin-top: 45px;
+margin-left: -170px;
 }
 #btn-comenzar:hover{
-background-color: cyan;
-color: black;
+background-color: blueviolet;
+color: white;
 }
 #btn-gifo{
 display: none;
 font-size: 10px;
-color: cyan;
-border: 2px solid cyan;
+color: black;
+background: cyan;
+border: 2px solid white;
 border-radius: 30px;
 width: 90px;
 height: 40px;
 font-weight: bold;
 cursor: pointer;
-margin-top: 80px;
-margin-left: 270px;
+margin-top: 90px;
+margin-left: -170px;
 }
 #btn-gifo:hover{
-background-color: cyan;
-color: black;
+background-color: blueviolet;
+color: white;
 }
 #btn-grabar{
 display: none;
 font-size: 10px;
-color: cyan;
-border: 2px solid cyan;
+color: black;
+background: cyan;
+border: 2px solid white;
 border-radius: 30px;
 width: 90px;
 height: 40px;
 font-weight: bold;
 cursor: pointer;
-margin-top: 80px;
-margin-left: 270px;
+margin-top: 90px;
+margin-left: -170px;
 }
 #btn-grabar:hover{
-background-color: cyan;
-color: black;
+background-color: blueviolet;
+color: white;
 }
 #btn-finalizar{
 display: none;
 font-size: 10px;
-color: cyan;
-border: 2px solid cyan;
+color: black;
+background: cyan;
+border: 2px solid white;
 border-radius: 30px;
 width: 90px;
 height: 40px;
 font-weight: bold;
 cursor: pointer;
-margin-top: 80px;
-margin-left: 270px;
+margin-top: 90px;
+margin-left: -170px;
 }
 #btn-finalizar:hover{
-background-color: cyan;
-color: black;
+background-color: blueviolet;
+color: white;
 }
 .contador{
 position: absolute;
@@ -375,10 +391,9 @@ left: 400px;
   #repetir{
   display: none;
   border: none;
-  border-bottom: 2px solid cyan;
+  border-bottom: 2px solid black;
   font-size: 12px;
   color: cyan;
-  background: #353638 ;
   font-weight: bold;
   cursor: pointer;
   }
@@ -415,6 +430,7 @@ font-size: 12px;
 }
 p{
 margin-left: auto;
+color: white;
 }
 #twitter:hover{
 background: url(../assets/icon-twitter-hover.svg) no-repeat;

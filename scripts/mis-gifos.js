@@ -1,3 +1,12 @@
+let btnNoc = document.getElementById("mod");
+let btnNoc1 = document.getElementById("mod1");
+btnNoc.addEventListener("click", e=> {
+   modoOscuro()
+})
+btnNoc1.addEventListener("click", e=> {
+   modoOscuro()
+})
+
 function modoOscuro() {
 let theme = document.getElementById("noc");
    if (noc.getAttribute("href") == "../estilos/mis-gifos.css") {
@@ -13,11 +22,11 @@ iconoMenu.addEventListener("click", (e)=>{
 menu.classList.toggle("active");
 document.body.classList.toggle("opacity");
 const rutaActual = e.target.getAttribute("src");
-    if(rutaActual == "../assets/burger.svg"){
-    e.target.setAttribute("src","../assets/close.svg");
-    } else {
-    e.target.setAttribute("src","../assets/burger.svg");
-    }
+   if(rutaActual == "../assets/burger.svg"){
+   e.target.setAttribute("src","../assets/close.svg");
+   } else {
+   e.target.setAttribute("src","../assets/burger.svg");
+   }
 })
 
 const leftArrow = document.getElementById("left-arrow");
@@ -44,21 +53,21 @@ buscarMisGifos();
   
 function buscarMisGifos() {
 let pantallaMisGifosVacio = document.querySelector('.contenido');
-    if (misGifosString == null || misGifosString == "[]") {
-    pantallaMisGifosVacio.style.display = "block";
-    pantallaMisGifos.style.display = "none";
-    } else {
-    misGifosArray = JSON.parse(misGifosString);
-    let urlMisGifos = `https://api.giphy.com/v1/gifs?ids=${misGifosArray.toString()}&api_key=${apiKey}`;
-    fetch(urlMisGifos)
-    .then(response => response.json())
-    .then(content => {
-    console.log(content);
-    mostrarMisGifos(content);
-    })
-    .catch(err => {
-    console.error('mis gifos fallo', err);
-    })
+   if (misGifosString == null || misGifosString == "[]") {
+   pantallaMisGifosVacio.style.display = "block";
+   pantallaMisGifos.style.display = "none";
+   } else {
+   misGifosArray = JSON.parse(misGifosString);
+   let urlMisGifos = `https://api.giphy.com/v1/gifs?ids=${misGifosArray.toString()}&api_key=${apiKey}`;
+   fetch(urlMisGifos)
+   .then(response => response.json())
+   .then(content => {
+   console.log(content);
+   mostrarMisGifos(content);
+   })
+   .catch(err => {
+   console.error('mis gifos fallo', err);
+   })
   }
 }
   
@@ -82,8 +91,7 @@ let gifosMisGifosArray = content.data;
     `;
 }
 }
-  
-  //FUNCION BORRAR GIF
+
 function borrarGifo(gif){
 let arrayAuxGifos = [];
 arrayAuxGifos = JSON.parse(misGifosString);
@@ -103,29 +111,29 @@ invokeSaveAsDialog(blob, gifNombre + ".gif");
  
 function maxGifDesktopMG(img, id, slug, title) {
   if(window.matchMedia("(min-width: 1023px)").matches){
-    modalDesktop.style.display = "block";
-    modalDesktop.innerHTML = `<img src="../assets/close.svg" alt="" class="modal-close" onclick="cerrarModalDesktop()">
-    <img src="${img}" alt="${id}" class="modal-gif">
-    <div class="modal-bar">
-    <div class="modal-texto">
-    <p class="modal-titulo">${title}</p>
-    </div>
-    <div class="btn-modal">
-    <img src="../assets/icon-fav-hover.svg" alt="fav" id="icon-fav-max-${id}" onclick="agregarFavoritoMax('${id}')">
-    <img src="../assets/icon-download-hover.svg" alt="down" onclick="descargaGif('${img}','${slug}')">
-    </div>
-    </div>
-    `
- modalDesktop.classList.add("modal-activo");
- document.body.appendChild(modalDesktop)
- }
+   modalDesktop.style.display = "block";
+   modalDesktop.innerHTML = `<img src="../assets/close.svg" alt="" class="modal-close" onclick="cerrarModalDesktop()">
+   <img src="${img}" alt="${id}" class="modal-gif">
+   <div class="modal-bar">
+   <div class="modal-texto">
+   <p class="modal-titulo">${title}</p>
+   </div>
+   <div class="btn-modal">
+   <img src="../assets/icon-fav-hover.svg" alt="fav" id="icon-fav-max-${id}" onclick="agregarFavoritoMax('${id}')">
+   <img src="../assets/icon-download-hover.svg" alt="down" onclick="descargaGif('${img}','${slug}')">
+   </div>
+   </div>
+   `
+modalDesktop.classList.add("modal-activo");
+document.body.appendChild(modalDesktop)
+}
 }
   
 function cerrarModalDesktopMG() {
 modalDesktopMG.style.display = "none";
 } 
 
-  //trendings
+
 let sliderTrendingGifos = document.getElementById('trending-container');
 window.onload = trendingGifos();
 
@@ -133,26 +141,26 @@ function trendingGifos() {
    let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=12`;
 
    fetch(url)
-    .then(resp => resp.json()) //me trae el json con los 4 trending gifos
-    .then(content => {
-    let trendingGifArray = content.data;
-    let trendingGIFOhtml = "";
-    for (let i = 0; i < trendingGifArray.length; i++) {
-    let trendingGif = trendingGifArray[i];
-    trendingGIFOhtml += `
-    <div class="trending-box">
-    <div class="box-card2">
-    <div class="card2">
-    <img src="../assets/icon-fav.svg" alt="icon-favorito" id="icon-fav-trending-${trendingGif.id}" class="icon-fav-trending" onclick="agregarFavoritoTrending('${trendingGif.id}')">
-    <img src="../assets/icon-download.svg" alt="icon-download" id="dow-trending" onclick="descargarGifTrending('${trendingGif.images.downsized.url}', '${trendingGif.slug}')">
-    <img src="../assets/icon-max-normal.svg" alt="icon-max" id="max-trending" onclick="maxGifDesktopTrending('${trendingGif.images.downsized.url}', '${trendingGif.id}', '${trendingGif.slug}', '${trendingGif.username}', '${trendingGif.title}')">
-    </div>
-    <div class="textos-trending">
-    <p id="titulo-gif">${trendingGif.title}</p>
-    </div>
-    <img src="${trendingGif.images.downsized.url}" alt="${trendingGif.title}" class="trending-gif">
-    </div>
-    </div>`
+   .then(resp => resp.json())
+   .then(content => {
+   let trendingGifArray = content.data;
+   let trendingGIFOhtml = "";
+   for (let i = 0; i < trendingGifArray.length; i++) {
+   let trendingGif = trendingGifArray[i];
+   trendingGIFOhtml += `
+   <div class="trending-box">
+   <div class="box-card2">
+   <div class="card2">
+   <img src="../assets/icon-fav.svg" alt="icon-favorito" id="icon-fav-trending-${trendingGif.id}" class="icon-fav-trending" onclick="agregarFavoritoTrending('${trendingGif.id}')">
+   <img src="../assets/icon-download.svg" alt="icon-download" id="dow-trending" onclick="descargarGifTrending('${trendingGif.images.downsized.url}', '${trendingGif.slug}')">
+   <img src="../assets/icon-max-normal.svg" alt="icon-max" id="max-trending" onclick="maxGifDesktopTrending('${trendingGif.images.downsized.url}', '${trendingGif.id}', '${trendingGif.slug}', '${trendingGif.username}', '${trendingGif.title}')">
+   </div>
+   <div class="textos-trending">
+   <p id="titulo-gif">${trendingGif.title}</p>
+   </div>
+   <img src="${trendingGif.images.downsized.url}" alt="${trendingGif.title}" class="trending-gif">
+   </div>
+   </div>`
 }
 sliderTrendingGifos.innerHTML = trendingGIFOhtml;
 })
@@ -196,7 +204,6 @@ iconFavMax.setAttribute("src", "../assets/icon-fav-active.svg");
 agregarFavoritoTrendingGral(gif);
 }
 
-// FAVORITOS
 favoritosArray = [];
 favoritosString = localStorage.getItem("gifosFavoritos");
 
@@ -217,8 +224,7 @@ favoritosString = JSON.stringify(favoritosArray);
 localStorage.setItem("gifosFavoritos", favoritosString);
 }
 
-//DESCARGAR
 async function descargarGifTrending(gifImg, gifNombre) {
-   let blob = await fetch(gifImg).then(img => img.blob());
-   invokeSaveAsDialog(blob, gifNombre + ".gif");
+let blob = await fetch(gifImg).then(img => img.blob());
+invokeSaveAsDialog(blob, gifNombre + ".gif");
 }

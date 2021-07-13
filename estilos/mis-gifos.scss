@@ -28,66 +28,75 @@ margin: auto;
   width: 100%;
   height: 50px;
   justify-content: space-between;
-    #mod{
-    color: rgb(111, 0, 255);
-    border: none;
-    background: #fff;
-    font-size: 12px;
-    margin-top: 13px;
-    margin-right: 0px;
-    cursor: pointer;
-    height: 30px;
-    width: 200px;
-    }
-    #cruz{
-    width: 70px;
-    margin-bottom: -10px;
-    margin-left: 30px;
-    cursor: pointer;
-    background: url(../assets/button-crear-gifo.svg) no-repeat;
-    object-fit: cover;
-    }
-  }
-  li{
-  margin: 20px;
-  font-size: 13px;
-  width: 70px;
-  height: 20px;
-  }
-  a{
-  text-decoration: none;
+  #mod{
   color: rgb(111, 0, 255);
+  border: none;
+  background: #fff;
+  font-size: 13px;
+  margin-top: 21px;
+  margin-right: -40px;
+  cursor: pointer;
+  height: 30px;
+  width: 200px;
+  }
+  #cruz{
+  width: 70px;
+  height: 60px;
+  margin-top: 0px;
+  margin-left: 10px;
+  cursor: pointer;
+  background: url(../assets/button-crear-gifo.svg) no-repeat;
+  }
+  #a-img{
+  margin-left: 20px;
+  font-size: 28px;
+  position: absolute;
+  top: 30px;
+  color: rgb(111, 0, 255);
+  }
+}
+li{
+margin: 20px;
+font-size: 13px;
+width: 70px;
+height: 20px;
+}
+a{
+text-decoration: none;
+color: rgb(111, 0, 255);
 }
 }
 #mod::after{
 content: "MODO NOCTURNO";
 }
 .menu-hamburguesa{
-  display: none;
+display: none;
+position: relative;
+z-index: 90;
 }
 .icono-menu{
-  position: absolute;
-  left: 90%;
-  top: 40px;
-  z-index: 10;
-  }
-  .icono-menu img{
-  vertical-align: top;
-  width: 30px;
-  cursor: pointer;
-  }
-  .cont-menu{
-  background-color: rgb(111, 0, 255);
-  opacity: 0.9;
-  box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all .5s ease;
-  margin-top: 100px;
-  }
+position: absolute;
+left: 80%;
+top: -40px;
+z-index: 10;
+}
+.icono-menu img{
+vertical-align: top;
+width: 30px;
+cursor: pointer;
+}
+.cont-menu{
+background-color: rgb(111, 0, 255);
+opacity: 0.9;
+box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
+width: 100%;
+height: 100vh;
+position: absolute;
+top: -70px;
+left: 0;
+transition: all .5s ease;
+margin-top: 100px;
+}
 .active{
 transform: translate(-600px);
 }
@@ -99,16 +108,6 @@ padding: 100px 0px 20px 0px;
 list-style: none;
 text-align: center;
 margin-top: -25px;
-  button{
-  border: none;
-  font-size: 25px;
-  background: rgb(111, 0, 255);
-  color: white;
-  border-bottom: 1px solid white;
-  width: 87%;
-  height: 45px;
-  outline: none;
-  }
 }
 .cont-menu ul li{
 color: white;
@@ -126,10 +125,33 @@ margin: 30px;
 }
 .cont-menu ul li:hover{
 background-color: rgb(228, 228, 228);
-color: rgb(42, 42, 42);
+  a:hover{
+  color: black;
+  }
 }
 #cruz:hover{
-  background: url(../assets/CTA-crear-gifo-hover.svg) no-repeat;
+background: url(../assets/CTA-crear-gifo-hover.svg) no-repeat;
+}
+#a-img:hover{
+color: white;
+}
+#mod1{
+color: #fff;
+border-bottom: 1px solid white;
+background: rgb(111, 0, 255);
+font-size: 22px;
+margin-top: 13px;
+margin-right: 0px;
+cursor: pointer;
+height: 30px;
+width: 70%;
+}
+#mod1::before{
+content: "MODO NOCTURNO";
+}
+#mod1:hover{
+background-color: white;
+color: black;
 }
 .galeria-gifos{
 max-width: 100%;

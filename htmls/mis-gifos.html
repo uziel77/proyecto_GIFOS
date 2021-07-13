@@ -9,33 +9,33 @@
 </head>
 <body>
 
-  <!---------header menu------------>
+  <!--header menu-->
 
   <header>
-    <a href="../index.html" id="logo"> <img src="" alt=""></a>
+    <a href="../index.html" id="logo"></a>
     <nav class="menu1">
       <ul>
-        <button onclick="modoOscuro()" id="mod"></button>
+      <li id="mod"></li>
         <li><a href="../htmls/favoritos.html">FAVORITOS</a></li>
         <li><a href="../htmls/mis-gifos.html">MIS GIFOS</a></li>
-        <a href="../htmls/crear-gifo.html" id="cruz"><img src="" alt=""></a>
+        <li id="cruz"><a href="../htmls/crear-gifo.html" id="a-img">+</a></li>
       </ul>
     </nav>
-</header>
-<div class="menu-hamburguesa">
-    <div class="icono-menu">
-      <img src="../assets/burger.svg" alt="">
+  </header>
+    <div class="menu-hamburguesa">
+        <div class="icono-menu">
+          <img src="../assets/burger.svg" alt="">
+        </div>
+        <div class="cont-menu active" id="menu">
+          <ul>
+            <li id="mod1"></li>
+            <li><a href="../htmls/favoritos.html">FAVORITOS</a></li>
+            <li><a href="../htmls/mis-gifos.html">MIS GIFOS</a></li>
+          </ul>
+      </div>
     </div>
-    <div class="cont-menu active" id="menu">
-      <ul>
-        <button onclick="modoOscuro()" id="mod"></button>
-        <li><a href="../htmls/favoritos.html">FAVORITOS</a></li>
-        <li><a href="../htmls/mis-gifos.html">MIS GIFOS</a></li>
-      </ul>
-    </div>
-  </div>
 
-  <!---------galeria de favoritos------------>
+  <!--galeria de favoritos-->
 
   <main class="galeria-gifos">
     <div class="titulo-gifos">
@@ -49,7 +49,7 @@
       <div class="resultados-misgifos" id="resultados-misgifos"></div>
   </main>
 
-  <!---------trending------------>
+  <!--trending-->
 
   <article>
     <h2>Trending GIFOS</h2>
@@ -65,7 +65,7 @@
     </div>
   </article>
 
-  <!---------footer y redes------------>
+  <!--footer y redes-->
 
   <footer>
     <div class="contactos">

@@ -48,9 +48,9 @@ header ul #mod {
   color: #fff;
   border: none;
   background: #353638;
-  font-size: 12px;
-  margin-top: 13px;
-  margin-right: 0px;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-right: -40px;
   cursor: pointer;
   height: 30px;
   width: 200px;
@@ -58,10 +58,11 @@ header ul #mod {
 
 header ul #cruz {
   width: 70px;
-  margin-bottom: -10px;
-  margin-left: 30px;
+  height: 60px;
+  margin-top: 0px;
+  margin-left: 10px;
   cursor: pointer;
-  background: url(../assets/CTA-crear-gifo-active.svg) no-repeat;
+  background: url(../assets/CTA-crar-gifo-modo-noc.svg) no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -84,16 +85,14 @@ header a {
 
 .menu-hamburguesa {
   display: none;
-}
-
-.menu-hamburguesa {
-  display: none;
+  position: relative;
+  z-index: 90;
 }
 
 .icono-menu {
   position: absolute;
-  left: 90%;
-  top: 40px;
+  left: 80%;
+  top: -40px;
   z-index: 10;
 }
 
@@ -111,7 +110,7 @@ header a {
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 0;
+  top: -70px;
   left: 0;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
@@ -135,17 +134,6 @@ header a {
   margin-top: -25px;
 }
 
-.cont-menu ul button {
-  border: none;
-  font-size: 25px;
-  background: black;
-  color: white;
-  border-bottom: 1px solid white;
-  width: 87%;
-  height: 45px;
-  outline: none;
-}
-
 .cont-menu ul li {
   color: white;
   display: block;
@@ -164,7 +152,32 @@ header a {
 
 .cont-menu ul li:hover {
   background-color: #e4e4e4;
-  color: #2a2a2a;
+  color: black;
+}
+
+.cont-menu ul li:hover a:hover {
+  color: black;
+}
+
+#mod1 {
+  color: #fff;
+  border-bottom: 1px solid white;
+  background: black;
+  font-size: 22px;
+  margin-top: 13px;
+  margin-right: 0px;
+  cursor: pointer;
+  height: 30px;
+  width: 70%;
+}
+
+#mod1::before {
+  content: "MODO DIURNO";
+}
+
+#mod1:hover {
+  background-color: white;
+  color: black;
 }
 
 main {
@@ -249,23 +262,22 @@ main {
   position: relative;
 }
 
-.grabar .grabando {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.grabar #grabando {
+  display: block;
   height: 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.grabar .grabando #cinta {
+.grabar #grabando #cinta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 80px;
-  position: absolute;
-  right: 0px;
+  position: relative;
+  top: 20px;
+  left: 450px;
 }
 
 .grabar .spn {
@@ -276,10 +288,10 @@ main {
   margin-top: 50px;
   position: absolute;
   top: -20px;
-  left: 500px;
+  left: 480px;
 }
 
-.grabar .spn #sp {
+.grabar .spn #sp1, .grabar .spn #sp2, .grabar .spn #sp3 {
   color: cyan;
   margin-left: 50px;
   font-size: 20px;
@@ -293,8 +305,8 @@ main {
 }
 
 .grabar .spn .spans {
-  background-color: cyan;
-  color: black !important;
+  background-color: #6f00ff;
+  color: honeydew !important;
 }
 
 .grabar #grabacion {
@@ -385,77 +397,81 @@ main {
 
 #btn-comenzar {
   font-size: 10px;
-  color: cyan;
-  border: 2px solid cyan;
+  color: black;
+  background: cyan;
+  border: 2px solid white;
   border-radius: 30px;
   width: 90px;
   height: 40px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 80px;
-  margin-left: 270px;
+  margin-top: 45px;
+  margin-left: -170px;
 }
 
 #btn-comenzar:hover {
-  background-color: cyan;
-  color: black;
+  background-color: blueviolet;
+  color: white;
 }
 
 #btn-gifo {
   display: none;
   font-size: 10px;
-  color: cyan;
-  border: 2px solid cyan;
+  color: black;
+  background: cyan;
+  border: 2px solid white;
   border-radius: 30px;
   width: 90px;
   height: 40px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 80px;
-  margin-left: 270px;
+  margin-top: 90px;
+  margin-left: -170px;
 }
 
 #btn-gifo:hover {
-  background-color: cyan;
-  color: black;
+  background-color: blueviolet;
+  color: white;
 }
 
 #btn-grabar {
   display: none;
   font-size: 10px;
-  color: cyan;
-  border: 2px solid cyan;
+  color: black;
+  background: cyan;
+  border: 2px solid white;
   border-radius: 30px;
   width: 90px;
   height: 40px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 80px;
-  margin-left: 270px;
+  margin-top: 90px;
+  margin-left: -170px;
 }
 
 #btn-grabar:hover {
-  background-color: cyan;
-  color: black;
+  background-color: blueviolet;
+  color: white;
 }
 
 #btn-finalizar {
   display: none;
   font-size: 10px;
-  color: cyan;
-  border: 2px solid cyan;
+  color: black;
+  background: cyan;
+  border: 2px solid white;
   border-radius: 30px;
   width: 90px;
   height: 40px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 80px;
-  margin-left: 270px;
+  margin-top: 90px;
+  margin-left: -170px;
 }
 
 #btn-finalizar:hover {
-  background-color: cyan;
-  color: black;
+  background-color: blueviolet;
+  color: white;
 }
 
 .contador {
@@ -473,10 +489,9 @@ main {
 .contador #repetir {
   display: none;
   border: none;
-  border-bottom: 2px solid cyan;
+  border-bottom: 2px solid black;
   font-size: 12px;
   color: cyan;
-  background: #353638;
   font-weight: bold;
   cursor: pointer;
 }
@@ -524,6 +539,7 @@ footer .contactos #inst {
 
 footer p {
   margin-left: auto;
+  color: white;
 }
 
 footer #twitter:hover {
