@@ -301,7 +301,7 @@ main {
   left: 480px;
 }
 
-.grabar .spn #sp1, .grabar .spn #sp2, .grabar .spn #sp3 {
+.grabar .spn #sp {
   color: #6f00ff;
   margin-left: 50px;
   font-size: 20px;
@@ -433,7 +433,7 @@ main {
   height: 40px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 90px;
+  margin-top: 45px;
   margin-left: -170px;
 }
 
@@ -452,7 +452,7 @@ main {
   height: 40px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 90px;
+  margin-top: 45px;
   margin-left: -170px;
 }
 
@@ -471,7 +471,7 @@ main {
   height: 40px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 90px;
+  margin-top: 45px;
   margin-left: -170px;
 }
 
@@ -490,6 +490,7 @@ main {
   font-size: 17px;
   line-height: 20px;
   color: #6f00ff;
+  margin-top: 20px;
 }
 
 .contador #repetir {
@@ -500,6 +501,7 @@ main {
   color: blueviolet;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 footer {

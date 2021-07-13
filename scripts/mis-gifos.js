@@ -73,22 +73,22 @@ let pantallaMisGifosVacio = document.querySelector('.contenido');
   
 function mostrarMisGifos(content) {
 let gifosMisGifosArray = content.data;
-    for (let i = 0; i < gifosMisGifosArray.length; i++) {
-    pantallaMisGifos.innerHTML += `
-    <div class="resultados-gifos">
-    <div class="box-mis-gifos">
-    <div class="card-gifos">
-    <img src="../assets/icon-trash-normal.svg" alt="icon-borrar" onclick="borrarGifo('${content.data[i].id}')" class="borrar">
-    <img src="../assets/icon-download.svg" alt="icon-download" id="dow" onclick="descargarGif('${content.data[i].images.downsized.url}', '${content.data[i].slug}')" >
-    <img src="../assets/icon-max-normal.svg" alt="icon-max" id="max" onclick="maxGifDesktopMG('${content.data[i].images.downsized.url}', '${content.data[i].id}', '${content.data[i].slug}', '${content.data[i].username}')">
-    </div>
-    <div class="texto-mis-gifos">
-    <p class="texto-gifos">${content.data[i].username}</p>
-    </div>
-    </div>
-    <img src="${content.data[i].images.downsized.url}" alt="${content.data[i].title}" class="resultados-gif">
-    </div>
-    `;
+   for (let i = 0; i < gifosMisGifosArray.length; i++) {
+   pantallaMisGifos.innerHTML += `
+   <div class="resultados-gifos">
+   <div class="box-mis-gifos">
+   <div class="card-gifos">
+   <img src="../assets/icon-trash-normal.svg" alt="icon-borrar" onclick="borrarGifo('${content.data[i].id}')" class="borrar">
+   <img src="../assets/icon-download.svg" alt="icon-download" id="dow" onclick="descargarGif('${content.data[i].images.downsized.url}', '${content.data[i].slug}')" >
+   <img src="../assets/icon-max-normal.svg" alt="icon-max" id="max" onclick="maxGifDesktopMG('${content.data[i].images.downsized.url}', '${content.data[i].id}', '${content.data[i].slug}', '${content.data[i].username}')">
+   </div>
+   <div class="texto-mis-gifos">
+   <p class="texto-gifos">${content.data[i].username}</p>
+   </div>
+   </div>
+   <img src="${content.data[i].images.downsized.url}" alt="${content.data[i].title}" class="resultados-gif">
+   </div>
+   `;
 }
 }
 

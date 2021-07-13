@@ -7,12 +7,11 @@ border-top: 4px solid rgb(111, 0, 255);
 border-bottom: 4px solid rgb(111, 0, 255);
 overflow-x: hidden;
 }
-// header navbar
 header{
-  display: flex;
-  width: 70%;
-  justify-content: space-between;
-  margin: auto;
+display: flex;
+width: 70%;
+justify-content: space-between;
+margin: auto;
   #logo{
   background: url(../assets/logo-desktop.svg) no-repeat;
   margin: 20px 0 0 0;
@@ -128,32 +127,31 @@ background-color: rgb(228, 228, 228);
   a:hover{
   color: black;
   }
-}
-#cruz:hover{
-background: url(../assets/CTA-crear-gifo-hover.svg) no-repeat;
-}
-#a-img:hover{
-color: white;
-}
-#mod1{
-color: #fff;
-border-bottom: 1px solid white;
-background: rgb(111, 0, 255);
-font-size: 22px;
-margin-top: 13px;
-margin-right: 0px;
-cursor: pointer;
-height: 30px;
-width: 70%;
-}
-#mod1::before{
-content: "MODO NOCTURNO";
-}
-#mod1:hover{
-background-color: white;
-color: black;
-}
-// bloque busqueda y gifos
+  }
+  #cruz:hover{
+  background: url(../assets/CTA-crear-gifo-hover.svg) no-repeat;
+  }
+  #a-img:hover{
+  color: white;
+  }
+  #mod1{
+  color: #fff;
+  border-bottom: 1px solid white;
+  background: rgb(111, 0, 255);
+  font-size: 22px;
+  margin-top: 13px;
+  margin-right: 0px;
+  cursor: pointer;
+  height: 30px;
+  width: 70%;
+  }
+  #mod1::before{
+  content: "MODO NOCTURNO";
+  }
+  #mod1:hover{
+  background-color: white;
+  color: black;
+  }
 main{
 width: 100%;
 height: 100%;
@@ -172,7 +170,6 @@ align-items: center;
   margin: 0  auto;
   height: 160px;
   }
-  //barra de busqueda
   .busqueda{
   display: flex;
   align-items: center;
@@ -252,7 +249,6 @@ position: relative;
   top: -20px;
 }
 }
-// gifos
 #titulo-gifs{
 font-size: 50px;
 color:rgb(111, 0, 255) ;
@@ -362,7 +358,6 @@ color: rgb(111, 0, 255);
 margin-top: -15px;
 }
 }
-// trending
 article{
 text-align: center;
   h2{
@@ -507,7 +502,6 @@ margin-right: 50px;
 }
 }
 }
-//footer
 footer{
 display: flex;
 padding: 10px 120px;
@@ -548,7 +542,6 @@ background: url(../assets/icon_facebook_hover.svg) no-repeat;
 background: url(../assets/icon_instagram-hover.svg) no-repeat;
 }
 }
-// mediaquery
 @media screen and (max-width:600px){
   body{
   width: 110%;

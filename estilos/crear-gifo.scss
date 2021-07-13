@@ -186,7 +186,6 @@ display: flex;
 position: relative;
 align-items: center;
 box-shadow: 10px 5px 5px rgb(111, 0, 255);
-
   #titulo{
   width: 300px;
   position: absolute;
@@ -225,7 +224,7 @@ margin-top: 50px;
 position: absolute;
 top: -20px;
 left: 480px;
-  #sp1 , #sp2, #sp3{
+  #sp{
   color: rgb(111, 0, 255);
   margin-left: 50px;
   font-size: 20px;
@@ -343,7 +342,7 @@ width: 90px;
 height: 40px;
 font-weight: bold;
 cursor: pointer;
-margin-top: 90px;
+margin-top: 45px;
 margin-left: -170px;
 }
 #btn-gifo:hover{
@@ -360,7 +359,7 @@ width: 90px;
 height: 40px;
 font-weight: bold;
 cursor: pointer;
-margin-top: 90px;
+margin-top: 45px;
 margin-left: -170px;
 }
 #btn-grabar:hover{
@@ -377,7 +376,7 @@ width: 90px;
 height: 40px;
 font-weight: bold;
 cursor: pointer;
-margin-top: 90px;
+margin-top: 45px;
 margin-left: -170px;
 }
 #btn-finalizar:hover{
@@ -392,6 +391,7 @@ left: 400px;
   font-size: 17px;
   line-height: 20px;
   color: rgb(111, 0, 255);
+  margin-top: 20px;
   }
   #repetir{
   display: none;
@@ -401,6 +401,7 @@ left: 400px;
   color: blueviolet;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 20px;
   }
 }
 footer{

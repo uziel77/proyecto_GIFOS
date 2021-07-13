@@ -291,7 +291,7 @@ main {
   left: 480px;
 }
 
-.grabar .spn #sp1, .grabar .spn #sp2, .grabar .spn #sp3 {
+.grabar .spn #sp {
   color: cyan;
   margin-left: 50px;
   font-size: 20px;
