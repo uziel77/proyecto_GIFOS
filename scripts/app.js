@@ -1,6 +1,6 @@
 let barraSearch = document.getElementById("search");
 let btnSearch = document.getElementById("btn"); 
-let barraDesp = document.getElementById("barra-desp");
+let barraDesp = document.querySelector(".barra-desp");
 let busqueda = document.getElementById("busqueda"); 
 let cerrar = document.getElementById("cerrar"); 
 let containerGif = document.getElementById("container-gifs");
@@ -84,6 +84,8 @@ cerrar.style.display = "none";
 btnSearch.addEventListener("click", searchGif);
 barraSearch.addEventListener("keyup", (e)=>{
    if(e.keyCode === 13){
+   barraDesp.style.display = "none";
+   btnSearch.style.marginRight = "20px";
    searchGif();
    }
 })

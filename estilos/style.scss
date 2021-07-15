@@ -144,7 +144,7 @@ background-color: rgb(228, 228, 228);
   margin-right: 0px;
   cursor: pointer;
   height: 30px;
-  width: 68%;
+  width: 67%;
   }
   #mod1::before{
   content: "MODO NOCTURNO";
@@ -182,6 +182,7 @@ align-items: center;
   border-radius: 30px;
   #btn{
   width: 20px;
+  height: 20px;
   margin-right: -20px;
   cursor: pointer;
   }
@@ -213,7 +214,7 @@ margin-top: -4px;
   margin-left: 30px;
   border: none;
   }
-  #barra-desp{
+  .barra-desp{
   margin-top: 10px;
   border-top: 1px solid black;
   width: 380px;

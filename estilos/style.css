@@ -181,7 +181,7 @@ header a {
   margin-right: 0px;
   cursor: pointer;
   height: 30px;
-  width: 68%;
+  width: 67%;
 }
 
 #mod1::before {
@@ -235,6 +235,7 @@ main .busqueda {
 
 main .busqueda #btn {
   width: 20px;
+  height: 20px;
   margin-right: -20px;
   cursor: pointer;
 }
@@ -271,7 +272,7 @@ main .buscando input {
   border: none;
 }
 
-main .buscando #barra-desp {
+main .buscando .barra-desp {
   margin-top: 10px;
   border-top: 1px solid black;
   width: 380px;
@@ -279,7 +280,7 @@ main .buscando #barra-desp {
   padding: 10px;
 }
 
-main .buscando #barra-desp .options {
+main .buscando .barra-desp .options {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,13 +292,13 @@ main .buscando #barra-desp .options {
           justify-content: space-between;
 }
 
-main .buscando #barra-desp .options .lupa {
+main .buscando .barra-desp .options .lupa {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
-main .buscando #barra-desp .options .option-p {
+main .buscando .barra-desp .options .option-p {
   font-size: 20px;
   cursor: pointer;
   margin-left: 10px;
