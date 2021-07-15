@@ -10,7 +10,7 @@ btnNoc.addEventListener("click", e=> {
 btnNoc1.addEventListener("click", e=> {
    modoOscuro()
 })
-//modo oscuro
+
 function modoOscuro() {
 let theme = document.getElementById("theme");
   if (theme.getAttribute("href") == "./estilos/style.css") {

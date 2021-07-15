@@ -112,7 +112,6 @@ borrarFav(gif);
 }
 
 function maxGifDesktopFav(img, id, slug, title) {
-  if(window.matchMedia("(min-width: 1023px)").matches){
   modalDesktop.style.display = "block";
   modalDesktop.innerHTML = `<img src="../assets/close.svg" alt="" class="modal-close" onclick="cerrarModalDesktop()">
   <img src="${img}" alt="${id}" class="modal-gif">
@@ -129,7 +128,7 @@ function maxGifDesktopFav(img, id, slug, title) {
  modalDesktop.classList.add("modal-activo");
  document.body.appendChild(modalDesktop)
  }
-}
+
 
 let sliderTrendingGifos = document.getElementById('trending-container');
 window.onload = trendingGifos();
@@ -166,7 +165,6 @@ console.log(err);
 }
 
 function maxGifDesktopTrending(img, id, slug, title) {
-  if (window.matchMedia("(min-width: 1023px)").matches) {
   modalDesktop.style.display = "block";
   modalDesktop.innerHTML = `
   <img src="../assets/close.svg" alt=""  class="modal-close" onclick="cerrarModalDesktop()">
@@ -184,11 +182,7 @@ function maxGifDesktopTrending(img, id, slug, title) {
   modalDesktop.classList.add("modal-activo");
   document.body.appendChild(modalDesktop);
   }
-}
 
-function cerrarModalDesktop() {
-modalDesktop.style.display = "none";
-}
 
 function cerrarModalDesktop() {
 modalDesktop.style.display = "none";

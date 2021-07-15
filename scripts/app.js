@@ -14,7 +14,6 @@ let apikey = "k7myyVYXWc9zebI6Yrrm5zPMspeexlxV";
 let imgFav = document.getElementById("img-fav-tren")
 let modalDesktop = document.createElement("div")
 
-//barra de busqueda
 barraSearch.addEventListener("keyup", sugerencia);
 
 function sugerencia(){
@@ -123,7 +122,7 @@ closeBox();
 
 function agregarGif(content) {
 gifs.innerHTML += `
-   <div class="container-cards">
+   <div class="container-cards" onclick="maxGifMobile">
    <div id="box-card">
    <div class="card1">
    <img src="./assets/icon-fav.svg" alt="icon-favorito" id="icon-fav-${content.id}" onclick="agregarFavBus('${content.id}')" class="fav">
@@ -198,7 +197,6 @@ invokeSaveAsDialog(blob, gifName + ".gif");
 }
 
 function maxGifDesktop(img,id,slug,title){
-   if(window.matchMedia("(min-width: 1023px)").matches){
    modalDesktop.style.display = "block";
    modalDesktop.innerHTML = `<img src="./assets/close.svg" alt="" class="modal-close" onclick="cerrarModalDesktop()">
    <img src="${img}" alt="${id}" class="modal-gif">
@@ -214,17 +212,6 @@ function maxGifDesktop(img,id,slug,title){
    `
 modalDesktop.classList.add("modal-activo");
 document.body.appendChild(modalDesktop)
-}
-}
-
-function cerrarModalDesktop() {
-modalDesktop.style.display = "none";
-} 
-
-function agregarFavoritoMax(gif){
-let iconFavMax = document.getElementById('icon-fav-max-' + gif);
-iconFavMax.setAttribute("src", "./assets/icon-fav-active.svg");
-agregarFav(gif);
 }
 
 
@@ -263,7 +250,6 @@ console.log(err);
 }
 
 function maxGifDesktopTrending(img, id, slug, title) {
-   if (window.matchMedia("(min-width: 1023px)").matches) {
    modalDesktop.style.display = "block";
    modalDesktop.innerHTML = `
    <img src="./assets/close.svg" alt=""  class="modal-close" onclick="cerrarModalDesktop()">
@@ -280,15 +266,12 @@ function maxGifDesktopTrending(img, id, slug, title) {
 modalDesktop.classList.add("modal-activo");
 document.body.appendChild(modalDesktop);
 }
-}
+
 
 function cerrarModalDesktop() {
 modalDesktop.style.display = "none";
 }
 
-function cerrarModalDesktop() {
-modalDesktop.style.display = "none";
-}
 
 function agregarFavoritoMaxTren(gif) {
 let iconFavMax = document.getElementById('icon-fav-max-' + gif);
