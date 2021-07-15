@@ -713,7 +713,7 @@ footer #inst:hover {
     display: block;
   }
   figure {
-    display: none;
+    display: block;
   }
   footer {
     width: 80%;

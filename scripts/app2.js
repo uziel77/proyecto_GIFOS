@@ -44,53 +44,14 @@ const rutaActual = e.target.getAttribute("src");
   }
 })
 
-// const leftArrow = document.getElementById("left-arrow");
-// const righttArrow = document.getElementById("right-arrow");
-// const content = document.getElementById("trending-container");
+const leftArrow = document.getElementById("left-arrow");
+const righttArrow = document.getElementById("right-arrow");
+const content = document.getElementById("trending-container");
 
-// righttArrow.addEventListener("click", e => {
-// content.scrollLeft += 100;
-// })
+righttArrow.addEventListener("click", e => {
+content.scrollLeft += 200;
+})
 
-// leftArrow.addEventListener("click", e => {
-// content.scrollLeft -= 100;
-// });
-let imageIndex = 1;
-let translateX = 0;
-
-let trendingBtnPrev = document.getElementById('left-arrow');
-let trendingBtnNext = document.getElementById('right-arrow');
-
-trendingBtnNext.addEventListener('click', sliderNext);
-function sliderNext() {
-    if (window.matchMedia("(min-width: 1440px)").matches) {
-        if (imageIndex <= 5) {
-            imageIndex++;
-            translateX -= 387;
-            sliderTrendingGifos.style.transform = `translateX(${translateX}px)`;
-        }
-    } else if (window.matchMedia("(min-width: 1024px)").matches) {
-        if (imageIndex <= 5) {
-            imageIndex++;
-            translateX -= 273;
-            sliderTrendingGifos.style.transform = `translateX(${translateX}px)`;
-        }
-    }
-}
-
-trendingBtnPrev.addEventListener('click', sliderPrev);
-function sliderPrev() {
-    if (window.matchMedia("(min-width: 1440px)").matches) {
-        if (imageIndex !== 1) {
-            imageIndex--;
-            translateX += 387;
-            sliderTrendingGifos.style.transform = `translateX(${translateX}px)`;
-        }
-    } else if (window.matchMedia("(min-width: 1024px)").matches) {
-        if (imageIndex !== 1) {
-            imageIndex--;
-            translateX += 273;
-            sliderTrendingGifos.style.transform = `translateX(${translateX}px)`;
-        }
-    }
-}
+leftArrow.addEventListener("click", e => {
+content.scrollLeft -= 200;
+});
