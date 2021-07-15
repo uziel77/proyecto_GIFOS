@@ -3,7 +3,7 @@ const righttArrow = document.getElementById("right-arrow");
 const content = document.getElementById("trending-container");
 const iconoMenu = document.querySelector(".icono-menu");
 let menu = document.querySelector("#menu");
-let modalDesktop = document.createElement("div")
+let modal = document.createElement("div")
 let apikey = "k7myyVYXWc9zebI6Yrrm5zPMspeexlxV";
 
 let btnNoc = document.getElementById("mod");
@@ -76,7 +76,7 @@ let gifosFavoritosArray = content.data;
   <div class="card-fav">
   <img src="../assets/icon-fav-active.svg" alt="icon-favorito" id="icon-borrar-fav-${content.data[i].id}" class="fav" onclick="borrarFav('${content.data[i].id}')">
   <img src="../assets/icon-download.svg" alt="icon-dowlnoad" id="dow" onclick="descargarGif('${content.data[i].images.downsized.url}', '${content.data[i].slug}')">
-  <img src="../assets/icon-max-normal.svg" alt="icon-max" onclick="maxGifDesktopFav('${content.data[i].images.downsized.url}', '${content.data[i].id}', '${content.data[i].slug}', '${content.data[i].title}')" id="max">
+  <img src="../assets/icon-max-normal.svg" alt="icon-max" onclick="maxGifFav('${content.data[i].images.downsized.url}', '${content.data[i].id}', '${content.data[i].slug}', '${content.data[i].title}')" id="max">
   </div>
   <div class="fav-texto">
   <p class="texto-fav">${content.data[i].title}</p>
@@ -111,9 +111,9 @@ iconNoFavMaxMob.setAttribute("src", "../assets/icon-fav-hover.svg");
 borrarFav(gif);
 }
 
-function maxGifDesktopFav(img, id, slug, title) {
-  modalDesktop.style.display = "block";
-  modalDesktop.innerHTML = `<img src="../assets/close.svg" alt="" class="modal-close" onclick="cerrarModalDesktop()">
+function maxGifFav(img, id, slug, title) {
+  modal.style.display = "block";
+  modal.innerHTML = `<img src="../assets/close.svg" alt="" class="modal-close" onclick="cerrarmodal()">
   <img src="${img}" alt="${id}" class="modal-gif">
   <div class="modal-bar">
   <div class="modal-texto">
@@ -125,8 +125,8 @@ function maxGifDesktopFav(img, id, slug, title) {
   </div>
   </div>
   `
- modalDesktop.classList.add("modal-activo");
- document.body.appendChild(modalDesktop)
+ modal.classList.add("modal-activo");
+ document.body.appendChild(modal)
  }
 
 
@@ -148,7 +148,7 @@ let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=12`;
   <div class="card2">
   <img src="../assets/icon-fav.svg" alt="icon-favorito" id="icon-fav-trending-${trendingGif.id}" class="icon-fav-trending" onclick="agregarFavoritoTrending('${trendingGif.id}')">
   <img src="../assets/icon-download.svg" alt="icon-download" id="dow-trending" onclick="descargarGifTrending('${trendingGif.images.downsized.url}', '${trendingGif.slug}')">
-  <img src="../assets/icon-max-normal.svg" alt="icon-max" id="max-trending" onclick="maxGifDesktopTrending('${trendingGif.images.downsized.url}', '${trendingGif.id}', '${trendingGif.slug}', '${trendingGif.username}', '${trendingGif.title}')">
+  <img src="../assets/icon-max-normal.svg" alt="icon-max" id="max-trending" onclick="maxGifTrending('${trendingGif.images.downsized.url}', '${trendingGif.id}', '${trendingGif.slug}', '${trendingGif.username}', '${trendingGif.title}')">
   </div>
   <div class="textos-trending">
   <p id="titulo-gif">${trendingGif.title}</p>
@@ -164,10 +164,10 @@ console.log(err);
 })
 }
 
-function maxGifDesktopTrending(img, id, slug, title) {
-  modalDesktop.style.display = "block";
-  modalDesktop.innerHTML = `
-  <img src="../assets/close.svg" alt=""  class="modal-close" onclick="cerrarModalDesktop()">
+function maxGifTrending(img, id, slug, title) {
+  modal.style.display = "block";
+  modal.innerHTML = `
+  <img src="../assets/close.svg" alt=""  class="modal-close" onclick="cerrarmodal()">
   <img src="${img}" alt="${id}" class="modal-gif">
   <div class="modal-bar">
   <div class="modal-textos">
@@ -179,13 +179,13 @@ function maxGifDesktopTrending(img, id, slug, title) {
   </div>
   </div>
   `;
-  modalDesktop.classList.add("modal-activo");
-  document.body.appendChild(modalDesktop);
+  modal.classList.add("modal-activo");
+  document.body.appendChild(modal);
   }
 
 
-function cerrarModalDesktop() {
-modalDesktop.style.display = "none";
+function cerrarmodal() {
+modal.style.display = "none";
 }
 
 function agregarFavoritoMaxTren(gif) {

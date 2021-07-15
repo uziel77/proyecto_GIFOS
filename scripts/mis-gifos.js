@@ -44,10 +44,9 @@ apiKey = "k7myyVYXWc9zebI6Yrrm5zPMspeexlxV";
 misGifosArray = [];
 misGifosString = localStorage.getItem("misGifos");
 let pantallaMisGifos = document.getElementById('resultados-misgifos');
-let modalDesktop = document.createElement("div")
+let modal = document.createElement("div")
 let apikey = "k7myyVYXWc9zebI6Yrrm5zPMspeexlxV";
-let modalMobileMG = document.createElement("div");
-let modalDesktopMG = document.createElement("div");
+let modalMG = document.createElement("div");
   
 buscarMisGifos();
   
@@ -111,8 +110,8 @@ invokeSaveAsDialog(blob, gifNombre + ".gif");
  
 function maxGifDesktopMG(img, id, slug, title) {
   if(window.matchMedia("(min-width: 1023px)").matches){
-   modalDesktop.style.display = "block";
-   modalDesktop.innerHTML = `<img src="../assets/close.svg" alt="" class="modal-close" onclick="cerrarModalDesktop()">
+   modal.style.display = "block";
+   modal.innerHTML = `<img src="../assets/close.svg" alt="" class="modal-close" onclick="cerrarmodal()">
    <img src="${img}" alt="${id}" class="modal-gif">
    <div class="modal-bar">
    <div class="modal-texto">
@@ -124,13 +123,13 @@ function maxGifDesktopMG(img, id, slug, title) {
    </div>
    </div>
    `
-modalDesktop.classList.add("modal-activo");
-document.body.appendChild(modalDesktop)
+modal.classList.add("modal-activo");
+document.body.appendChild(modal)
 }
 }
   
-function cerrarModalDesktopMG() {
-modalDesktopMG.style.display = "none";
+function cerrarmodalMG() {
+modalMG.style.display = "none";
 } 
 
 
@@ -170,9 +169,9 @@ console.log(err);
 }
 
 function maxGifDesktopTrending(img, id, slug, title) {
-   modalDesktop.style.display = "block";
-   modalDesktop.innerHTML = `
-   <img src="../assets/close.svg" alt=""  class="modal-close" onclick="cerrarModalDesktop()">
+   modal.style.display = "block";
+   modal.innerHTML = `
+   <img src="../assets/close.svg" alt=""  class="modal-close" onclick="cerrarmodal()">
    <img src="${img}" alt="${id}" class="modal-gif">
    <div class="modal-bar">
    <div class="modal-textos">
@@ -184,13 +183,13 @@ function maxGifDesktopTrending(img, id, slug, title) {
    </div>
    </div>
 `;
-modalDesktop.classList.add("modal-activo");
-document.body.appendChild(modalDesktop);
+modal.classList.add("modal-activo");
+document.body.appendChild(modal);
 }
 
 
-function cerrarModalDesktop() {
-modalDesktop.style.display = "none";
+function cerrarmodal() {
+modal.style.display = "none";
 }
 
 function agregarFavoritoMaxTren(gif) {

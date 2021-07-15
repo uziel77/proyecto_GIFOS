@@ -12,7 +12,7 @@ let favoritosArray;
 
 let apikey = "k7myyVYXWc9zebI6Yrrm5zPMspeexlxV";
 let imgFav = document.getElementById("img-fav-tren")
-let modalDesktop = document.createElement("div")
+let modal = document.createElement("div")
 
 barraSearch.addEventListener("keyup", sugerencia);
 
@@ -122,12 +122,12 @@ closeBox();
 
 function agregarGif(content) {
 gifs.innerHTML += `
-   <div class="container-cards" onclick="maxGifMobile">
+   <div class="container-cards">
    <div id="box-card">
    <div class="card1">
    <img src="./assets/icon-fav.svg" alt="icon-favorito" id="icon-fav-${content.id}" onclick="agregarFavBus('${content.id}')" class="fav">
    <img src="./assets/icon-download.svg" alt="icon-dowlnoad" id="dow" onclick="descargaGif('${content.images.downsized.url}', '${content.slug}')">
-   <img src="./assets/icon-max-normal.svg" alt="icon-max" id="max" onclick="maxGifDesktopTrending('${content.images.downsized.url}', '${content.id}', '${content.slug}', '${content.username}', '${content.title}')">
+   <img src="./assets/icon-max-normal.svg" alt="icon-max" id="max" onclick="maxGifTrending('${content.images.downsized.url}', '${content.id}', '${content.slug}', '${content.username}', '${content.title}')">
    </div>
    <div id="texto-gif">
    <p id="titulo-gif-res">${content.title}</p>
@@ -196,9 +196,9 @@ let blob = await fetch(gifImg).then(img => img.blob());
 invokeSaveAsDialog(blob, gifName + ".gif");
 }
 
-function maxGifDesktop(img,id,slug,title){
-   modalDesktop.style.display = "block";
-   modalDesktop.innerHTML = `<img src="./assets/close.svg" alt="" class="modal-close" onclick="cerrarModalDesktop()">
+function maxGif(img,id,slug,title){
+   modal.style.display = "block";
+   modal.innerHTML = `<img src="./assets/close.svg" alt="" class="modal-close" onclick="cerrarmodal()">
    <img src="${img}" alt="${id}" class="modal-gif">
    <div class="modal-bar">
    <div class="modal-texto">
@@ -210,8 +210,8 @@ function maxGifDesktop(img,id,slug,title){
    </div>
    </div>
    `
-modalDesktop.classList.add("modal-activo");
-document.body.appendChild(modalDesktop)
+modal.classList.add("modal-activo");
+document.body.appendChild(modal)
 }
 
 
@@ -233,7 +233,7 @@ let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=12`;
    <div class="card2">
    <img src="./assets/icon-fav.svg" alt="icon-favorito" id="icon-fav-trending-${trendingGif.id}" class="icon-fav-trending" onclick="agregarFavoritoTrending('${trendingGif.id}')">
    <img src="./assets/icon-download.svg" alt="icon-download" id="dow-trending" onclick="descargarGifTrending('${trendingGif.images.downsized.url}', '${trendingGif.slug}')">
-   <img src="./assets/icon-max-normal.svg" alt="icon-max" id="max-trending" onclick="maxGifDesktopTrending('${trendingGif.images.downsized.url}', '${trendingGif.id}', '${trendingGif.slug}', '${trendingGif.username}', '${trendingGif.title}')">
+   <img src="./assets/icon-max-normal.svg" alt="icon-max" id="max-trending" onclick="maxGifTrending('${trendingGif.images.downsized.url}', '${trendingGif.id}', '${trendingGif.slug}', '${trendingGif.username}', '${trendingGif.title}')">
    </div>
    <div class="textos-trending">
    <p id="titulo-gif">${trendingGif.title}</p>
@@ -249,10 +249,10 @@ console.log(err);
 })
 }
 
-function maxGifDesktopTrending(img, id, slug, title) {
-   modalDesktop.style.display = "block";
-   modalDesktop.innerHTML = `
-   <img src="./assets/close.svg" alt=""  class="modal-close" onclick="cerrarModalDesktop()">
+function maxGifTrending(img, id, slug, title) {
+   modal.style.display = "block";
+   modal.innerHTML = `
+   <img src="./assets/close.svg" alt=""  class="modal-close" onclick="cerrarmodal()">
    <img src="${img}" alt="${id}" class="modal-gif">
    <div class="modal-bar">
    <div class="modal-textos">
@@ -263,13 +263,13 @@ function maxGifDesktopTrending(img, id, slug, title) {
    <img src="./assets/icon-download-hover.svg" alt="download-gif" onclick="descargarGifTrending('${img}','${slug}')">
    </div>
    </div>`;
-modalDesktop.classList.add("modal-activo");
-document.body.appendChild(modalDesktop);
+modal.classList.add("modal-activo");
+document.body.appendChild(modal);
 }
 
 
-function cerrarModalDesktop() {
-modalDesktop.style.display = "none";
+function cerrarmodal() {
+modal.style.display = "none";
 }
 
 
