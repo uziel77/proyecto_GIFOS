@@ -79,7 +79,7 @@ let gifosMisGifosArray = content.data;
    <div class="card-gifos">
    <img src="../assets/icon-trash-normal.svg" alt="icon-borrar" onclick="borrarGifo('${content.data[i].id}')" class="borrar">
    <img src="../assets/icon-download.svg" alt="icon-download" id="dow" onclick="descargarGif('${content.data[i].images.downsized.url}', '${content.data[i].slug}')" >
-   <img src="../assets/icon-max-normal.svg" alt="icon-max" id="max" onclick="maxGifDesktopMG('${content.data[i].images.downsized.url}', '${content.data[i].id}', '${content.data[i].slug}', '${content.data[i].username}')">
+   <img src="../assets/icon-max-normal.svg" alt="icon-max" id="max" onclick="maxGifMG('${content.data[i].images.downsized.url}', '${content.data[i].id}', '${content.data[i].slug}', '${content.data[i].username}')">
    </div>
    <div class="texto-mis-gifos">
    <p class="texto-gifos">${content.data[i].username}</p>
@@ -108,8 +108,7 @@ let blob = await fetch(gifImg).then(img => img.blob());;
 invokeSaveAsDialog(blob, gifNombre + ".gif");
 }
  
-function maxGifDesktopMG(img, id, slug, title) {
-  if(window.matchMedia("(min-width: 1023px)").matches){
+function maxGifMG(img, id, slug, title) {
    modal.style.display = "block";
    modal.innerHTML = `<img src="../assets/close.svg" alt="" class="modal-close" onclick="cerrarmodal()">
    <img src="${img}" alt="${id}" class="modal-gif">
@@ -126,7 +125,7 @@ function maxGifDesktopMG(img, id, slug, title) {
 modal.classList.add("modal-activo");
 document.body.appendChild(modal)
 }
-}
+
   
 function cerrarmodalMG() {
 modalMG.style.display = "none";
@@ -152,7 +151,7 @@ function trendingGifos() {
    <div class="card2">
    <img src="../assets/icon-fav.svg" alt="icon-favorito" id="icon-fav-trending-${trendingGif.id}" class="icon-fav-trending" onclick="agregarFavoritoTrending('${trendingGif.id}')">
    <img src="../assets/icon-download.svg" alt="icon-download" id="dow-trending" onclick="descargarGifTrending('${trendingGif.images.downsized.url}', '${trendingGif.slug}')">
-   <img src="../assets/icon-max-normal.svg" alt="icon-max" id="max-trending" onclick="maxGifDesktopTrending('${trendingGif.images.downsized.url}', '${trendingGif.id}', '${trendingGif.slug}', '${trendingGif.username}', '${trendingGif.title}')">
+   <img src="../assets/icon-max-normal.svg" alt="icon-max" id="max-trending" onclick="maxGifTrending('${trendingGif.images.downsized.url}', '${trendingGif.id}', '${trendingGif.slug}', '${trendingGif.username}', '${trendingGif.title}')">
    </div>
    <div class="textos-trending">
    <p id="titulo-gif">${trendingGif.title}</p>
@@ -168,7 +167,7 @@ console.log(err);
 })
 }
 
-function maxGifDesktopTrending(img, id, slug, title) {
+function maxGifTrending(img, id, slug, title) {
    modal.style.display = "block";
    modal.innerHTML = `
    <img src="../assets/close.svg" alt=""  class="modal-close" onclick="cerrarmodal()">
