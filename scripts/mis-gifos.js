@@ -40,7 +40,7 @@ leftArrow.addEventListener("click", e => {
 content.scrollLeft -= 100;
 });
 
-apiKey = "k7myyVYXWc9zebI6Yrrm5zPMspeexlxV";
+
 misGifosArray = [];
 misGifosString = localStorage.getItem("misGifos");
 let pantallaMisGifos = document.getElementById('resultados-misgifos');
@@ -57,7 +57,7 @@ let pantallaMisGifosVacio = document.querySelector('.contenido');
    pantallaMisGifos.style.display = "none";
    } else {
    misGifosArray = JSON.parse(misGifosString);
-   let urlMisGifos = `https://api.giphy.com/v1/gifs?ids=${misGifosArray.toString()}&api_key=${apiKey}`;
+   let urlMisGifos = `https://api.giphy.com/v1/gifs?ids=${misGifosArray.toString()}&api_key=${apikey}`;
    fetch(urlMisGifos)
    .then(response => response.json())
    .then(content => {
