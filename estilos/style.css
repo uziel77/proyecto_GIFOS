@@ -455,9 +455,13 @@ main h4 {
   color: #6f00ff;
 }
 
-main p {
+main #trending-text {
   color: #6f00ff;
   margin-top: -15px;
+}
+
+main #trending-text .trending-span {
+  color: #6f00ff;
 }
 
 article {

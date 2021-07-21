@@ -124,7 +124,7 @@ spans[1].classList.remove("spans");
 spans[2].classList.add("spans");
 repetir.style.display = "none";
     fetch(`https://upload.giphy.com/v1/gifs`,{
-    method: "POST",
+    method: 'POST',
     body: form,
 })
 .then(response =>{
@@ -153,9 +153,9 @@ localStorage.setItem("misGifos", misGifosString);
 .catch(error => console.log("error al subir gif" + error))
 }
 
-async function descargarGif(gifImg){
-let blob = await fetch(gifImg).then(img => img.blob());
-invokeSaveAsDialog(blob, "migifo.gif");
+async function descargarGif(gifImg) {
+    let blob = await fetch(gifImg).then(img => img.blob());
+    invokeSaveAsDialog(blob, "miGifo" + ".gif");
 }
 
 repetir.addEventListener("click", repetirGif);
