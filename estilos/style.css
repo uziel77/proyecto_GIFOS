@@ -462,6 +462,7 @@ main #trending-text {
 
 main #trending-text .trending-span {
   color: #6f00ff;
+  cursor: pointer;
 }
 
 article {
