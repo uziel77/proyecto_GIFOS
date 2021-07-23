@@ -305,26 +305,49 @@ let blob = await fetch(gifImg).then(img => img.blob());
 invokeSaveAsDialog(blob, gifNombre + ".gif");
 }
 
-let tredingText = document.getElementById('trending-text');
+// let tredingText = document.getElementById('trending-text');
+// window.onload = trendingTopics();
+
+// function trendingTopics() {
+//    let url = `https://api.giphy.com/v1/trending/searches?api_key=${apikey}`;
+//    return fetch(url)
+//    .then(resp => resp.json()) 
+//    .then(content => {
+//    let topics = content.data;
+//    tredingText.innerHTML = `<span class="trending-span">${topics[0]}</span>, <span class="trending-span">${topics[1]}</span>, <span class="trending-span">${topics[2]}</span>, <span class="trending-span">${topics[3]}</span>, <span class="trending-span">${topics[4]}</span>`;
+//    let topicBtn = document.getElementsByClassName('trending-topics-link');
+//       for (let x = 0; x < topicBtn.length; x++) {
+//       topicBtn[x].addEventListener('click', e => {
+//       barraSearch.value = topics[x];
+//       searchGif();
+//       })
+//    }
+// })
+// .catch(err => {
+// console.log("error" + err);
+// })
+// }
+
+let trendingText = document.getElementById('trending-text');
 window.onload = trendingTopics();
 
 function trendingTopics() {
-   let url = `https://api.giphy.com/v1/trending/searches?api_key=${apikey}`;
-   return fetch(url)
-   .then(resp => resp.json()) 
-   .then(content => {
-   let topics = content.data;
-   tredingText.innerHTML = `<span class="trending-span">${topics[0]}</span>, <span class="trending-span">${topics[1]}</span>, <span class="trending-span">${topics[2]}</span>, <span class="trending-span">${topics[3]}</span>, <span class="trending-span">${topics[4]}</span>`;
-   let topicBtn = document.getElementsByClassName('trending-topics-link');
-      for (let x = 0; x < topicBtn.length; x++) {
-      topicBtn[x].addEventListener('click', e => {
-      barraSearch.value = topics[x];
-      searchGif();
-      })
-   }
-})
-.catch(err => {
-console.log("error" + err);
-})
-}
+    let url = `https://api.giphy.com/v1/trending/searches?api_key=${apikey}`;
 
+    return fetch(url)
+        .then(resp => resp.json())
+        .then(content => {
+            let topics = content.data;
+            trendingText.innerHTML = `<span class="trending-span">${topics[0]}</span>, <span class="trending-span">${topics[1]}</span>, <span class="trending-span">${topics[2]}</span>, <span class="trending-span">${topics[3]}</span>, <span class="trending-span">${topics[4]}</span>`;
+            let topicBtn = document.getElementsByClassName('trending-span');
+            for (let x = 0; x < topicBtn.length; x++) {
+                topicBtn[x].addEventListener('click', function (e) {
+                    barraSearch.value = topics[x];
+                    searchGif();
+                })
+            }
+        })
+        .catch(err => {
+            console.log("error trending topics" + err);
+        })
+}
